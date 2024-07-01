@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="enter the data" id="name">
+    <button onclick="changeData()">changeData</button>
+    <div id="found"></div>
+    <ul id="result">
+       <!-- <p id="tag">hi</p>
+      <p id="tag">hi , how are you</p>
+       <p id="tag">Iam fine, May I know What are you doing know I mean about studies </p>
+       <p id="tag">Yeah, Iam doing a java full stack course in be-practical tech solutions</p>
+       <p id="tag">when you joined there</p> 
+       <p id="tag">In the month of January</p>
+       <p id="tag">Course duration</p>
+       <p id="tag">six months</p>
+       <p>what are the technologies they are going to teach</p>
+       <p>frontEnd, Backend with database</p>-->
+    </ul> 
+    <script>
+        let found=document.getElementById('found')
+        
+        let name=document.getElementById('name')
+        let result=document.getElementById('result');
+        
+      let messages=[
+        {
+            id:1,
+            mes:'hi',
+        },
+        {
+            id:2,
+            mes:'hi, how are u',
+        },
+        {
+            id:3,
+            mes:'fine, what about you',
+        },
+        {
+            id:4,
+            mes:'Iam also fine',
+        },
+        {
+            id:5,
+            mes:'what are you doing currently',
+        },
+        {
+            id:6,
+            mes:'Doing full stack java in be practical tech solutions',
+        },
+        {
+            id:7,
+            mes:'oh , nice',
+        },
+
+      ]
+      messages.map((item,index)=>{
+                result.innerHTML+=`<div class="chat">
+                    <p>${item.mes}</p>
+                </div>`
+      
+       })
+        function changeData() {
+    const inputValue = name.value.toLowerCase(); 
+    let messageFound = false; 
+    messages.forEach((item, index) => {
+        if (item.mes.toLowerCase().includes(inputValue)) {
+            found.innerHTML = `<p>Message found: ${item.mes}</p>`;
+            messageFound = true; 
+           return;
+        }
+        
+       
+    });
+    if(messageFound==false){
+        found.innerHTML='not found'
+    }
+}
+
+    </script>
+</body>
+</html>

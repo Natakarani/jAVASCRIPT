@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card{
+            border: 1px solid red;
+        }
+        /* for selection  purpose we can use only some properties */
+        p::selection{
+            background-color: orange;
+            color: white;
+            border: 1px soid grey;
+        }
+    </style>
+</head>
+<body>
+    <p>we can create elements and remove elements by using javscript</p>
+    <div id="result">
+    </div>
+    <button onclick="remover()" id="btn">add</button>
+    <script>
+        // let result=document.getElementById('result');
+        // result.innerHTML+=`
+        // <div class
+        // ="card">
+        // <h1>this is heading</h1>
+        // </div>
+        // `
+
+        // function remover(){
+        //     result.innerHTML=''
+        // }
+   let adder=false;
+   let btn=document.getElementById('btn')
+   function remover(){
+    if(adder==false){
+        result.innerHTML+=`
+        <h1>this is heading</h1>
+        `
+        adder=true;
+        btn.innerHTML='remove'
+    }
+    else{
+        result.innerHTML='';
+        btn.innerHTML='add'
+        adder=false;
+    }
+   }
+
+        
+    </script>
+</body>
+</html>

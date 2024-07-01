@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+    }
+    .card{
+    
+        text-align: center;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        min-width: 350px;
+    }
+    #continue{
+        margin: 20px 0;
+        padding: 7px;
+        width: 100%;
+        border-radius: 6px;
+        background-color: rgb(0, 183, 255);
+    }
+    #signup{
+        border: none;
+        background-color: transparent;
+        border: 2px solid rgb(10, 184, 10);
+    }
+    .profile{
+        display: flex;
+        /* gap:20px; */
+        align-items: center;
+        justify-content: space-around;
+        /* position: relative; */
+    }
+    .profile p{
+        letter-spacing: 1px;
+        font-size: 20px;
+        position:relative;
+        
+    }
+    .profile p:last-child{
+        color: grey;
+    }
+    .profile p:hover{
+        color: black;
+    }
+    .profile p::before{
+        content:'';
+        position: absolute;
+        bottom: -7px;
+        left:0;
+        background-color: black;
+        height: 2px;
+        width: 130px;
+    }
+    .profile p:last-child::before{
+        color: grey;
+        background-color: grey;
+    }
+    #profileShow i{
+        font-size: 60px;
+        border: 3px solid black;
+        padding: 40px;
+        border-radius: 100px;
+        margin-bottom: 20px;
+    }
+    #verifyBtn{
+        background-color: rgb(0, 136, 255);
+        opacity: 0.7;
+        color: white;
+    }
+
+    #verifyBtn:hover{
+        opacity: 1;
+    }
+   
+    .requiredFields{
+        /* display: none; */
+        font-size: 16px;
+        max-width: fit-content;
+       text-align: center;
+       margin: auto;
+       height: 29px;
+        background-color: rgba(255, 0, 0, 0.317);
+        /* border: 1px solid red; */
+        
+    }
+    #syncContacts{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        background-color: rgb(24, 130, 237);
+        opacity: 0.7;
+    }
+    #syncContacts:hover{
+        /* background-color: rgb(24, 130, 237); */
+        opacity: 1;
+    }
+   
+</style>
+<body>
+    <p class="requiredFields"></p>
+    <div class="container">
+        <div class="card shadow p-5">
+            
+    </div>
+
+    </div>
+
+    <script>
+
+        let phNo=0;
+        let emailAddres='';
+        let password='';
+        let requiredFields=document.querySelector('.requiredFields')
+        let card=document.querySelector('.card')
+        let profileShow=document.getElementById('profileShow')
+        let startCreation=document.querySelector('.startCreation')
+        
+        let oldUsers={
+            userName:'raj',
+            userEmail:'raj@gmail.com',
+            phNO:'+917689090987'
+        }
+        let allUsers=[]
+        function startCreationFunc(){
+            card.innerHTML=`<div class="startCreation">
+            <h1>Instagram</h1>
+       
+        <div>
+            <button id="continue" class="border-0 text-light fs-5">Continue as send emp</button>
+            <p class="text-secondary">Girish girl, chandan and 1890 other friends are using instagram </p>
+            <button class="text-primary p-2 w-100" id="signup" onclick="signUpOption()">sign up with Email address or phone number</button>
+            <p class="text-secondary mt-3">OR</p>
+            <small class="text-secondary">Already have account ? <b>Log in</b></small>
+        </div>
+        </div>`
+
+
+        }
+        startCreationFunc()
+        function signUpOption(){
+            // console.log(card)
+            card.innerHTML=`
+            <div id="profileShow">
+        <i class="fa-regular fa-user"></i>
+        <div class="profile">
+            <p class="fw-bold">Phone number</p>
+            <p class="fw-bold ">EmailAddress</p>
+        </div>
+        <input type="tel" class="form-control p-2 mt-2" placeholder="+91 enetr phone number" required id="phone">
+         
+          <p class="text-secondary">You may receive message updates from instagram and can opt out at any time</p>
+          <button class="text-light p-2 w-100 bg-primary border-0 fs-5" onclick="verify('${input}')">Next</button>
+          <p class="text-secondary mt-4">Already have account? <b>Log in</b></p>
+        <!-- <input type="text" class="input-group"> -->
+    </div>
+            `
+        }
+
+        function verify(phone){
+            console.log(phone)
+          let input=  document.querySelector('input')
+          if(input.value==''){
+            // requiredFields.classList.add('addFileds')
+          requiredFields.innerHTML=`please fill the required Fields`
+          console.log(requiredFields)
+          }
+          else{
+            if(input.value.length<10){
+                requiredFields.innerHTML=`must have to enter the 10 digit mobile number`
+            }
+
+            else{
+            card.innerHTML=`
+            <div>
+        <p class="p-2 bg-success text-light text-center fs-5 mb-5 w-100" style="padding:0 60px">An SMS verification message has been send to your mobile</p>
+        <h3>ENTER CONFIRMATION CODE</h3>
+        <p class="mt-3">Enter the 6-digit code we sent to</p>
+        <p> <b>Request a new one</b></p>
+        <input type="text" class="w-100 p-2 mt-3" placeholder="confirmation code" required><br>
+        <button class="btn w-100 mt-4 p-2 fs-4" id="verifyBtn" onclick="confirmCode()">Next</button>
+    </div>
+            `
+        }
+    }
+        }
+
+        function confirmCode(){
+            let input=document.querySelector('input')
+            if(input.value==''){
+            // requiredFields.classList.add('addFileds')
+          requiredFields.innerHTML=`please fill the required Fields`
+          console.log(requiredFields)
+          }
+          else{
+            
+          
+            card.innerHTML=`
+            <div>
+                <h3>NAME AND PASSWORD</h3>
+                <br>
+                <input type="text" id="name" placeholder="enter username" class="p-2 w-100">
+                <br>
+                <br>
+                
+                <input type="password" placeholder="enter password" id="password" class="p-2 w-100"></input>
+                <button class="btn alert-heading text-light fs-5 w-100" id="syncContacts" onclick="welcomePage()">continue and sync contacts</button>
+                <p class="text-primary fw-bold text-center">Continue without signing contacts</p>
+       
+             </div>
+            `
+    }
+
+        }
+        function welcomePage(){
+            let input=document.querySelector('input')
+            
+            if(input.value==''){
+                requiredFields.innerHTML=`please fill the required Fields`
+            }
+            else{
+            card.innerHTML=`
+            <h3>WELCOME TO INSTAGRAM, 34534_EXample</h2>
+                <p class="text-secondary mt-3">Find people to follow and start sharing photos. You can change your username at any time</p>
+                <button class="btn w-100 mt-4 p-1 fs-4" id="verifyBtn" >Next</button>
+                <p class="text-primary fw-bold mt-3 fs-4" onclick="changeUserName()">Change userName</p>
+                `
+            }
+        }
+
+        function changeUserName(){
+          
+            card.innerHTML=`
+            <h3>CHANGE USERNAME</h2>
+
+                <p class="text-secondary mt-3">Choose a username for your account . YOu can always change it later. </p>
+                <input type="text" placeholder="username" class="w-100 p-2"/>
+                <button class="btn w-100 mt-4 p-1 fs-4" id="verifyBtn" >Next</button>
+               
+                `
+            }
+        
+
+        
+    </script>
+</body>
+</html>

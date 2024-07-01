@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>static method</h1>
+        <p>cant access the sttaic data by obj creation</p>
+        <p>js provides static method that belongs to class instead of an nstance of an that class. these methods are called directly on class itself</p>
+
+    </center>
+    <hr>
+    <h3>points to remember</h3>
+    <ul>
+        <li>the static keyword is used to declare a sttaic methos</li>
+        <li>the static method methos can be any name</li>
+        <li>class contain more than one static method also</li>
+        <li>whwn we declare the same name of methods multiple times it will take the last one</li>
+        <li>we can use the this keyword to call the static methos into another staic methos</li>
+        <li>but we cant call the static method inside the another sttaic method by using this keyword</li>
+        <li>in such case we can call static eitehr using classname or property of constructor</li>
+    </ul>
+    <script>
+        class Student{
+            static Display1(){
+                return 'this is  display method in student class'
+            }
+            static print(){
+                return 'this is print method in student class'
+            }
+        }
+       document.write(`<h1>${ Student.print()}</h1>`)
+       document.write(`<h1>${ Student.Display1()}</h1>`)
+               //whwn we declare the same name of methods multiple times it will take the last one
+document.write('======================')
+        class Student1{
+            static Display1(){
+                return 'this is first display method in student class'
+            }
+            static Display1(){
+                return 'this is second display method in student class'
+            }
+        }
+        //cant access  the data by using obj creation when we want to print the static data
+       // let user=new Student();
+       // console.log(user)
+
+      document.write(`<h1>${ Student1.Display1()}</h1>`)
+
+    </script>
+</body>
+</html>

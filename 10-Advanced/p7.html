@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="result"></div>
+    <script>
+let result=document.getElementById('result')
+        function createPost(userID){
+            let uploadPosts=[]
+            return function(content,image){
+                uploadPosts.push({
+                    post:content,
+                    postImg:image,
+                })
+                console.log(`<p>${content} ${userID}</p>`);
+                console.log(uploadPosts)
+                uploadPosts.map((item,index)=>{
+                    result.innerHTML+=`<p>${item.post}</p>
+                    <img src=${item.postImg}></img>
+                    `
+                })
+
+
+            }
+        }
+        let user1=createPost('usreId123')
+        user1('fake post1 ','https://img.freepik.com/free-photo/wide-angle-shot-single-tree-growing-clouded-sky-sunset-surrounded-by-grass_181624-22807.jpg?t=st=1716820570~exp=1716824170~hmac=f0b94d2f5517e80673fcd5be647456aeeb7fb9d62b5a6717aa80973f3aa848fa&w=996')
+        user1('fake post2 ','https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?t=st=1716820611~exp=1716824211~hmac=2f16aaf95e23edc1ae3cbd2352e9131a204815ec6251ae74f23566f2920bd1b4&w=996')
+
+    </script>
+
+
+    <script>
+        document.write("or we can write like thos allso")
+    let res=document.getElementById('res')
+function createPost(userName,userId,image){
+    let arr=[{
+        userNames:userName,
+        userId:userId,
+        userImage:image,
+    }]
+    arr.map((item,index)=>{
+        res.innerHTML+=`<p>${item.userId}</p>
+        <p>${userName}s</p>`
+    })
+  return function msg(){
+    return `${userName} ${userId} ${image}
+`
+
+   }
+  
+}
+let store=createPost("jawaan","14325124","image");
+console.log(store())
+let store1=createPost("jawaan","56567","image");
+console.log(store1())
+</script>
+</body>
+</html>

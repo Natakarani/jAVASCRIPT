@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="sayHello('hai hello')">say hello</button>
+    <button onclick="sayHello('bye')">say bye</button>
+
+    <button onclick="sayHello('hai good moring')">good morning</button>
+
+    <script>
+        function sayHello(message){
+            alert(message);
+        }
+        function name(firstName,lastName){
+            let fullName=firstName+" "+lastName;
+            return fullName;
+        }
+        document.write(`<h1>fullname: ${name('john','doe')}</h1>`)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    #result{
+        margin: 30px 390px;
+        padding: 20px;
+    }
+    img{
+        width: 50px;
+        height: fit-content;
+        object-fit: cover;
+    }
+    section{
+        padding: 10px;
+        box-shadow: 0px 0px 10px grey;
+        line-height: 1.7;
+        display: flex;
+        justify-content: space-evenly;
+        gap:80px;
+        align-items: center;
+        margin-top: 20px;
+    }
+    button{
+        background-color: blue;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        font-size: 17px;
+    }
+    input{
+        padding: 12px 30px;
+
+    }
+    section h2{
+        flex:1;
+    }
+    section img{
+        flex: 1; 
+    }
+    footer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap:20px;
+        font-weight: 500;
+        font-size: 20px;
+    }
+</style>
+<body>
+ 
+    <input type="number" id="inputBox">
+    <button onclick="generator()">Generate Cards</button>
+    <div id="result"></div>
+    <script>
+
+        let inputBox=document.getElementById('inputBox')
+    let result=document.getElementById('result')
+            function generator(){
+               
+                if(inputBox.value==''){
+                    inputBox.style.border='1px solid red'
+                }
+               
+                else{
+                    console.log(inputBox.value)
+                    for(let i=0;i<inputBox.value;i++){
+                        let p=document.createElement('h2')
+                        let div=document.createElement('section')
+                        let image=document.createElement('img')
+
+                    p.innerHTML='Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias necessitatibus animi voluptatum aliquid veniam commodi, dolores illum doloribus minus incidunt.'
+                    image.src='https://img.freepik.com/free-photo/beautiful-female-model-smiling-pleased-showing-okay-zero-sign-complimenting-praising-you-standing-beige-background_1258-86850.jpg?t=st=1714537767~exp=1714541367~hmac=dd148e137e9ea2ea8c8d1724b674f8fe55353ee4177c66eb44dfb46ebcccab78&w=900'
+                    div.append(image)
+                    div.append(p)
+                    result.append(div)
+console.log(result)
+                    }
+                }
+           }
+        
+    </script>
+</body>
+</html>

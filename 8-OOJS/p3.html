@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #result{
+        position:absolute;
+        bottom: 0;
+        margin: auto;
+        /* right: 0;
+        margin: auto;
+        text-align: center; */
+        padding: 6px 20px;
+        border: 1px solid grey;
+    }
+    .green{
+        background-color: green;
+    }
+    .red{
+        background-color: red;
+    }
+</style>
+<body>
+    <center>
+        <h1>functions, arrays and objects as properties</h1>
+
+    </center>
+    <div id="result"></div>
+    <script>
+        let result=document.getElementById('result')
+        let user={
+            firstName:'arun',
+            lastName:'kumar',
+            userEmail:'arun@gmail.com',
+            userHobbies:['coding','cyclicng','racing'],
+            fullname:function(){
+                return this.firstName+" "+this.lastName;
+            },
+            getEmail:()=>{
+//cant return the data by using the arrow function so dont use the arrow function
+            },
+            address:{
+                city:'bangalore',
+                pincode:8890,
+            },
+
+            isOnline:false,
+        }
+
+        document.write(`<p>${user.firstName}</p>`)
+        document.write(`<p>${user.lastName}</p>`)
+        document.write(`<p>${user.fullname()}</p>`)
+        document.write(`<p>${user.address.city}</p>`)
+        document.write(`<p>${user.userHobbies[0]}</p>`+'<hr>')
+
+user.userHobbies.map((item,index)=>{
+    document.write(`<p>${item}</p>`)
+})
+
+
+if(user.isOnline==true){
+    result.classList.add('green')
+    result.innerHTML=`<p>u are in online</p>`
+}
+else{
+    result.classList.add('red')
+
+   result.innerHTML=`<p>u are in offline</p>`
+}
+    </script>
+</body>
+</html>

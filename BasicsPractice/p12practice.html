@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .btn{
+            display: flex;
+            justify-content: center;
+            margin: auto;
+            background-color: white;
+            padding: 10px 20px;
+            border: none;
+            font-size: 20px;
+            border-radius: 10px;
+            color:rgb(4, 4, 193);
+            font-weight: bold;
+            box-shadow: 0px 0px 5px grey;
+            margin-bottom: 10px;
+
+        }
+        body{
+            /* background-color: blue;
+            margin: 10px;
+            margin: 10px 100px; */
+        }
+        img{
+            width: 100%;
+        }
+        .addBtn{
+            display: flex;
+            justify-content: center;
+          
+        }
+        .addBtn button{
+            background-color: blue;
+            padding: 10px 30px;
+            border: none;
+            border-radius: 20px ;
+            color: white;
+            font-weight: bold;
+            font-size: 17px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="addBtn">
+        <button onclick="Adder()" id="adds">Add</button>
+
+    </div>
+    <div id="result"></div>
+  
+   <script>
+    let adds=document.getElementById('adds')
+        let result=document.getElementById('result')
+        let isShow=false;
+        function Adder(){
+            if(isShow==false){
+            result.innerHTML=`
+            <div style="background-color: blue;margin:10px 300px;">
+            <button class="btn">Be practical</button>
+            <h1 style="color:white;text-align: center;">HIRE- <span style="color:orange">TRAIN</span> - DEPLOY</h1>
+            <p style="background-color: white;color:red;font-weight: bold;font-size: 20px;box-shadow: 0px 0px 5px grey;padding: 10px;margin-bottom:20px;margin: 0 50px;">Join with Us We will help u out</p>
+            <div style="display: flex;
+            justify-content: center;">
+                <h1 style="background-color: red;color:white;text-align: center;max-width:fit-content;margin: 10px 0;border-radius: 10px;padding:10px 20px;"><span>PACKAGE: </span>$4.5lakh</h1>
+            </div>
+            <DIV style="display: grid; grid-template-columns: 1fr 1fr 1fr;gap:20px;background-color: yellow;padding: 10px;">
+                <div>
+                    <img src="https://img.freepik.com/free-photo/young-beautiful-woman-pink-warm-sweater-natural-look-smiling-portrait-isolated-long-hair_285396-896.jpg?t=st=1714542110~exp=1714545710~hmac=dee4eee4b712bc9d517e60f78d176ca602ac3ae2d09f2fb38283a936f7119a78&w=900" alt="" >
+                    <p style="font-weight: bold;text-align: center;">package: 3lakh</p>
+                </div>
+                <div>
+                    <img src="https://img.freepik.com/free-photo/young-beautiful-woman-pink-warm-sweater-natural-look-smiling-portrait-isolated-long-hair_285396-896.jpg?t=st=1714542110~exp=1714545710~hmac=dee4eee4b712bc9d517e60f78d176ca602ac3ae2d09f2fb38283a936f7119a78&w=900" alt="" >
+                    <p style="font-weight: bold;text-align: center;">package: 3lakh</p>
+                </div>
+                <div>
+                    <img src="https://img.freepik.com/free-photo/young-beautiful-woman-pink-warm-sweater-natural-look-smiling-portrait-isolated-long-hair_285396-896.jpg?t=st=1714542110~exp=1714545710~hmac=dee4eee4b712bc9d517e60f78d176ca602ac3ae2d09f2fb38283a936f7119a78&w=900" alt="" >
+                    <p style="font-weight: bold;text-align: center;">package: 3lakh</p>
+                </div>
+                <div>
+                    <img src="https://img.freepik.com/free-photo/young-beautiful-woman-pink-warm-sweater-natural-look-smiling-portrait-isolated-long-hair_285396-896.jpg?t=st=1714542110~exp=1714545710~hmac=dee4eee4b712bc9d517e60f78d176ca602ac3ae2d09f2fb38283a936f7119a78&w=900" alt="" >
+                    <p style="font-weight: bold;text-align: center;">package: 3lakh</p>
+                </div>
+                <div>
+                    <img src="https://img.freepik.com/free-photo/young-beautiful-woman-pink-warm-sweater-natural-look-smiling-portrait-isolated-long-hair_285396-896.jpg?t=st=1714542110~exp=1714545710~hmac=dee4eee4b712bc9d517e60f78d176ca602ac3ae2d09f2fb38283a936f7119a78&w=900" alt="" >
+                    <p style="font-weight: bold;text-align: center;">package: 3lakh</p>
+                </div>
+                <div>
+                    <img src="https://img.freepik.com/free-photo/young-beautiful-woman-pink-warm-sweater-natural-look-smiling-portrait-isolated-long-hair_285396-896.jpg?t=st=1714542110~exp=1714545710~hmac=dee4eee4b712bc9d517e60f78d176ca602ac3ae2d09f2fb38283a936f7119a78&w=900" alt="" >
+                    <p style="font-weight: bold;text-align: center;">package: 3lakh</p>
+                </div>
+                <div>
+                    <img src="https://img.freepik.com/free-photo/young-beautiful-woman-pink-warm-sweater-natural-look-smiling-portrait-isolated-long-hair_285396-896.jpg?t=st=1714542110~exp=1714545710~hmac=dee4eee4b712bc9d517e60f78d176ca602ac3ae2d09f2fb38283a936f7119a78&w=900" alt="" >
+                    <p style="font-weight: bold;text-align: center;">package: 3lakh</p>
+                </div>
+                <div>
+                    <img src="https://img.freepik.com/free-photo/young-beautiful-woman-pink-warm-sweater-natural-look-smiling-portrait-isolated-long-hair_285396-896.jpg?t=st=1714542110~exp=1714545710~hmac=dee4eee4b712bc9d517e60f78d176ca602ac3ae2d09f2fb38283a936f7119a78&w=900" alt="" >
+                    <p style="font-weight: bold;text-align: center;">package: 3lakh</p>
+                </div>
+                <div>
+                    <img src="https://img.freepik.com/free-photo/young-beautiful-woman-pink-warm-sweater-natural-look-smiling-portrait-isolated-long-hair_285396-896.jpg?t=st=1714542110~exp=1714545710~hmac=dee4eee4b712bc9d517e60f78d176ca602ac3ae2d09f2fb38283a936f7119a78&w=900" alt="" >
+                    <p style="font-weight: bold;text-align: center;">package: 3lakh</p>
+                </div>
+            </DIV>
+        </div>
+            `
+            adds.innerText='remove'
+            isShow=true;
+         }
+         else{
+            result.innerHTML=''
+            adds.innerText='add'
+            isShow=false
+         }
+        }
+        //converting one datatype to another datatype called type casting
+        //when started with capital letter means it is a constructor example Number (thats is  belongs to Number class)
+        
+    </script>
+</body>
+</html>

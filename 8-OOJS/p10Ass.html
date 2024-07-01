@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        
+    }
+    button{
+        cursor: pointer;
+        background-color: green;
+        color: white;
+        outline: none;
+        border: none;
+        padding: 5px 30px;
+        font-size: 18px;
+        margin: 10px;
+
+    }
+    .card h1{
+        letter-spacing: 1.3px;
+        text-shadow: 3px 3px 2px rgb(22, 22, 22);
+        color: green;
+    }
+    .card{
+        margin: 20px 80px;
+        max-width: 300px;
+        padding: 20px;
+        background:repeating-linear-gradient(190deg,rgb(136, 231, 136) 30%,rgb(175, 237, 177),white 50%);
+        box-shadow: 0px 0px 10px green;
+    }
+</style>
+<body>
+    <h1 style="font-size: 40px;">defineProperties()</h1>
+     <!-- <input type="text" id="name"> -->
+    <button onclick="addCard()">Click</button>
+    <div id="result"></div>
+   
+    
+    <script>
+        let name1 = document.getElementById('name');
+        let result = document.getElementById('result');
+        let a = {
+            image: [
+                {
+                    id: 'book',
+                    // img: 'https://99bookscart-assets.s3.ap-south-1.amazonaws.com/9780007260812.png',
+                    desc: 'Somewhere, someday',
+                    price: '368',
+                },
+                {
+                    id: 'book',
+                    // img: 'https://99bookscart-assets.s3.ap-south-1.amazonaws.com/9780552159128.png',
+                    desc: 'Somewhere, someday',
+                    price: '1720',
+                },
+                {
+                    id: 'book',
+                    // img: 'https://99bookscart-assets.s3.ap-south-1.amazonaws.com/9780747266921.png',
+                    desc: 'thos os ',
+                    price: '990',
+                },
+           ]
+        };
+        
+        for(let i=0;i<a.image.length;i++){
+            // result.innerHTML+=`<img src=${a.image[i].img}>`
+        }
+
+        Object.defineProperties(a,
+            {
+                secondname:{
+                value:[
+                    {
+                        name:'Raj',
+                        email:'raj@gamail.com'
+                    },
+                    {
+                        name:'John',
+                        email:'john@gmail.com'
+                    }
+                ]
+                },
+           }
+        )
+        result.innerHTML=`<div class="card">
+            <h1>Doe</h1>
+            <p>doe@gmail.com</p>
+            </div>`
+     function addCard(){
+        for(let i=0;i<a.image.length;i++){
+           
+        result.innerHTML+=`
+        <div class="card">
+        <h1>${a.secondname[i].name}</h1>
+        <p>${a.secondname[i].email}</p>
+       </div>
+        `
+       }
+    }
+    console.log(a)
+    </script>
+</body>
+</html>

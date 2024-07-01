@@ -1,0 +1,605 @@
+{
+    "allrestaurants":[
+     {
+         "restaurantname":"Urban Bites",
+         "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdBGJFphNJG60wyWYTwHdV8r06aHQOmB1chA&s",
+        
+         "availableFoods":[
+             {
+                 "foodname":"pizza",
+                 "price":300,
+                 "foodImage":"https://img.freepik.com/free-photo/freshly-italian-pizza-with-mozzarella-cheese-slice-generative-ai_188544-12347.jpg?t=st=1717789831~exp=1717793431~hmac=15055bc2caf6d61254db70c9707a8733fef9a3ef189643f447ff0aaf94bebb8d&w=1060",
+                 "foodItem":[
+                    {
+                    
+                        "name":"Cheese Pizza",
+                        "address":"Burgers, American, Fast Food, Beverages, DessertsVasanth Nagar",
+                        "ratings":"3.9",
+                        "price":250,
+                        "image":"https://img.freepik.com/premium-photo/pizza-with-very-much-cheese-melting_945053-1212.jpg?w=996"
+                    },
+                    {
+                        "name":"Vag Pizza",
+                        "address":"Rajajinagar, bangalore",
+                        "ratings":"4.5",
+                        "price":700,
+                        "image":"https://img.freepik.com/free-psd/food-menu-delicious-pizza-web-banner-template_106176-419.jpg?t=st=1717792399~exp=1717795999~hmac=ab5916651261daa901d9d490ee2aefb28feffe0cb12ea8c87cb8e2ca9b864a45&w=996"
+                    },
+                    {
+                    
+                        "name":"Chicken Pizza",
+                        "address":"Shantinagar, bangalore",
+                        "ratings":"3.9",
+                        "price":500,
+                        "image":"https://img.freepik.com/premium-psd/picture-pizza-with-transparent-background-black-olive-it_728472-477.jpg?w=826"
+                    },
+                    {
+                        
+                        "name":"Egg Pizza",
+                        "address":"Burgers, American, Fast Food, Beverages, DessertsVasanth Nagar",
+                        "ratings":"4.7",
+                        "price":400,
+                        "image":"https://img.freepik.com/free-photo/top-view-pepperoni-pizza-with-mushroom-sausages-bell-pepper-olive-corn-black-wooden_141793-2158.jpg?t=st=1717793653~exp=1717797253~hmac=8ec6dc36e82b77125d05e8a686a89b41ae821c212956703b84ec2934bf19337b&w=996"
+                    }
+                 ]
+             },
+             {
+                 "foodname":"meals",
+                 "price":"$ 200",
+                 "foodImage":"https://img.freepik.com/free-photo/gourmet-meal-with-grilled-meat-rice-generated-by-ai_188544-38918.jpg?t=st=1717789848~exp=1717793448~hmac=ec8b5f9d10bd71eb15612efc088c6c78d4375695b62030abed61c2f696e56a33&w=1060",
+                 "foodItem":[
+                    {
+                        "name":"Veg mixed curry",
+                        "price":250,
+                        "ratings":"4.2",
+                        "address":"Indiranagar , bangalore",
+                        "image":"https://img.freepik.com/free-photo/delicious-food-table_23-2150857756.jpg?t=st=1717790814~exp=1717794414~hmac=ee99950b8a786889a6a433a16d5f5c8b8bbf422f18463cbc8df306ecbf4a8c94&w=1060"
+                    },
+                    {
+                        "name":"Meals",
+                        "address":"Burgers, American, Fast Food, Beverages, DessertsVasanth Nagar",
+                        "price":700,
+                        "ratings":"4.9",
+                        "image":"https://img.freepik.com/premium-photo/vibrant-vegetable-pulao-served-with-raita-papadums_1170794-335394.jpg?w=996"
+                    },
+                    {
+                        "name":"Paneer curry",
+                        "address":"kormangla, bangalore",
+                        "price":100,
+                        "ratings":"4.7",
+                        "image":"https://img.freepik.com/free-photo/fresh-gourmet-vegetarian-meal-with-grilled-tomato-bell-pepper-generated-by-artificial-intelligence_188544-124565.jpg?t=st=1717793831~exp=1717797431~hmac=fae87eeb3bbed6f0fdcad02c0722576e85b5dc473407be7ca657cb2d805c150f&w=1060"
+                    },
+                    {
+                        "name":"Gobi manchuria",
+                        "address":"Vital mallaya Road ,bangalore",
+                        "price":400,
+                        "ratings":"3.9",
+                        "image":"https://img.freepik.com/free-photo/herbs-fried-chicken-with-chili-tomato-cucumber-carrot-fresh-pepper_1150-25899.jpg?t=st=1717793861~exp=1717797461~hmac=e18ff03eccf7c975ee5271a3f7b2726841a95bc6f6433648c7a6d14236d1e06f&w=996"
+                    }
+                 ]
+             },
+             {
+                 "foodname":"burger",
+                 "price":"$290",
+                 "foodImage":"https://img.freepik.com/free-photo/grilled-cheeseburger-with-tomato-sesame-bun-generative-ai_188544-12302.jpg?t=st=1717789915~exp=1717793515~hmac=344a6a248ea31fb95953bb4a83fcaa71b0bda716988eb0cf8dc9ca4a3cbca66a&w=1060",
+                 "foodItem":[
+                    {
+                        "name":"chicken burder",
+                        "address":"Vital mallaya Road ,bangalore",
+                        "price":250,
+                        "ratings":"3.9",
+                        "image":"https://img.freepik.com/free-photo/grilled-cheeseburger-with-tomato-sesame-bun-generative-ai_188544-12302.jpg?t=st=1717789915~exp=1717793515~hmac=344a6a248ea31fb95953bb4a83fcaa71b0bda716988eb0cf8dc9ca4a3cbca66a&w=1060"
+                    },
+                    {
+                        "name":"paneer burger",
+                        "price":700,
+                        "ratings":"3.4",
+                        "address":"Lavelle Road ,bangalore",
+                        "image":"https://img.freepik.com/premium-photo/fresh-tasty-homemade-burger-wooden-table_147620-1307.jpg?w=900"
+                    },
+                    {
+                        "name":"veg burger",
+                        "price":100,
+                        "ratings":"3.9",
+                        "address":"Residency Road ,bangalore",
+                        "image":"https://img.freepik.com/free-photo/front-view-chicken-burger-with-cheese-green-salad-wooden-desk-sandwich-fast-food-meal-food_140725-25937.jpg?t=st=1717794159~exp=1717797759~hmac=0f111b910e84a10c26fddee1765710c20d9c6e9ca05f6ed7ba6c27443c07bc42&w=996"
+                    },
+                    {
+                        "name":"burger",
+                        "price":400,
+                        "ratings":"3.9",
+                        "address":"Shantinagar ,bangalore",
+                        "image":"https://img.freepik.com/free-photo/grilled-cheeseburger-sesame-bun-with-fresh-toppings-generative-ai_188544-12325.jpg?t=st=1717794181~exp=1717797781~hmac=e22ac443b655c69c4f0d211dc676a5ab6f4228dc217fcf5301c8f33adb776468&w=1060"
+                    }
+                 ]
+             },
+             {
+                 "foodname":"Ice creams",
+                 "price":"$ 100",
+                 "foodImage":"https://img.freepik.com/premium-photo/ice-cream-cone-set-with-three-realistic-colorful-ice-cream-wafers-different-taste-with-berry-topp_807701-3403.jpg?w=996",
+                 "foodItem":[
+                    {
+                        "name":"Italian delight",
+                        "price":"$ 250",
+                        "image":"https://img.freepik.com/premium-photo/bowl-with-delicious-ice-cream-cookies_1165404-8378.jpg?w=996"
+                    },
+                    {
+                        "name":"chocolate ice cream",
+                        "price":"$ 700",
+                        "image":"https://img.freepik.com/premium-photo/blueberry-ice-cream-scoops_123827-21732.jpg?w=996"
+                    },
+                    {
+                        "name":"vanilla ice cream",
+                        "price":"$ 100",
+                        "image":"https://img.freepik.com/premium-photo/top-view-delicious-homemade-ice-cream-concept_23-2148425385.jpg?w=996"
+                    },
+                    {
+                        "name":"black current",
+                        "price":"$ 400",
+                        "image":"https://img.freepik.com/free-photo/ice-cream-cone_169016-3418.jpg?t=st=1717794375~exp=1717797975~hmac=eabcb1a1264c713bf12906d94cea6d2946253ee89edaa899605b3d5764368edc&w=996"
+                    }
+                 ]
+             }
+         ]
+
+         
+     },
+     {
+         "restaurantname":"Swiggy",
+         "image":"https://st.adda247.com/https://currentaffairs.adda247.com/wp-content/uploads/multisite/sites/5/2022/05/16165408/swiggy.jpeg",
+         "location":{
+             "city":"",
+             "pincode":"dd"
+         },
+         "availableFoods":[
+             {
+                 "foodname":"SandWitch",
+                 "foodImage":"https://img.freepik.com/premium-photo/veg-grilled-sandwich-served-with-ketchup-isolated-rustic-wooden-background-selective-focus_726363-1356.jpg?w=826",
+                 "price": 200,
+                 "foodItem":[
+                    {
+                        "name":"veg Sandwitch",
+                        "price":250,
+                        "address":"Shantinagar ,bangalore",
+                        "ratings":"3.9",
+                        "image":"https://img.freepik.com/premium-photo/bowl-with-delicious-ice-cream-cookies_1165404-8378.jpg?w=996"
+                    },
+                    {
+                        "name":"veg Sandwitch",
+                        "price":700,
+                        "address":"Adigoli ,bangalore",
+                        "ratings":"3.9",
+                        "image":"https://img.freepik.com/premium-photo/vegetable-sandwitch-with-vegies-with-pattie_271168-45.jpg?w=1060"
+                    },
+                    {
+                        "name":"paneer sandwitch",
+                        "price":100,
+                        "address":"Jayanagar ,bangalore",
+                        "ratings":"2.9",
+                        "image":"https://img.freepik.com/free-photo/top-view-yummy-ham-sandwich-inside-dark-plate-with-french-fries-ketchup-dark-surface_179666-35672.jpg?t=st=1717790872~exp=1717794472~hmac=f6cd6a3c9704e4e34c98dde56ab0d9becf5364477d0387caaed2dc7ac8050fbd&w=996"
+                    },
+                    {
+                        "name":"corn sandwitch",
+                        "price":400,
+                        "address":"Sampangirama ,bangalore",
+                        "ratings":"1.5",
+                        "image":"https://img.freepik.com/premium-photo/two-sandwiches-made-slice-meat-cheese-tomatoes-toasted-bread-wooden-table_244366-394.jpg?w=996"
+                    }
+                 ]
+             },
+             {
+                 "foodname":"Biryani",
+                 "foodImage":"https://img.freepik.com/free-photo/close-up-appetizing-ramadan-meal_23-2151182540.jpg?t=st=1717790776~exp=1717794376~hmac=5df5b5fb8f025fccff8f2f07688591decc566ed394c101a070f6ee773d041b4f&w=996",
+                 "price": 500,
+                 "foodItem":[
+                    {
+                        "name":"chicken Biryani",
+                        "price":250,
+                        "address":"Basavanaguli ,bangalore",
+                        "ratings":"2.5",
+                        "image":"https://img.freepik.com/free-photo/high-angle-pakistan-meal-composition_23-2148821517.jpg?t=st=1717797155~exp=1717800755~hmac=8d3967dfdbb935855801ac1639cfa4540017305bef96918839e11730a0f356e2&w=996"
+                    },
+                    {
+                        "name":"veg biryani",
+                        "price":700,
+                        "address":"St Marks Road ,bangalore",
+                        "ratings":"4.5",
+                        "image":"https://img.freepik.com/free-photo/side-view-rice-garnish-with-fried-onion-carrot-greens-chili-pepper-table_141793-5069.jpg?t=st=1717797193~exp=1717800793~hmac=27038b2fae1e1226503b353239a87e04fe7db8e45f0940a826303e8f31aa81d5&w=996"
+                    },
+                    {
+                        "name":"paneer biryani",
+                        "price":100,
+                        "address":"Residency Food ,bangalore",
+                        "ratings":"4.3",
+                        "image":"https://img.freepik.com/premium-photo/indian-vegetable-pulav-biryani-made-using-basmati-rice-served-terracotta-bowl-selective-focus_466689-55616.jpg?w=996"
+                    },
+                    {
+                        "name":"ghee biryani",
+                        "price":400,
+                        "address":"Church Road ,bangalore",
+                        "ratings":"3.9",
+                        "image":"https://img.freepik.com/free-photo/close-up-appetizing-ramadan-meal_23-2151182540.jpg?t=st=1717790776~exp=1717794376~hmac=5df5b5fb8f025fccff8f2f07688591decc566ed394c101a070f6ee773d041b4f&w=996"
+                    }
+                 ]
+             },
+             {
+                 "foodname":"Veg Meals",
+                 "foodImage":"https://img.freepik.com/free-photo/delicious-food-table_23-2150857756.jpg?t=st=1717790814~exp=1717794414~hmac=ee99950b8a786889a6a433a16d5f5c8b8bbf422f18463cbc8df306ecbf4a8c94&w=1060",
+                 "price": 200,
+                 "foodItem":[
+                    {
+                        "name":"veg meals",
+                        "address":"Brigade ,bangalore",
+                        "ratings":"4.9",
+                        "price":250,
+                        "image":"https://img.freepik.com/free-photo/top-view-pakistan-food-arrangement_23-2148821544.jpg?t=st=1717797591~exp=1717801191~hmac=de0b678a72172ea18e858babb3f8d1d440b374e78722dd2124eafa8e942b8643&w=740"
+                    },
+                    {
+                        "name":"non veg meals",
+                        "price":700,
+                        "address":"Jayanagar ,bangalore",
+                        "ratings":"3.8",
+                        "image":"https://img.freepik.com/premium-photo/sweet-coconut-rice-narali-bhat-marathi-garnished-with-cashew-cloves-dry-fruits-served-brass-bowl-moody-background-selective-focus_466689-59279.jpg?w=996"
+                    },
+                    {
+                        "name":"meals",
+                        "price":100,
+                        "address":"Rich mond Town ,bangalore",
+                        "ratings":"2.9",
+                        "image":"https://img.freepik.com/free-photo/curry-fried-rice_1339-1810.jpg?t=st=1717797695~exp=1717801295~hmac=8441c84e1f7045ee3cc572197764bf4b205888465a7501240019e249d3e0cd69&w=900"
+                    },
+                    {
+                        "name":"meals",
+                        "price":400,
+                        "address":"Shanti nagar ,bangalore",
+                        "ratings":"2.6",
+                        "image":"https://img.freepik.com/free-vector/hand-drawn-chicken-biryani_52683-49331.jpg?t=st=1717797760~exp=1717801360~hmac=144393a0abc02d541bacc3d685e4c45e1761af7154d8dd723e79d5ff2679110f&w=740"
+                    }
+                 ]
+             },
+             {
+                 "foodname":"chapati",
+                 "foodImage":"https://img.freepik.com/free-photo/indian-tasty-roti-composition_23-2149073357.jpg?t=st=1717790844~exp=1717794444~hmac=27d0cde9a0b7c68b804d220a96b2fb21d6e03c37cc55dab0e92af0e3dc5f3081&w=996",
+                 "price":140,
+                 "foodItem":[
+                    {
+                        "name":"chapati",
+                        "price":250,
+                        "address":"Shanti nagar ,bangalore",
+                        "ratings":"2.9",
+                        "image":"https://img.freepik.com/free-photo/indian-tasty-roti-composition_23-2149073357.jpg?t=st=1717790844~exp=1717794444~hmac=27d0cde9a0b7c68b804d220a96b2fb21d6e03c37cc55dab0e92af0e3dc5f3081&w=996"
+                    },
+                    {
+                        "name":"chicken chapati",
+                        "price":700,
+                        "address":"Kormangala ,bangalore",
+                        "ratings":"3.5",
+                        "image":"https://img.freepik.com/premium-photo/chapati-tava-roti-also-known-as-indian-bread-fulka-phulka-main-ingredient-lunch-dinner-india-pakistan-selective-focus_466689-32575.jpg?w=996"
+                    },
+                    {
+                        "name":"paneer chapati",
+                        "price":100,
+                        "address":"BTM ,bangalore",
+                        "ratings":"4.3",
+                        "image":"https://img.freepik.com/free-photo/indian-tasty-roti-composition_23-2149073358.jpg?t=st=1717797491~exp=1717801091~hmac=cd2ed76f69e5acd33c8329b0a89ccffd6e3ae8fbdf6b93bc0385446a8708cf5d&w=996"
+                    },
+                    {
+                        "name":"corn chapati",
+                        "price":400,
+                        "address":"Ashok nagar ,bangalore",
+                        "ratings":"5",
+                        "image":"https://img.freepik.com/free-photo/delicious-roti-arrangement-table_23-2149033983.jpg?t=st=1717797529~exp=1717801129~hmac=ac35a4cdce70eb7d0350a632f88447bfd9184dbce6eaebf67b1aacf010523c69&w=996"
+                    }
+                 ]
+             }
+         ]
+      
+     },
+     {
+         "restaurantname":"Zomato",
+         "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-QkAue65swo0CALhpyCvyuWklVVtuyw7PFurDfdIi_Gi6H4uHVKwl1Xezb_wOMn7ZXs8&usqp=CAU",
+         "location":{
+             "city":"",
+             "pincode":"dd"
+         },
+         "availableFoods":[
+             {
+                 "foodname":"Cool drinks",
+                 "foodImage":"https://img.freepik.com/premium-photo/refreshing-drink-with-orange-slice-strawberries_118124-185776.jpg?w=1060",
+                 "price":130,
+                 "foodItem":[
+                    {
+                        "name":"cool drinks",
+                        "address":"Rajaji nagar ,bangalore",
+                        "ratings":"3.4",
+                        "price":250,
+                        "image":"https://img.freepik.com/premium-photo/highquality-image-refreshing-summer-drink-lemonade-generative-ai_117038-7072.jpg?w=996"
+                    },
+                    {
+                        "name":"grape cool drink",
+                        "price":700,
+                        "address":"Ashok nagar ,bangalore",
+                        "ratings":"3.7",
+                        "image":"https://img.freepik.com/premium-photo/free-photo-front-view-coka-cola-cooldrink-chill-ice-cubes-bubbles_437985-84.jpg?w=740"
+                    },
+                    {
+                        "name":"Orange",
+                        "price":100,
+                        "address":"Shanti nagar ,bangalore",
+                        "ratings":"5",
+                        "image":"https://img.freepik.com/premium-photo/cocktail-with-lemon-cooldrink-white-background_827055-286.jpg?w=740"
+                    },
+                    {
+                        "name":"Lemon",
+                        "price":400,
+                        "address":"Basaweshwara nagar ,bangalore",
+                        "ratings":"5",
+                        "image":"https://img.freepik.com/premium-photo/highquality-image-refreshing-summer-drink-lemonade-generative-ai_117038-7079.jpg?w=996"
+                    }
+                 ]
+             },
+             {
+                 "foodname":"Fish",
+                 "foodImage":"https://img.freepik.com/free-photo/fried-fish-carp-fresh-vegetable-salad-wooden-table_2829-19923.jpg?t=st=1717798249~exp=1717801849~hmac=82e67a8b6e5cc24d95810eeca486365a55a83ce5a99b07eb1ff936d6a274a326&w=900",
+                 "price":560,
+                 "foodItem":[
+                    {
+                        "name":"fish fry",
+                        "address":"Majestic nagar ,bangalore",
+                        "ratings":"5",
+                        "price":250,
+                        "image":"https://img.freepik.com/free-photo/fried-fish-carp-fresh-vegetable-salad-wooden-table_2829-19923.jpg?t=st=1717798249~exp=1717801849~hmac=82e67a8b6e5cc24d95810eeca486365a55a83ce5a99b07eb1ff936d6a274a326&w=900"
+                    },
+                    {
+                        "name":"fish roast",
+                        "address":"Basaweshwara nagar ,bangalore",
+                        "ratings":"3.9",
+                        "price":700,
+                        "image":"https://img.freepik.com/free-photo/grilled-fish-wooden-board-onion-lettuce-tomato-lemon_141793-17504.jpg?t=st=1717798286~exp=1717801886~hmac=9bfc7111cea092719a2ad6c78d8b13693289a1222b16b8c45d6704345db69ae3&w=996"
+                    },
+                    {
+                        "name":"Lemon Fish",
+                        "address":"Banashankari nagar ,bangalore",
+                        "ratings":"3.8",
+                        "price":100,
+                        "image":"https://img.freepik.com/premium-photo/bowl-fish-chips_518173-2426.jpg?w=826"
+                    },
+                    {
+                        "name":"Fried fish",
+                        "price":400,
+                        "address":"Malleshwaram nagar ,bangalore",
+                        "ratings":"4.9",
+                        "image":"https://img.freepik.com/premium-photo/battered-fried-fish-steak-with-orange-salad_1048944-30823522.jpg?w=1060"
+                    }
+                 ]
+             },
+             {
+                 "foodname":"prawns",
+                 "foodImage":"https://img.freepik.com/free-photo/fried-shrimp-squid-with-spicy-sauce_1150-35477.jpg?t=st=1717790741~exp=1717794341~hmac=90851f5a399f0eb307dad51e854426fc30f744c05e4b1b8d9b2c67a17298f117&w=996",
+                 "price":900,
+                 "foodItem":[
+                    {
+                        "name":"prawns fry",
+                        "address":"Malleshwaram nagar ,bangalore",
+                        "ratings":"4.4",
+                        "price":250,
+                        "image":"https://img.freepik.com/free-photo/moroccan-stew-with-sausages_2829-15959.jpg?t=st=1717798405~exp=1717802005~hmac=73139244bc55f2a0211aadfaaa9b45448eb624c5db1e0579cfdbde4b2e34f05c&w=996"
+                    },
+                    {
+                        "name":"prawns roast",
+                        "address":"Rajaji nagar ,bangalore",
+                        "ratings":"4.9",
+                        "price":700,
+                        "image":"https://img.freepik.com/free-photo/grilled-fish-wooden-board-onion-lettuce-tomato-lemon_141793-17504.jpg?t=st=1717798286~exp=1717801886~hmac=9bfc7111cea092719a2ad6c78d8b13693289a1222b16b8c45d6704345db69ae3&w=996"
+                    },
+                    {
+                        "name":"Lemon prawns",
+                        "address":"Indira nagar ,bangalore",
+                        "ratings":"4.2",
+                        "price":100,
+                        "image":"https://img.freepik.com/premium-photo/dish-fried-shrimp-with-sweet-chilli-sauce-served-with-chopsticks_1089554-11131.jpg?w=996"
+                    },
+                    {
+                        "name":"Fried prawns",
+                        "address":"Adugoli ,bangalore",
+                        "ratings":"4.7",
+                        "price":400,
+                        "image":"https://img.freepik.com/free-photo/front-view-baked-potatoes-with-minced-meat-greens-inside-plate-dark-blue-desk_140725-49054.jpg?t=st=1717798445~exp=1717802045~hmac=62cf495d1eae959586df64a9ce3502f4f3e580b178dac365f9cb128c36905c72&w=996"
+                    }
+                 ]
+             },
+             {
+                 "foodname":"Egg Biryani",
+                 "foodImage":"https://img.freepik.com/free-photo/arrangement-with-delicious-pakistan-meal_23-2148821529.jpg?t=st=1717790916~exp=1717794516~hmac=965702784e81d3d99f839fc5cc521c65407fbeddb476534a28c7ea8882a587af&w=996",
+                 "price":400,
+                 "foodItem":[
+                    {
+                        "name":"egg biryani",
+                        "address":"Kempegowda ,bangalore",
+                        "ratings":"4.1",
+                        "price":250,
+                        "image":"https://img.freepik.com/premium-photo/kande-pohay-aloo-poha-is-popular-indian-breakfast-recipe-made-using-flattened-rice-usually-served-with-hot-tea-served-bowl-selective-focus_466689-47119.jpg?w=996"
+                    },
+                    {
+                        "name":"chicken egg biryani",
+                        "price":700,
+                        "address":"Majestic ,bangalore",
+                        "ratings":"4.6",
+                        "image":"https://img.freepik.com/premium-photo/rice-with-chicken-black-plate-dark-background-top-view_79830-134.jpg?w=996"
+                    },
+                    {
+                        "name":"special biryani",
+                        "price":100,
+                        "address":"Basavanaguli ,bangalore",
+                        "ratings":"3.7",
+                        "image":"https://img.freepik.com/free-photo/high-angle-pakistan-meal-composition_23-2148821517.jpg?t=st=1717797155~exp=1717800755~hmac=8d3967dfdbb935855801ac1639cfa4540017305bef96918839e11730a0f356e2&w=996"
+                    },
+                    {
+                        "name":"egg dum biryani",
+                        "price":400,
+                        "address":"Adugoli ,bangalore",
+                        "ratings":"2.9",
+                        "image":"https://img.freepik.com/free-photo/front-view-delicious-plov-with-different-raisins-dark-space_140725-97295.jpg?t=st=1717798535~exp=1717802135~hmac=ed723428e341df307b29f5a8ea8e31eb6c2f453b71657e70fa37b2684a67c6e1&w=996"
+                    }
+                 ]
+             }
+         ]
+     },
+     {
+         "restaurantname":"SpiceCraft",
+         "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVNQnI0BSTg9-tKY6AYvkw7_7zuXS0rPH5UA&s",
+         "location":{
+             "city":"",
+             "pincode":"dd"
+         },
+         "availableFoods":[
+             {
+                 "foodname":"Salards",
+                 "foodImage":"https://img.freepik.com/premium-photo/sumptuous-salad-featuring-mix-crisp_1082068-8725.jpg?w=1060",
+                 "price":190,
+                 "foodItem":[
+                    {
+                        "name":"veg Salards",
+                        "address":"Majestic ,bangalore",
+                        "ratings":"4.5",
+                        "price":250,
+                        "image":"https://img.freepik.com/premium-photo/sumptuous-salad-featuring-mix-crisp_1082068-8725.jpg?w=1060"
+                    },
+                    {
+                        "name":"chicken egg Salards",
+                        "price":700,
+                        "address":"Adugoli ,bangalore",
+                        "ratings":"2.9",
+                       "image":"https://img.freepik.com/free-photo/top-view-delicious-salad-plate-stained-white-surface_179666-34151.jpg?t=st=1717798691~exp=1717802291~hmac=ad031acc521fa6280c74f04cc9470d810ed505820e23250f0169c46af4eb1fac&w=996"
+                    },
+                    {
+                        "name":"special Salards",
+                        "price":100,
+                        "address":"Basaweshwara nagar ,bangalore",
+                        "ratings":"4.2",
+                        "image":"https://img.freepik.com/free-photo/flat-lay-salad-with-chicken-sesame-seeds_23-2148700369.jpg?t=st=1717798669~exp=1717802269~hmac=2c56d37a1624e2d1aa8494ebf525d0f95d2c50cfcd630a4cfb3a2371387bfb72&w=996"
+                    },
+                    {
+                        "name":" Tomato",
+                        "price":400,
+                        "address":"Basavanagudi ,bangalore",
+                        "ratings":"2.5",
+                        "image":"hhttps://img.freepik.com/free-photo/front-view-delicious-vegetable-salad-sliced-food-with-fresh-ingredients-dark-space_140725-95222.jpg?t=st=1717798648~exp=1717802248~hmac=5fbb4327d5f32257a512d35eef5955f0420dd3817620309cf54cffc2db2e9b08&w=996"
+                    }
+                 ]
+             },
+             {
+                 "foodname":"Juices",
+                 "foodImage":"https://img.freepik.com/premium-photo/fresh-fruit-cocktails-wooden-table-bar-are-showcased_922357-33099.jpg?w=996",
+                "price":90,
+                "foodItem":[
+                    {
+                        "name":"Juices",
+                        "address":"Adugoli ,bangalore",
+                        "ratings":"4.2",
+                        "price":250,
+                        "image":"https://img.freepik.com/premium-photo/fresh-fruit-cocktails-wooden-table-bar-are-showcased_922357-33099.jpg?w=996"
+                    },
+                    {
+                        "name":"Lemon juice",
+                        "price":700,
+                        "ratings":"3.1",
+                        "address":"Shanti nagar ,bangalore",
+
+                       "image":"https://img.freepik.com/free-photo/side-view-natural-fresh-detox-water-served-with-tube-mint-orange-brown-background_140725-94661.jpg?t=st=1717798758~exp=1717802358~hmac=e3f6b5330d5e2f4713b46a190da8533022086909ac978680e29e4630ca9c286b&w=996"
+                    },
+                    {
+                        "name":"Mango juice",
+                        "price":100,
+                        "address":"Indira nagar ,bangalore",
+                        "ratings":"4.7",
+                        "image":"https://img.freepik.com/premium-photo/fresh-pineapple-juice_1339-101836.jpg?w=996"
+                    },
+                    {
+                        "name":" Orange",
+                        "price":400,
+                        "address":"Rajaji nagar ,bangalore",
+                        "ratings":"3.9",
+                        "image":"https://img.freepik.com/free-photo/fresh-orange-juice-glass-dark-background_1150-45560.jpg?t=st=1717798837~exp=1717802437~hmac=b9c19350c41204bcd2613b5468d1cdef4f2c1cc72ccb6e951cd211baaad5b4e0&w=996"
+                    }
+                 ]
+             },
+             {
+                 "foodname":" Dum biryani",
+                 "foodImage":"https://img.freepik.com/free-photo/gourmet-biryani-with-saffron-rice-chicken-generated-by-ai_188544-39093.jpg?t=st=1717791038~exp=1717794638~hmac=c9a71abb7b7764da187c4faa9bcee565ba434a4d1303be63d558b7d6101e4d81&w=1060",
+                 "price":580,
+                 "foodItem":[
+                    {
+                        "name":"Dum biryani",
+                        "address":"kormangla, bangalore",
+                        "ratings":"2.3",
+                        "price":250,
+                        "image":"https://img.freepik.com/free-photo/american-shrimp-fried-rice-served-with-chili-fish-sauce-thai-food_1150-26584.jpg?t=st=1717799197~exp=1717802797~hmac=3530a7e74296a53b078d4dff28eddcd883f08fd6d79dc4b54d8b059e0fe9205a&w=996"
+                    },
+                    {
+                        "name":"Dum egg biryani",
+                        "price":700,
+                        "ratings":"2.9",
+                        "address":"Sampangirama ,bangalore",
+
+                       "image":"https://img.freepik.com/free-photo/pilaf-with-carrots-saffron_140725-1198.jpg?t=st=1717799179~exp=1717802779~hmac=0a4f109d6c7e660f9a2fad2a4790c0681d053eb42ade433601ac65e0a054b82c&w=826"
+                    },
+                    {
+                        "name":"Dum chicken biryani",
+                        "price":100,
+                        "address":"Malleshwaram nagar ,bangalore",
+                        "ratings":"3.1",
+                        "image":"https://img.freepik.com/free-photo/close-up-appetizing-ramadan-meal_23-2151182540.jpg?t=st=1717799148~exp=1717802748~hmac=3f3aced06297d1ace0b016fe6db46773451d7cf0b00fb29a9af9680362f12490&w=996"
+                    },
+                    {
+                        "name":" Dum prawns biryani",
+                        "price":400,
+                        "address":"Rajaji nagar ,bangalore",
+                        "ratings":"3.2",
+                        "image":"https://img.freepik.com/premium-photo/fried-rice-tom-yum-with-seafood-spicy-food-thai-style-nasi-goreng-tomyam-malaysia_742418-485.jpg?w=900"
+                    }
+                 ]
+             },
+             {
+                 "foodname":"$ Paneer veg nons",
+                 "foodImage":"https://img.freepik.com/free-photo/high-angle-chicken-meal_23-2148825122.jpg?t=st=1717791068~exp=1717794668~hmac=c377063f78b7543a92f09ed395f9b54581826e084b48449ed095c71d0f3d5a77&w=996",
+                 "price": 290,
+                 "foodItem":[
+                    {
+                        "name":"Panner kaju curry",
+                        "address":"Rich mond Town ,bangalore",
+                        "ratings":"2.7",
+                        "price":"$250",
+                        "image":"https://img.freepik.com/premium-photo/bowl-full-panner-tikka-white-background_1165739-1098.jpg?w=826"
+                    },
+                    {
+                        "name":"Paneer curry",
+                        "price":"$700",
+                        "ratings":"3.5",
+                        "address":"Jayanagar ,bangalore",
+
+                       "image":"https://img.freepik.com/premium-photo/bowl-full-panner-tikka-white-background_1165739-1098.jpg?w=826"
+                    },
+                    {
+                        "name":"Paneer masala",
+                        "price":"$100",
+                        "ratings":"4.5",
+                        "address":"Residency Road ,bangalore",
+
+                        "image":"https://img.freepik.com/premium-photo/brazilian-food-tasty-cassava-recipe_979658-4866.jpg?w=1060"
+                    },
+                    {
+                        "name":" Paneer veg beans",
+                        "price":"$400",
+                        
+                        "address":"Rajaji nagar ,bangalore",
+                        "ratings":"5",
+
+                        "image":"https://img.freepik.com/free-photo/close-up-plate-with-chicken-nuggets_23-2147765459.jpg?t=st=1717798886~exp=1717802486~hmac=f83173657bbfdd23796c65658a816efd2b4177a6e8fddbd0148b5ad9beaa2582&w=740"
+                    }
+                 ]
+             }
+         ]
+     }
+    ]
+ }

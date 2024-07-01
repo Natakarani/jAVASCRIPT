@@ -1,0 +1,501 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<style>
+    * {
+        
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    button{
+        cursor: pointer;
+    }
+
+    header {
+        font-weight: 500;
+        font-size: 24px;
+        padding-top: 30px;
+    }
+
+    header h1 {
+        text-shadow: 2px 2px 4px black;
+    }
+
+    .container1 {
+        min-height: 86vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .startBtn:hover{
+        background-color: rgba(123, 5, 106,0.6) !important;
+
+    }
+
+    .startQuiz {
+        color: white;
+        min-height: 90vh;
+        letter-spacing: 0.5px;
+        background: repeating-linear-gradient(45deg, rgb(220, 6, 181), rgb(10, 10, 10), rgb(237, 5, 195));
+    }
+
+    .startQuiz h1 {
+        font-size: 40px;
+    }
+
+    .startQuiz header {
+        letter-spacing: 0.5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 150px;
+    }
+
+    .startQuiz button {
+        color: white;
+        font-size: 20px;
+        background-color: rgb(183, 6, 165);
+        padding: 10px 30px;
+        border-radius: 4px;
+        border: 2px solid white;
+        margin-top: 19px;
+    }
+
+    .startQuiz p {
+        font-size: 18px;
+    }
+
+    header div {
+        display: flex;
+        gap: 50px;
+        align-items: center;
+    }
+
+    .nextStep {
+        letter-spacing: 0.5px;
+        background: repeating-linear-gradient(45deg, rgb(220, 6, 181), rgb(10, 10, 10), rgb(237, 5, 195));
+        color: white;
+        overflow: hidden;
+        min-height: 97vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nextStep1 {
+        background-color: white !important;
+        color: black !important;
+        padding: 20px;
+        max-width: 400px;
+        margin-top: 14%;
+        margin-left: 42%;
+    }
+    .nextStep1 h1 {
+        margin-bottom: 18px;
+        color: rgb(184, 5, 157);
+    }
+
+    .btns {
+        display: flex;
+        gap: 40px;
+    }
+
+    .nextStep1 button {
+        border-radius: 4px;
+        font-size: 18px;
+        margin-top: 20px;
+        border: none;
+        outline: none;
+        padding: 10px 30px;
+        background-color: rgb(189, 9, 132);
+        color: white;
+    }
+
+    .lightBtn {
+        color: rgb(189, 9, 132) !important;
+        background-color: white !important;
+        border: 2px solid rgb(189, 9, 132) !important;
+    }
+    .lightBtn:hover{
+        background-color: rgb(179, 7, 133) !important;
+        color:white !important;
+    }
+
+    .card {
+        background: white;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .que {
+        font-size: 25px;
+        font-weight: 500;
+        margin-bottom: 18px;
+        margin-top: 68px;
+        letter-spacing: 0.5px;
+    }
+
+    .option {
+        color: rgb(187, 5, 135);
+        margin-top: 24px;
+        border-radius: 6px;
+        border: 1px solid rgb(187, 5, 135);
+        padding: 10px;
+        letter-spacing: 0.5px;
+    }
+    
+
+    .selected {
+        margin-top: 14px;
+        border-radius: 6px;
+        padding: 10px;
+        letter-spacing: 0.5px;
+        color: green !important;
+        border: 2px solid rgb(11, 128, 0) !important;
+    }
+
+    .notselected {
+        margin-top: 14px;
+        border-radius: 6px;
+        border: 1px solid rgb(187, 5, 135);
+        padding: 10px;
+        letter-spacing: 0.5px;
+        color: red !important;
+        border: 1px solid rgba(235, 35, 35, 0.895) !important;
+    }
+
+    .selection {
+        background-color: black;
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+       min-width: 100%;
+        color: white;
+    }
+    .selection1 {
+        max-width: 400px;
+        display: flex; 
+         flex-direction: column;
+        /* align-items: center; */
+        margin-left:40%;
+        margin-top: 8%;
+        letter-spacing: 0.5px;
+        border: 1px solid rgb(220, 6, 181);
+        padding: 20px;
+        border-radius: 4px;
+    } 
+    .selection h1 {
+        padding: 4px 30px;
+        background: repeating-linear-gradient(45deg, black, rgb(220, 6, 181), rgb(10, 10, 10));
+    }
+   
+    .optionStyle {
+        border: 1px solid rgb(220, 6, 181);
+        padding: 10px;
+        padding: 10px 90px 10px 10px;
+        border-radius: 4px;
+        color: rgb(220, 6, 181);
+    }
+
+    .line {
+        background-color: rgb(220, 6, 181);
+        height: 2px;
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .btn {
+        background-color: white;
+        border: 2px solid rgb(220, 6, 181);
+        color: rgb(220, 6, 181);
+        font-size: 18px;
+        border-radius: 4px;
+        font-weight: 500;
+        margin-top: 18px;
+        margin-left: 220px;
+        padding: 8px 30px;
+    }
+
+    .scoreCard {
+        background-color: black;
+         display: flex;
+         padding: 20px;
+         align-items: center;
+         justify-content: center;
+         min-height: 100vh;
+    }
+    .scoreCard1{
+        margin-top: 16%;
+        margin-left: 40%;
+       display: flex;
+       border:2px solid rgb(193, 6, 175);
+       /* box-shadow: 2px 2px 4px rgb(153, 3, 143), -2px -2px 6px rgb(153, 3, 143); */
+       text-align: center;
+        padding: 40px;
+        border-radius: 8px;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+       max-width: 400px;
+        /* background: repeating-linear-gradient(45deg, rgb(220, 6, 181), rgb(10, 10, 10), rgb(237, 5, 195)); */
+    }
+    .score h1{
+        color: white;
+        text-shadow: 2px 2px 4px grey;
+        font-size: 40px;
+    }
+     .score p{
+        margin-top: 20px;
+        color: white;
+        text-shadow: 2px 2px 4px rgb(31, 29, 29);
+        font-size: 20px;
+    } 
+    .tryAgainBtn{
+        padding:8px 14px;
+
+    color: white; 
+    font-size: 18px;
+      border: none;
+     cursor: pointer;
+     border-radius:4px;
+        background-color: rgb(223, 10, 198) !important;
+    }
+    .tryAgainBtn:hover{
+        background-color: rgb(130, 4, 115) !important;
+    }
+    .homeBtn{
+        padding:8px 14px; 
+     color: purple; font-size: 18px;
+      border: none;
+       cursor: pointer;
+       border-radius:4px;
+        background-color: white;
+        border: 2px solid rgb(223, 10, 198);
+    }
+    .homeBtn:hover{
+      color: white !important;
+      background-color: rgb(223, 10, 198) !important;
+
+    }
+</style>
+
+<body>
+
+    <div class="startQuiz">
+        <header>
+            <h1>Quiz</h1>
+            <div>
+                <p>Home</p>
+                <p>Contacts</p>
+                <p>Details</p>
+                <p>About</p>
+            </div>
+        </header>
+        <div class="container1">
+            <div style="text-align:center">
+                <h1>Quiz Website</h1>
+                <p style="margin:18px">Lorem ipsum dolor, sit amet consectetur adipisicing elit.<br>
+                    Beatae atque illo distinctio perferendis fugit laborum dicta <br>
+                    neque, totam magnam? Sit!</p>
+                <button onclick="nextStepFunc()">Start Quiz</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="nextStep">
+        <div class="nextStep1" style="line-height: 40px;box-shadow:2px 2px 4px grey, -2px -2px 4px grey;border-radius:8px"> 
+            <h1>Quiz Website</h1>
+            <p>1.No negative marking </p>
+            <p>2. Answser all the quesstions</p>
+            <p>3. select only one option</p>
+            <p>4. once selected cannot change the option</p>
+            <p>5. Each question carries 1 mark</p>
+            <div class="btns">
+                <button class="lightBtn" onclick="startQuizFunc()">Exit Page</button>
+                <button onclick="continuePageFunc()">Continue</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="selection">
+        <div class="selection1">
+            <div class="continueStep"></div>
+            <div class="que"></div>
+            <div class="options"></div>
+            <div class="nextBtn"></div>
+        </div>
+    </div>
+
+    <div class="scoreCard">
+        <div class="scoreCard1">
+            <p class="score"></p>
+            <div style="display: flex;margin-top: 20px;gap:30px">
+            <button class="tryAgainBtn" onclick="resetQuiz()">Play Again</button>
+            <button class="homeBtn" onclick="startAgainFunc()">Go To Home</button>
+           </div>
+        </div>
+    </div>
+    
+    <script>
+        let scoreCount = 0;
+        let index = 0;
+
+        const score = document.querySelector('.score');
+        const selection = document.querySelector('.selection');
+        const scoreCard = document.querySelector('.scoreCard');
+        const nextBtn = document.querySelector('.nextBtn');
+        const options = document.querySelector('.options');
+        const que = document.querySelector('.que');
+        const continueStep = document.querySelector('.continueStep');
+        const nextStep = document.querySelector('.nextStep');
+        const startQuiz = document.querySelector('.startQuiz');
+
+        const data = [
+            {
+                que: 'What does HTML stand for?',
+                option: ['Hyper Text Markup Language', 'Hyper Type Multi Language', 'Hyper Text Multiple Language', 'Home Text Multi Language'],
+                ans: 'Hyper Text Markup Language'
+            },
+            {
+                que: 'What does CSS stands for?',
+                option: ['cascade sheets', 'cascade style sheet', 'cascade sheet style', 'none of above'],
+
+                ans: 'cascade style sheet'
+            },
+            {
+                que: 'What does JS stand for?',
+                option: ['Javascope', 'Javascript', 'Javashift', 'none of above'],
+                ans: 'Javascript'
+            },
+            {
+                que: 'Who javascript the invented?',
+                option: ['Brendan Eich','James Gosling','Dennis Reynolds','DEnnis Reif'],
+                ans: 22
+            },
+            {
+                que: 'When javascript the invented?',
+                option: [1993,1902,1925,1995],
+                ans: 22
+            }
+        ];
+
+        function startQuizFunc() {
+            startQuiz.style.display = 'block';
+            selection.style.display = 'none';
+            scoreCard.style.display = 'none';
+            nextStep.style.display = 'none';
+        }
+
+        startQuizFunc();
+
+        function nextStepFunc() {
+            scoreCard.style.display = 'none';
+            nextStep.style.display = 'block';
+            selection.style.display = 'none';
+            startQuiz.style.display = 'none';
+        }
+
+        function continuePageFunc() {
+            startQuiz.style.display = 'none';
+            scoreCard.style.display = 'none';
+            selection.style.display = 'block';
+            nextBtn.innerHTML = ``;
+            nextStep.style.display = 'none';
+            continueStep.innerHTML = `<div style="display:flex;flex-direction:column;align-items:center;justify-content:center">
+                <h1>Codehal Quiz</h1>
+                <div style="display:flex;gap:20px;margin-top:28px;font-size:18px;letter-spacing:0.5px">
+                    <p>Quiz website tutorials</p>
+                   <p>Question: ${index+1}</p>
+                </div>
+            </div>`;
+            que.innerHTML = `<p style="margin-top:-20px">${data[index].que}</p>`;
+            options.innerHTML = ``;
+            data[index].option.forEach((item) => {
+                options.innerHTML += `<div class="optionStyle" style="margin-top:22px">
+                <input type="radio" value="${item}" name="name" onclick="selectIt(event)"> 
+                <label>${item}</label><br>
+                </div>`;
+            });
+        }
+
+        function selectIt(event) {
+            if (event.target.value == data[index].ans) {
+                event.target.parentElement.classList.add('selected');
+                scoreCount++;
+            } else {
+                event.target.parentElement.classList.add('notselected');
+                selectCorrectOption();
+            }
+            let inputs = document.querySelectorAll('input');
+            inputs.forEach((item) => {
+                item.disabled = true;
+            });
+            nextBtn.innerHTML = `<button class="btn" onclick="nextQue()">Next</button>`;
+        }
+
+        function selectCorrectOption() {
+            let inputs = document.querySelectorAll('input');
+            inputs.forEach((item) => {
+                if (item.value == data[index].ans) {
+                    item.parentElement.classList.add('selected');
+                }
+            });
+        }
+
+        function nextQue() {
+            que.innerHTML = ``;
+            options.innerHTML = ``;
+            index++;
+            if (index < data.length) {
+                continuePageFunc();
+            } else {
+                showScore();
+            }
+        }
+
+        function showScore() {
+            selection.style.display = 'none';
+            scoreCard.style.display = 'block';
+            startQuiz.style.display = 'none';
+            nextBtn.style.display = 'none';
+            score.innerHTML = `
+                <h1>Quiz Result!</h1>
+                <p>Your Score: ${scoreCount} out of ${data.length}</p>
+            `;
+            index = 0;
+            scoreCount = 0;
+        }
+
+        function resetQuiz() {
+            document.querySelector('.startQuiz').style.display = 'none';
+        document.querySelector('.scoreCard').style.display = 'none';
+        document.querySelector('.selection').style.display = 'none';
+        startQuizFunc();
+        nextBtn.style.display='block'
+        }
+        function startAgainFunc(){
+            startQuizFunc();
+            nextBtn.style.display='block'
+        }
+
+      
+    </script>
+</body>
+
+</html> 

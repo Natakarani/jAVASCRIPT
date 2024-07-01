@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        #result{
+            display: flex;
+        }
+        #result h1{
+            animation: anim 1s linear infinite alternate;
+            animation-delay: var(--time);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-left: 10px;
+        }
+        @keyframes anim {
+            from{
+                transform: translateY(-80px);
+                color: green;
+            }
+            to{
+                transform: translateY(80px);
+                color: red;
+            }
+            
+        }
+        /* or else instead of var(--time) we can use this nth-childs */
+        /* #result h1:nth-child(1){
+            background-color: grey;
+            padding: 90px;
+        }
+        #result h1:nth-child(2){
+            background-color: grey;
+            padding: 90px;
+        } */
+    </style>
+
+    <p>split method= this method divides a string into ordered list of substring</p>
+        <input type="text" placeholder="enter data" id="name">
+
+        <div id="result"></div>
+    <script>
+let result=document.getElementById('result')
+        let a="javascript";
+
+      document.write(a.split('')+' <br>')
+      let b=a.split('');
+     console.log(typeof b)
+
+     b.map((item,index)=>{      
+          result.innerHTML+=`<h1 style=--time:${index}s>${item}</h1>`//0s, 1s
+ 
+        result.innerHTML+=`<h1 style=--time:0.${index}s>${item}</h1>`//0.0s, 0.1s
+
+     })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #result{
+       
+        color:white;
+        font-size: 20px;
+        letter-spacing: 1px;
+        
+    }
+    .add{
+        padding:10px;
+        width:fit-content;
+        background-color: green;
+    }
+    .addred{
+        background-color:red;
+    }
+</style>
+<body>
+    <div id="result"></div>
+    <script>
+        let result=document.getElementById('result')
+        let str=new String('123456789');
+        
+     let str1= str.split('')
+     for(let i=0;i<str1.length;i++){
+        if(str1[i]==8){
+            result.innerHTML+=`<p class="addred add">${str1[i]}</p>`
+
+        }
+        else{
+            result.innerHTML+=`<p class="add">${str1[i]}</p>`
+        }
+        
+
+     }
+       
+    </script>
+</body>
+</html>

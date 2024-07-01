@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="result"></div>
+    <script>
+        let result=document.getElementById('result')
+        let image=document.createElement('img');
+        image.src='https://img.freepik.com/free-photo/landscape-morning-fog-mountains-with-hot-air-balloons-sunrise_335224-794.jpg?t=st=1714413682~exp=1714417282~hmac=68cf3ee6be4c6061b10f441175fc04ea67286cc8320510a0dc54f6b0702a916e&w=996';
+        image.alt="image";
+        image.width=100;
+        
+        document.body.append(image);
+
+      let paragraph= document.createElement('p')
+      paragraph.innerText="this is paragraph"
+      paragraph.style="color:red"
+        result.append(paragraph)
+
+
+
+
+    </script>
+</body>
+</html>

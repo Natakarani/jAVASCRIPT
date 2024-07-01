@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>we can call the sttaic inside another static method by using classname or this keyword</h2>
+    <h3>but when we want to call the static inside the non static we have to use username only</h3>
+    <script>
+        class Student{
+            static display(){
+                document.write('this is display method'+'<br>')
+            }
+            static display1(){
+                document.write(`<p>${this.display()}</p>`)
+               
+            }
+            static display2(){
+                document.write(`${Student.display()}`+'<br>')
+               
+            }
+             display3(){
+                document.write(`${Student.display()}`+'<br>')
+            }
+        }
+        document.write("=============")
+        Student.display();
+        document.write("=============")
+        Student.display1();
+        document.write("=============")
+        Student.display2()
+
+    </script>
+</body>
+</html>

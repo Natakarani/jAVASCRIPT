@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>arithematic operator</h1>
+    </center>
+    <hr>
+    <script>
+        let firstName=50;
+        let lastName=40;
+        let add=firstName+lastName;
+        document.writeln(`add ${add}<br>`);
+        let sub=firstName-lastName;
+        document.writeln(`sub ${sub}<br>`);
+        let mul=firstName*lastName;
+        document.writeln(`mul ${mul}<br>`);
+        let div=firstName/lastName;
+        document.write(`div ${div}<br>`);
+        let modulus=firstName%lastName;
+        document.write(`modulus ${modulus}<br>`);
+        document.write(`-----logical operators-----<br>`);
+        let logical1=20;
+        let logical2=3;
+        let logicalAND=(logical1>20) && (logical2<10);
+        let logicalOR=(logical1==20) || (logical2==3);
+        
+        let logicalRightShift=logical1 << 2;
+        let logicalLeftShift=logical1 >>2;
+        document.write(`logicalAND ${logicalAND}<br>`);
+        document.write(`logicalor ${logicalOR}<br>`);
+let k=9;
+document.write(`<p><< ${k<<3}</p>`);
+ document.write(`<p>>> ${k>>3}</p>`);
+
+document.write(`-----ternary operators-----<br>`);
+
+let c=24;
+let ternary1=(c==25)?"true":"false";
+document.write(`<p>ternary ${ternary1}</p>`)
+
+document.write(`-----postincrement operators-----<br>`);
+let a=27;
+document.write(`<p>${a++}</p>`)
+document.write(`-----preincrement operators-----<br>`);
+
+document.write(`<p>${++a}</p>`)
+
+document.write(`-----predecrement operators-----<br>`);
+document.write(`<p>${--a}</p>`)
+
+document.write(`-----postdecrement operators-----<br>`);
+document.write(`<p>${a--}</p>`)
+document.write(`----assignment opertore-------`);
+let g=10;
+let g1=20;
+let g2=g1;
+
+document.write(`<p>= ${g2}</p>`)
+ g2+=23;
+ document.write(`<p>+= ${g2}</p>`);
+ g2-=23;
+ document.write(`<p>-= ${g2}</p>`);
+
+ document.write(`<p>/= ${g2/10}</p>`);
+ document.write(`<p>%= ${g2*3}</p>`);
+
+ document.write(`<p>%= ${g2%10}</p>`);
+
+ 
+
+document.write(`-----bitwise operators-----<br>`);
+        let bit1=6;
+        let bit2=5;
+        let bitAdd=bit1 & bit2;
+        let bitOr=bit1 | bit2;
+        let bitXor=bit1 ^ bit2;
+document.write(`bitwiseAND ${bitAdd}<br>`);
+document.write(`bitwiseOR ${bitOr}<br>`);
+document.write(`bitwiseXOR ${bitXor}<br>`);
+
+
+document.write(`-----comparision operators-----<br>`);
+        let c1=6;
+        let c2=5;
+       
+document.write(`> ${c1>0}<br>`);
+document.write(`<bitwiseOR ${c1<0}<br>`);
+document.write(`>= ${c2>=90}<br>`);
+document.write(`<= ${c2>=90}<br>`);
+document.write(`== ${c2=="80"}<br>`);
+document.write(`=== ${c2==="90"}<br>`);
+document.write(`!== ${c2>="90"}<br>`);
+document.write(`!= ${c2>="80"}<br>`);
+
+
+
+    </script>
+</body>
+</html>

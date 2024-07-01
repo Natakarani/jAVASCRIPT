@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+   <style>
+    *{
+        cursor: pointer;
+        
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    #result,#result1{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between; 
+        margin: 0 70px;
+        
+        color:grey;
+        font-size: 18px;
+    }
+    
+    #result img,#result1 img{
+        height: 340px;
+        width: 100%;
+    }
+
+     .card{
+        margin-top: 40px;
+        text-align: center;
+        width: 270px;
+        padding: 10px;
+        padding-bottom: 30px;
+        
+        border: 10px ridge rgb(216, 216, 216);
+    }
+    button{
+        background:rgb(0, 213, 255);
+        padding: 10px 40px;
+        outline: none;
+        border: none;
+        margin: 20px;
+        color: rgb(61, 59, 59);
+        border-radius: 20px;
+        font-size: 18px;
+    }
+   </style>
+<body>
+    <h1 style="text-align: center;margin:auto;color:red;
+    width:fit-content;padding:5px 40px;border:1px solid red;background: rgba(227, 138, 138, 0.367);">by using getPrototypeOf() and setPrototypeOf()</h1>
+    <button onclick="changeData()">change Data</button>
+    <div id="result"></div>
+    <div id="result1"></div>
+    <script>
+        let result=document.getElementById('result')
+        let result1=document.getElementById('result1')
+           //obj 1
+           let obj={
+            image:[
+            {
+                id:'book',
+                img:'https://99bookscart-assets.s3.ap-south-1.amazonaws.com/9781784295783.png',
+                desc:'The Lewis Man Peter May',
+                price:'120',
+            },
+            {
+                id:'book',
+                img:'https://99bookscart-assets.s3.ap-south-1.amazonaws.com/9780552148658.png',
+                desc:'The Lewis Man Peter May',
+
+                price:'346',
+            },
+            {
+                id:'book',
+                img:'https://99bookscart-assets.s3.ap-south-1.amazonaws.com/9781849160834.png',
+                desc:'The Lewis Man Peter May',
+
+                price:'678',
+            },
+            {
+                id:'book',
+                img:'https://99bookscart-assets.s3.ap-south-1.amazonaws.com/9781447225348.png',
+                desc:'The Lewis Man Peter May',
+
+                price:'520',
+            },
+            {
+                id:'book',
+                img:'https://99bookscart-assets.s3.ap-south-1.amazonaws.com/9780751548600.png',
+                desc:'The Lewis Man Peter May',
+
+                price:'676',
+            },
+            {
+                id:'book',
+                img:'https://99bookscart-assets.s3.ap-south-1.amazonaws.com/9780330485388.png',
+                desc:'The Lewis Man Peter May',
+
+                price:'320',
+            },
+              ]
+        }
+
+       //obj 2
+       let obj2={
+            image:[
+            {
+                id:'book',
+                img:'https://99bookscart-assets.s3.ap-south-1.amazonaws.com/9780007260812.png',
+                desc:'Somewhere , someday',
+                price:'368',
+            },
+            {
+                id:'book',
+                img:'https://99bookscart-assets.s3.ap-south-1.amazonaws.com/9780552159128.png',
+                desc:'Somewhere , someday',
+                price:'1720',
+            },
+            {
+                id:'book',
+                img:'https://99bookscart-assets.s3.ap-south-1.amazonaws.com/9780747266921.png',
+                desc:'Somewhere , someday',
+                price:'990',
+            },
+            {
+                id:'book',
+                img:'https://99bookscart-assets.s3.ap-south-1.amazonaws.com/9780747257578.png',
+                desc:'Somewhere , someday',
+                price:'990',
+            },
+            {
+                id:'book',
+                img:'https://99bookscart-assets.s3.ap-south-1.amazonaws.com/9781444704853.png',
+                desc:'Somewhere , someday',
+                price:'990',
+            },
+        ]
+       }
+         
+        //cloning the obj 1 into one variable for to get all the properties
+        let s=Object.create(obj)
+         let s1=Object.getPrototypeOf(s)
+         for(let i=0;i<s1.image.length;i++){
+           
+            result.innerHTML+=`<div class="card">
+                <img src="${s1.image[i].img}">
+                <p>${s1.image[i].desc}  
+                <p style="font-size:20px;margin-top:10px;color:black">$${s1.image[i].price}/-</p>
+                <button style="background:orange;border:none;outline:none;
+                padding:7px 40px;color:white;margin-top:10px;font-size:18px">add</button>      
+            </div>`
+        }
+        let s2=Object.setPrototypeOf(obj2,s1);
+
+
+    function changeData(){
+        for(let i=0;i<s2.image.length;i++){
+          result.innerHTML=''
+            result1.innerHTML+=`<div class="card">
+                <img src="${s2.image[i].img}">
+                <p>${s2.image[i].desc}  
+                <p style="font-size:20px;margin-top:10px;color:black">$${s2.image[i].price}/-</p>
+                <button style="background:orange;border:none;outline:none;
+                padding:7px 40px;color:white;margin-top:10px;font-size:18px">add</button>           
+            </div>`
+        }
+
+    }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function since(year){
+            let curYear=new Date().getFullYear();
+            // var allYears=0;
+            var allYears=[];
+            for(let i=year;i<curYear;i++){
+                // allYears++
+                allYears.push(i)
+
+            }
+            // return allYears;
+            return allYears.length
+
+        }
+        document.write(since(2019))
+    </script>
+<script>
+    function since(year){
+        let curYear=new Date().getFullYear();
+        var allYears=0;
+        for(let i=year;i<curYear;i++){
+            allYears++
+        }
+        return allYears;
+    }
+    document.write(since(2019))
+</script>
+</body>
+</html>

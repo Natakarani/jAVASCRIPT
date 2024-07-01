@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>object.definepropeties()</h1>
+    </center>
+    <hr>
+
+    <script>
+        //will allow to add more than one set of property from outside the objects
+
+        var user1={
+            firstname:'mahima',
+        }
+        console.log(user1);
+
+        Object.defineProperties(user1,
+            {
+                secondname:{
+                value:'raj'
+                },
+
+            email:{
+                value:'mahi@gmail.com'
+            },
+            age:{
+                value:34
+            },
+            fullname:{
+                value:function(){
+                    return this.firstname+" "+this.secondname;
+                }
+            },
+            address:{
+                value:{
+                    city:'bangalore',
+                    pincode:5787
+                }
+            }
+
+        })
+        console.log(user1);
+        console.log(user1.address.city)
+        console.log(user1.fullname());
+
+        //display all the property the data objects innhe card
+
+        
+
+    </script>
+
+    
+</body>
+</html>

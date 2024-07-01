@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>remove event listener</h1>
+    <p>for to remove the event</p>
+    <button id="add">add</button>
+    <button id="remove" onclick="remover()">remover</button>
+    <script>
+        function greek(){
+            alert('hello')
+        }
+        let add=document.getElementById('add')
+        let remove=document.getElementById('remove')
+        add.addEventListener('click',greek)
+        //event gets added
+        function remover(){
+        add.removeEventListener('click',greek)
+        alert('event removed')
+        //here event gets removed
+        }
+        //so after clicking the add btn also it wont give hello alert msg bcz event gets removed
+    </script>
+</body>
+</html>

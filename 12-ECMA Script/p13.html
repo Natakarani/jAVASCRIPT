@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let map=new Map([
+            ['name','john'],
+            ['age',32],
+            ['isonline',false]
+        ])
+        console.log(map)
+        console.log(map.get('name'))
+
+        //getting all data
+        for(let item of map){
+            console.log(item)
+            console.log("====")
+            console.log(map.get(item[0]))
+        }
+console.log("example2---------")
+        //exampl2 to get all
+        for(let [key,val] of map){
+            console.log(key)
+            console.log(val)
+        }
+        console.log("example3-------")
+
+        //example3
+
+        for(let item of map.keys()){
+            console.log(item)
+            console.log(map.get(item))
+        }
+        console.log("example4------")
+        //example4
+        for(let item of map.values()){
+            console.log(item)
+        }
+    </script>
+</body>
+</html>

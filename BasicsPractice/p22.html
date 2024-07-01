@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+        .disabled{
+            color: white;
+            background-color: green;
+        }
+        .none{
+            color:pink;
+            background-color: grey;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="btn()">click</button>
+    <div class="element" style="color:blue">this is element</div>
+    <script>
+       
+        console.log(element)
+        function btn(){
+            element.classList.add('disabled')
+            element.classList.remove('none')
+
+        }
+    </script>
+</body>
+</html>

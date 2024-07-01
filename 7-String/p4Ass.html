@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+   
+    /* #result{
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 300px;
+    } */
+    input{
+        background-color: white;
+        padding: 10px 40px;
+        padding-left: 10px;
+        border: 1px solid rgba(128, 128, 128, 0.525);
+        outline: none;
+    }
+    button{
+        background-color: blue;
+        border: none;
+        outline: none;
+        padding: 10px 16px;color: white;
+        font-weight: 500;
+        letter-spacing: 1.4px;
+
+    }
+</style>
+<body>
+    <h3>program to display the character using index position</h3>
+    <input type="number" placeholder="enter index position" id="input">
+    <button onclick="findIndex(2)">findIndex</button>
+    
+        <div id="result">
+        
+        </div>
+        
+   <script>
+//    let result= document.getElementById('result')
+//    let a='This is javascript Example'
+//     function findIndex(index){
+//         for(let i=0;i<a.length;i++){
+//             if(index>a.length || index<0){
+//                 result.innerHTML=`<h1>Give valid index number</h1>`
+//             }
+//             else{
+//                 result.innerHTML=`<div>
+//                     <p>The value of index position ${index} :<span style="font-weight:500;font-size:26px"> ${a[index]}</span></p>
+//             </div>`
+
+//             }
+//         }
+
+//     }
+   </script>
+   
+   
+<script>
+    let a1 = 'this is javascript example';
+
+function findIndex() {
+    let k = Number(input.value); 
+    if (k<0 || k>=a1.length) {
+        result.innerHTML = `<h1>Give a valid index number</h1>`;
+    } else {
+        result.innerHTML = `<div>
+            <p>The value of index position ${k} : <span style="font-weight:500;font-size:22px"> ${a1[k]}</span></p>
+        </div>`
+    }
+}
+
+</script>
+</body>
+</html>

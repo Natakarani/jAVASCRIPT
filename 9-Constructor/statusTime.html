@@ -1,0 +1,385 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <title>Document</title>
+
+</head>
+<style>
+   *{
+       margin:0;
+       padding: 0;
+       box-sizing: content-box;
+       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   }
+  
+   .header{
+       position: fixed;
+       width: 100%;
+       top:0px;
+       z-index:1029;
+       padding: 10px;
+       display: flex;
+       align-items: center;
+       background: rgba(225, 221, 221, 0.397);
+       justify-content: space-between;
+   }
+   .header>div{
+       display: flex;
+       align-items: center;
+       gap:20px;
+   }
+   .header i{
+       color: rgb(81, 80, 80);
+   }
+   .sidebar{
+      
+       display: grid;
+       grid-template-columns: 60px 380px auto;
+   }
+   .sidebar1{
+       position:fixed;
+       background: rgba(225, 221, 221, 0.308);
+       display: flex;
+       flex-direction: column;
+       gap:262px;
+       padding-top: 90px;
+       color: rgb(81, 80, 80);
+       font-size: 20px;
+       padding-bottom: 40px;
+       padding-left: 20px;
+       padding-right: 40px;
+   }
+   .sidebar1>div:first-child, .sidebar1>div:last-child{
+       
+       display: flex;
+       flex-direction: column;
+       gap:40px;
+      
+   }
+   .chat{
+       overflow-y: auto;
+       background-color: white;
+       position: absolute;
+       top:50px;
+       left:70px;
+       box-shadow: 0px 0px 5px rgb(219, 218, 218);
+       padding: 20px;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       gap:24px;
+       justify-content: space-between;
+   }
+
+   .contact{
+       margin-top: 0px;
+       
+   }
+   .contact>div:last-child{
+      
+   }
+   
+   input{
+    
+       border: none;
+       outline: none;
+       width: 80%;
+       margin: auto;
+       border-bottom: 3px solid green;
+       padding:0 20px 10px 20px;
+       margin-top: 60px !important;
+   }
+   .eyeIcon{
+       position: relative;
+   }
+   .eyeIcon{
+       position: relative;
+   }
+
+   #statustime{
+       transition: 0.5s;
+       position: absolute;
+       bottom:60px;
+       right:670px;
+       background-color: white;
+       color: black;
+       padding: 5px 20px;
+       border-radius: 10px;
+
+   }
+   
+
+</style>
+
+
+<body>
+   <div id="structure"></div>
+   <div id="structure1"></div>
+   <div id="chats"></div>
+   <div id="view"></div>
+   <div id="statustime"></div>
+   <script>
+       let statustime=document.getElementById('statustime')
+       let view=document.getElementById('view')
+       let structure=document.getElementById('structure')
+       let chats=document.getElementById('chats')
+       let structure1=document.getElementById('structure1')
+       let date=new Date('23-05-2024T02:49:00');
+       structure.innerHTML=`<div>
+         <div class="header">
+          <div>
+          
+           <i class="fa-brands fa-whatsapp" style="font-size:30px;color:green"></i>
+          <p>whatsApp</p>
+           </div>
+           <div>
+               <i class="fa-solid fa-minus"></i>
+               <i class="fa-regular fa-square"></i>
+               <i class="fa-solid fa-xmark"></i>
+
+           </div>
+           </div>`
+
+          
+           structure1.innerHTML=`<div class="sidebar1">
+               <div>
+                   <i class="fa-solid fa-bars"></i>
+                  <i class="fa-regular fa-comments" onclick="getStatus()"></i>
+                  <i class="fa-solid fa-phone"></i>
+                  <i class="fa-solid fa-circle-notch"></i>
+               </div>
+              <div>
+                 <i class="fa-regular fa-star"></i>
+                 <i class="fa-solid fa-industry"></i>
+                 <i class="fa-solid fa-gear"></i>
+                 <i class="fa-regular fa-user"></i>
+             </div>
+            </div>
+            `
+
+           chats.innerHTML=`
+           <div class="chat">
+               <div style="display:flex;align-items:center;gap:170px;position:fixed">
+                   <p style="font-size:30px;font-weight:500">Chats</p>
+                   <div style="display:flex;align-items:center;gap:20px">
+                       <i class="fa-regular fa-pen-to-square"></i>
+                       <i class="fa-solid fa-bars-staggered"></i>
+                   </div>
+               </div>
+               <input type="search" placeholder="search or start a new chat"/>
+               <div>
+                   <div class="contact">
+                    <div style="display:flex;align-items:center;gap:60px">
+                      <div style="display:flex;align-items:center;gap:20px">
+                       <img src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg" style="border-radius:50%; width:50px;height:50px"/>
+                      <div>
+                           <p style="font-size:18px; font-weight:600">frontend forever</p>
+                           <p style="color:grey">developers need?</p>
+                       </div>
+                       </div>
+                       <small style="color:grey">3:45</small>
+                   </div>
+
+                   <div style="display:flex;align-items:center;gap:60px;margin-top:30px">
+                      <div style="display:flex;align-items:center;gap:20px">
+                       <img src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg" style="border-radius:50%; width:50px;height:50px"/>
+                      <div>
+                       <p style="font-size:18px; font-weight:600">frontend forever</p>
+                           <p style="color:grey">developers need?</p>
+                       </div>
+                       </div>
+                       <small style="color:grey">3:45</small>
+                   </div>
+
+                   <div style="display:flex;align-items:center;gap:60px;margin-top:30px">
+                      <div style="display:flex;align-items:center;gap:20px">
+                       <img src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg" style="border-radius:50%; width:50px;height:50px"/>
+                      <div>
+                       <p style="font-size:18px; font-weight:600">frontend forever</p>
+                           <p style="color:grey">developers need?</p>
+                       </div>
+                       </div>
+                       <small style="color:grey">3:45</small>
+                   </div>
+
+                   <div style="display:flex;align-items:center;gap:60px;margin-top:30px">
+                      <div style="display:flex;align-items:center;gap:20px">
+                       <img src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg" style="border-radius:50%; width:50px;height:50px"/>
+                      <div>
+                       <p style="font-size:18px; font-weight:600">frontend forever</p>
+                           <p style="color:grey">developers need?</p>
+                       </div>
+                       </div>
+                       <small style="color:grey">3:45</small>
+                   </div>
+                   
+                   <div style="display:flex;align-items:center;gap:60px;margin-top:30px">
+                      <div style="display:flex;align-items:center;gap:20px">
+                       <img src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg" style="border-radius:50%; width:50px;height:50px"/>
+                      <div>
+                       <p style="font-size:18px; font-weight:600">frontend forever</p>
+                           <p style="color:grey">developers need?</p>
+                       </div>
+                       </div>
+                       <small style="color:grey">3:45</small>
+                   </div>
+
+                   <div style="display:flex;align-items:center;gap:60px;margin-top:30px">
+                      <div style="display:flex;align-items:center;gap:20px">
+                       <img src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg" style="border-radius:50%; width:50px;height:50px"/>
+                      <div>
+                       <p style="font-size:18px; font-weight:600">frontend forever</p>
+                           <p style="color:grey">developers need?</p>
+                       </div>
+                       </div>
+                       <small style="color:grey">3:45</small>
+                   </div>
+
+                   <div style="display:flex;align-items:center;gap:60px;margin-top:30px">
+                      <div style="display:flex;align-items:center;gap:20px">
+                       <img src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg" style="border-radius:50%; width:50px;height:50px"/>
+                      <div>
+                       <p style="font-size:18px; font-weight:600">frontend forever</p>
+                           <p style="color:grey">developers need?</p>
+                       </div>
+                       </div>
+                       <small style="color:grey">3:45</small>
+                   </div>
+
+                   <div style="display:flex;align-items:center;gap:60px;margin-top:30px">
+                      <div style="display:flex;align-items:center;gap:20px">
+                       <img src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg" style="border-radius:50%; width:50px;height:50px"/>
+                      <div>
+                       <p style="font-size:18px; font-weight:600">frontend forever</p>
+                           <p style="color:grey">developers need?</p>
+                       </div>
+                       </div>
+                       <small style="color:grey">3:45</small>
+                   </div>
+
+                   <div style="display:flex;align-items:center;gap:60px;margin-top:30px">
+                      <div style="display:flex;align-items:center;gap:20px">
+                       <img src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg" style="border-radius:50%; width:50px;height:50px"/>
+                      <div>
+                       <p style="font-size:18px; font-weight:600">frontend forever</p>
+                           <p style="color:grey">developers need?</p>
+                       </div>
+                       </div>
+                       <small style="color:grey">3:45</small>
+                   </div>
+
+                   
+                   </div>
+               </div>
+           <div>
+           </div>
+           </div>
+           `
+            
+           function getStatus(){
+               chats.innerHTML=''
+               structure1.style.marginTop='-370px';
+               structure1.style.padding='0'
+               structure.innerHTML+=`<div style="margin-left:110px;max-width:200px;margin-top:60px;padding:8px">
+                   <p style='font-size:40px'>Status</p>
+                  
+                   <div style="display:flex;align-items:center;gap:20px;" onclick="viewStatus()">
+                       <i class="fa-solid fa-user" style="background: rgba(225, 221, 221, 0.908);;padding:20px;border-radius:50%;outline-offset:3px;outline:4px solid rgba(225, 225, 225)"></i>
+                       <div>
+                       <p style="margin-top:20px;margin-bottom:20px">My status</p>
+                       <p style="margin-top:-14px">Today 2:27</p>
+                       </div>
+                   </div>
+                   <p style="margin-top:20px">View Updates</p>
+
+                   <div style="display:flex;align-items:center;gap:20px;margin-top:30px">
+                       <img src="https://t3.ftcdn.net/jpg/04/36/67/54/360_F_436675446_jGWzkVDah3b6ONZxhhN13s6I4iFnjLGJ.jpg" style="width:47px;height:47px;background: rgba(225, 221, 221, 0.908);border-radius:50%;outline-offset:3px;outline:4px solid rgba(225, 225, 225)">
+                       <div>
+                       <p>My status</p>
+                       <p>Today 2:27</p>
+                       </div>
+                   </div>
+                   <div style="display:flex;align-items:center;gap:20px;margin-top:30px">
+                       <img src="https://t3.ftcdn.net/jpg/04/36/67/54/360_F_436675446_jGWzkVDah3b6ONZxhhN13s6I4iFnjLGJ.jpg" style="width:47px;height:47px;background: rgba(225, 221, 221, 0.908);border-radius:50%;outline-offset:3px;outline:4px solid rgba(225, 225, 225)">
+                      
+                       <div>
+                       <p>My status</p>
+                       <p>Today 2:27</p>
+                       </div>
+                   </div
+
+               </div>`
+               
+           }
+
+
+           function getWhatsStatusTime(){
+           
+           let curTime=new Date();
+           let mesTime=new Date('2024-05-22T19:30:00')
+           let diffTime=curTime-mesTime
+           let seconds=Math.floor(diffTime/1000)
+           console.log(seconds)
+           let minutes=Math.floor(seconds/60)
+           console.log(seconds)
+           let hours=Math.floor(minutes/60)
+           console.log(hours)
+           let day=Math.floor(hours/24)
+           console.log(day)
+
+           if(day>0){
+               statustime.innerHTML=`1 viewed <p>${day} ago</p>`
+           }
+           else if(hours>0){
+               statustime.innerHTML=` 1 viewed ${hours} hours ago`
+           } 
+           else if(minutes>0){
+               statustime.innerHTML= ` 1 viewed ${minutes} minutes ago`
+           }
+           else{
+               statustime.innerHTML=  '1   viewed just now'
+           }
+       }
+       
+           function viewStatus(){
+               structure.innerHTML=''
+               structure1.style.marginTop='0px';
+               structure1.innerHTML=''
+               chats.innerHTML=''
+              
+               
+               view.innerHTML=`<div style="color:white;background:purple;width:100%;height:100%;padding:10px 0 130px 0">
+                   <div style="display:flex;flex-direction:column;gap:239px;align-items:center">
+                       <div style="display:flex;align-items:center;justify-content:space-evenly;gap:520px">
+                          <div style="display:flex;gap:20px;align-items:center">
+                          <i class="fa-solid fa-user" style="display:flex;align-items:center;border:4px solid rgba(225,221,221,0.8);border-radius:100px;max-height:30px;background: rgba(225, 221, 221, 0.608);padding:19px;margin-top:20px"></i>
+                          <div style="margin-top:-50px">
+                          <p style="margin-top:20px;margin-bottom:20px;margin-top:80px">My status</p>
+                          <p style="margin-top:-14px">Today 2:27</p>
+                          </div>
+                       </div>
+                          <div style="display:flex;gap:16px">
+                          <i class="fa-solid fa-pause"></i>
+                          <i class="fa-solid fa-volume-high"></i>
+                          <i class="fa-solid fa-ellipsis"></i>
+                          </div>
+                      </div>
+                      <div>
+                       <p style="text-align:center">https://docs.google.com/forms/d/1QAEcWGpKg95uwjb6kfKCXzMUmd4R9TQtpLDVqHDsmGY/viewform?edit_requested=true"</p>
+                      <h1 style="text-align:center">CLICK HERE TO REGISTER FOR TEST</h1>
+                       </div>
+                      
+                      <p class="eyeIcon" style="background:black;padding:10px 20px;border-radius:10px;color:white;width:fit-content;text-align:center;margin:auto" onclick="getWhatsStatusTime()"><i class="fa-regular fa-eye"></i> 1 </p>
+                   </div>
+               </div>
+               `
+           }
+           
+       
+   </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>function hosting</h1>
+    <p>calling before calling also print the data what ever we wrote in function bcz (javascript have default hosting) like what it will do is the declaration will sends to top of(scope ) calling</p>
+    <h1>variable hosting</h1>
+    <p>initializing before initializing also print the data what ever we wrote in function bcz (javascript have default hosting) like what it will do is the declaration will sends to top of scope(initialization)</p>
+    <p>before initialization also shows undefined bcz it dont know the type of data</p>
+
+
+    <script>
+        let a=10;
+        document.write(a+'<hr>')
+        //example 1
+        b=10;
+        document.write(b+'<hr>')
+        var b;
+//example2
+
+//declared with no initializing and printing the data so cant able to know so shows undefined 
+        let c=10;
+        let d;
+        document.write(d+'<hr>')
+        d=4;
+
+
+//function hosting
+        sayHello()
+        function sayHello(){
+            document.write('hello.....')
+        }
+
+    </script>
+</body>
+</html>

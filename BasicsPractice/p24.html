@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table,th,td{
+        border-collapse: collapse;
+        border: 1px solid red;
+    
+    }
+    tr{
+        padding: 10px;
+    }
+</style>
+<body>
+   <div id="result"></div>
+    <script>
+        let result=document.getElementById('result')
+        let student={
+            stuId:1,
+            stuName:'harsh',
+            dept:'ECE',
+            passed:true,
+            marks:{
+                maths:90,
+                science:79,
+                telugu:89,
+            }
+        }
+
+          result.innerHTML= `<div>
+            <h1>${student.stuId}</h1>
+            <h1>${student.stuName}</h1>
+            <h1>${student.dept}</h1>
+            <h1 style="color:${student.passed==true?"green":'red'}">${student.passed==true?"status is good":"status bad"}</h1>
+            <h1>${student.marks.science}</h1>
+            <table cellPadding=10>
+               <tr>
+                <th>science</th>
+                <th>maths</th>
+                <th>telugu</th>
+                </tr>
+
+        <tr>
+            <td>
+                ${student.marks.science}
+            </td>
+            <td>${student.marks.maths}</td>
+            <td>${student.marks.telugu}</td>
+        </tr>
+        
+
+    </table>
+            `
+        
+    </script>
+</body>
+</html>

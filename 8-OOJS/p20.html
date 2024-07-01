@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Constructor  with parameter for creating the objects
+    </h1>
+    <p>we can create many objects by single const </p>
+    <div id="result"></div>
+    <script>
+        let result=document.getElementById('result')
+        function User(fname,lname,age){
+            this.firstname=fname;
+            this.lastname=lname;
+            this.age=age;
+        }
+        let user1=new User('raj','kumar',32)
+        let user2=new User('john','doe',30)
+        result.innerHTML=`<div>
+            <p>${user1.firstname}</p>
+            <p>${user1.lastname}</p>
+            <p>${user1.age}</p>
+            <p style="color:red">${user2.firstname}</p>
+            <p style="color:red">${user2.lastname}</p>
+            <p style="color:red">${user2.age}</p>
+        </div>`
+    </script>
+</body>
+</html>

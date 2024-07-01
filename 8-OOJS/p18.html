@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+           min-height: 100vh;
+        }
+        .container1{
+            max-width: 390px;
+            padding: 20px;
+            background-color: rgb(103, 241, 209);
+            border: 1px solid grey;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        input{
+            padding: 10px;
+            margin-top: 10px;
+        }
+        button,input{
+            border: 2px solid  grey;
+            padding: 10px;
+            width: 100%;
+            margin-top: 10px;
+        }
+        button{
+            background-color: rgb(30, 101, 80);
+            color:white;
+            font-size: 20px;
+        }
+        .card{
+            display: flex;
+            gap:20px;
+           background-color: red;
+        }
+        #para{
+
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid rgb(20, 19, 19);
+
+        }
+    </style>
+<body>
+    
+       <div class="container1">
+        <input type="text" placeholder="ener the name" id="name">
+    <input type="email" placeholder="enter the email" id="email1">
+    <input type="number" placeholder="enter the age" id="age1">
+    <button onclick="clickIt()">click</button>
+    
+       </div>
+    <p id="para"></p>
+    <script>
+
+
+       
+        var a;
+        let array1=[]
+    function clickIt(){
+        let name=document.getElementById('name')
+        let email1=document.getElementById('email1')
+         let para=document.getElementById('para')
+        let age=document.getElementById('age1')
+         a={
+            name:name.value,
+            email:email1.value,
+            age:age.value,
+        }
+      
+        para.innerHTML+=`<div>
+           <p>${a.name}</p>
+           <p>${a.email}</p>
+          <p> ${a.age}</p>
+        </div>`
+        // console.log(a)
+       
+       array1.push(a)
+
+       para.innerHTML+=`<div class="card">
+        <h1>${array1[0].age}</h1>
+        </div>`
+       
+
+    }
+
+    </script>
+</body>
+</html>

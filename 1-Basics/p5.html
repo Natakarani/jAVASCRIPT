@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>javascript geneertaing output</h1>
+    </center>
+    <hr>
+    <p id ="res">result: </p>
+    <script>
+        let firstNum=10, lastNum=20, sum;
+        sum=firstNum+lastNum;
+document.write(`<p><b>document.write : ${sum}</b></p>`);
+document.write(`<p><b>document.writeln : ${sum}</b></p>`)
+console.log(`console.log`,sum);
+
+alert(`alert  ${sum}`);
+prompt(`prompt  ${sum}`);
+confirm(`confirm  ${sum}`);
+document.getElementById("res").innerHTML+=sum;
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>without parameter, with return</h1>
+    <script>
+        let firstNum=10,lastNum=20,total;
+         function addData(){
+            total=firstNum+lastNum;
+            return total;
+             document.write("this data wrong gets printed bcz this is after return statemebt");
+             document.write("execution stops at return statement only");
+         }
+         document.write(`<h1>without parameter with return ${addData()}</h1>`)
+    </script>
+</body>
+</html>

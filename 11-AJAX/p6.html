@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    #container{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap:30px;
+        padding: 30px;
+    }
+    .card{
+        padding: 20px;
+        box-shadow: 0px 0px 8px #ccc;
+        border-radius: 10px;
+    }
+    .card img{
+        width: 100%;
+        margin-bottom: 20px;
+        background-color: rgb(209, 166, 153);
+        border-radius: 10px;
+    }
+    @media(max-width:768px){
+        #container{
+            grid-template-columns: repeat(3,1fr);
+        }
+    }
+
+    @media(max-width:576px){
+        #container{
+            grid-template-columns: repeat(2,1fr);
+        }
+        .card{
+            padding: 10px;
+        }
+    }
+</style>
+<body>
+
+    <center>
+        <ul>
+            <li>post</li>
+            <li>get</li>
+            <li>put/patch</li>
+            <li>delete</li>
+        </ul>
+    </center>
+
+    <div id="container"></div>
+
+    <script>
+        let container=document.getElementById('container')
+        let products=[]
+        const url="https://dummyjson.com"
+        fetch(`${url}/products`,{
+            method:"GET"
+        })
+        .then((res)=>res.json())
+        .then((response)=>{
+            console.log(response.products)
+            products=response.products
+            displayData(products)
+        })
+        .catch((err)=>console.log(err))
+
+        function displayData(products){
+
+            products.forEach(element => {
+
+                let card= document.createElement('div')
+           let title=document.createElement('h3')
+           let price=document.createElement('h4')
+           let image=document.createElement('img')
+           title.textContent=element.title
+           price.innerHTML=`<strong>price : &#8377;${element.price}</strong>`
+           image.src=element.thumbnail
+           card.appendChild(image)
+           card.appendChild(title)
+           card.appendChild(price)
+           card.classList.add('card')
+
+           container.appendChild(card)
+
+            });
+           
+        }
+    </script>
+    
+</body>
+</html>

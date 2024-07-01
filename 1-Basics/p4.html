@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>AARAY</h1>
+        <p>collection of data</p>
+    </center>
+    <hr>
+    <h2>THERE ARE 3 TYPES OF ARRAY</h2>
+    <ol>
+        <li>
+            literal array =single
+            <li>literals</li>
+            <li>array using constructor</li>
+            <li>array using constructor parameter</li>
+        </ol>
+
+        </li>
+        <li>object array</li>
+        <li>JSON array</li>
+        <script>
+            document.write(`<h3>Array literals</h3>`);
+            let users=['first',100,true];
+            document.write(`<h3>typeofusers:${typeof(users)}</h3>`);
+            document.write(`users =`,users, "<hr>");
+            document.write('users = ',users);
+            document.write(`<h3>Array using const</h3>`);
+            let emp=new Array();
+            emp[0]='raju';
+            emp[1]='JAN';
+            emp[2]='mary';
+            emp[3]=true;
+            emp[4]=100;
+document.write('emp =',emp,"<hr>");
+
+document.write(`<h3>Array using constructor parameter</h3>`);
+let colors=new Array("red","green","pink");
+document.write(`<h3>type of colors :${typeof(colors)}</h3>`);
+document.write('colors = ',colors);
+console.log('colors=',colors);
+let employee={
+    firstName:"man",
+    lastName:"nat",
+}
+
+document.write(`<h3>object array</h3>`);
+document.write(`employee=`, employee,`<br>`);
+document.write(`employee.firstname: `,employee.firstName,`<br>`);
+document.write(`employee.lastname: `,employee.lastName,`<br>`);
+
+document.write(`<h3>JSON ARRAY</h3>`);
+let empDetails=[
+    {
+        firstName:"man",
+        lastName:"nat",
+    },
+    {
+        firstName:"manasa",
+        lastName:"clarity",
+    },
+
+];
+document.write(`<p>JSON ARRAY= `,typeof(empDetails));
+
+document.write(`<br><p>employee deetails </p>`,empDetails[0]);
+document.write(`<br><p>employee deetails </p>`,empDetails[0].lastName);
+
+document.write(`<br><p>employee deetails </p>`,empDetails[0].firstName);
+
+</script>
+        
+</body>
+</html>

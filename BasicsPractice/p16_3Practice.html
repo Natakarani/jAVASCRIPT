@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        img{
+            width: 140px;
+        }
+
+        i{
+            font-size: 20px;
+        }
+        .btns{
+            margin-top: 50px;
+            /* position: relative !important; */
+        }
+       
+    </style>
+</head>
+<body>
+   <div class="btns">
+    <button><i class="fa-solid fa-caret-left" onclick="clickLeft()"></i></button>
+    <button><i class="fa-solid fa-caret-up" id="topIcon" onclick="clickUp()"></i></button>
+    <button><i class="fa-solid fa-caret-down" id="bottomIcon" onclick="clickDown()"></i></button>
+    <button><i class="fa-solid fa-caret-right" onclick="clickRight()"></i></button>
+   </div>
+   <img src="https://img.freepik.com/free-vector/green-snake-cartoon-character-isolated-white-background_1308-64260.jpg?t=st=1714650517~exp=1714654117~hmac=ff5e2e8508bac8a7531815c462a8bdeb6d71d8ccfb6285ee1451a8aaca311908&w=1380" alt="" id="image">
+    <script>
+        let image=document.getElementById('image')
+        let i=0;
+        function clickRight(){
+            i+=10;
+            image.style.transform=`translateX(${i}px`;
+            if(i>150){
+                image.style.transform=`translateX(150px) translateY(0px)`
+            }
+        }
+        function clickUp(){
+
+        }
+        i=0;
+        
+        function clickDown(){
+            console.log(i)
+            i+=10;
+            image.style.transform=`translateY(${i}px)  translateX(150px)`;
+            if(i>300){
+                image.style.transform=`translateX(150px)translateY(150px)`
+             }
+            
+        }
+        function clickLeft(){
+
+        }
+    </script>
+</body>
+</html>

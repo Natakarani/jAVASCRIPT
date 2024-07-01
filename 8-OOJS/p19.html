@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>constructor</h1>
+    <p>we can create const by using function by giving the starting letter capital letter so it is a const</p>
+    <p>const cant return </p>
+    <p>create an instance to const by using new keyword</p>
+    <p>const properties created by using this keyword</p>
+    <p>name of const starting letter is started with capital letter</p>
+
+    <div id="result"></div>
+    <script>
+        let result=document.getElementById('result')
+        function User(){  //this is const
+            this.firstname='john',
+            this.lastname='doe',
+            this.age=79
+        }
+       let user1= new User();//this is obj
+       result.innerHTML+=`<div>
+        <p>${user1.firstname}</p>
+        <p>${user1.lastname}</p>
+        <p>${user1.age}</p>
+        
+        </div>`
+       
+    </script>
+</body>
+
+</html>

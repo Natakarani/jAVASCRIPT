@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>addEventListener</h1>
+    <p>we can add many events to a single or multipe tags of html </p>
+    <p>by using events in inline tags only we can able to apply only one event</p>
+    <button id="first">firstfunction</button>
+    <button id="second">secondfucntion</button>
+    <script>
+         let first=document.getElementById('first')
+         let second=document.getElementById('second')
+         //one method
+        //  first.onclick=firstFunction;
+        //  second.onclick=secondFunction;
+
+//method two 
+         function firstFunction(){
+            alert('calling first function')
+         }
+         function secondFunction(){
+            alert('calling second function')
+         }
+          //method two wih callling functin
+         first.addEventListener('click',firstFunction);
+         //creating the arrow function inside addevemtlistener 
+         first.addEventListener('click',()=>{
+            first.style.background='red';
+            first.style.padding='20px'
+         })
+                  //creating the function inside addevemtlistener 
+
+         first.addEventListener('click',()=>{
+           second.style.color='red'
+            first.style.color="white"
+         })
+         second.addEventListener('click',secondFunction)
+         //mouseover
+         second.addEventListener('mouseover',()=>{
+            second.style.padding='30px'
+         })
+         //mouseout
+         second.addEventListener('mouseout',()=>{
+            second.style.padding=''
+         })
+          //mouseleave
+         second.addEventListener('mouseleave',()=>{
+            second.style.padding=''
+         })
+    </script>
+</body>
+</html>

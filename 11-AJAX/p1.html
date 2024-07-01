@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>promises</h1>
+    
+
+        <h3>what is promise</h3>
+        <p>promise is a inbuilt constructor of javscript</p>
+        <p>a promise object represents a operation which producted or will eventually prodiuce a value,. promises provide 
+            a robust way to execute the (posssibly pending) result of asynchronous result
+        </p>
+
+        <h3>states of promises</h3>
+        <p>there are 4 states</p>
+        <ul>
+            <li>pending</li>
+            <li>fulfilled</li>
+            <li>rejected</li>
+            <li>settled</li>
+        </ul>
+
+        <h3>pending state</h3>
+        <p>the operation not yet completed or not rejected (i.e, not yet started) that state we can call it as pending sttae(.then() is going to handle the pending state)</p>
+
+        <h3>fulfilled state</h3>
+        <p>operation is successfully completed and promise is fulfilled with response (syntax is .then() for to handle the fulfiled state) </p>
+
+        <h3>rejected state</h3>
+        <p>the error will gets due may be any reason (line catch()) (syntax .catch()  for to handle the rejected state)</p>
+ 
+        <h3>settled sttae</h3>
+        <p>promise said to be settled that may be rejected or successfull (that state we can call it as settled state). promise is immutable it wont goes to pending sttae again</p>
+   
+
+        <script>
+            let a=100;
+            let promise=new Promise(function(resolve,reject){
+                if(a==100){
+                    resolve('hi this is new promise response')
+                }
+                else{
+                    reject('promise rejected th task')
+                }
+            })
+            promise.then(function(response){
+                console.log(response)
+
+            }).catch(function(error){
+                console.log(error)
+            })
+        </script>
+</body>
+</html>

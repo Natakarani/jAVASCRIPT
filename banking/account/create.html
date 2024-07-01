@@ -1,0 +1,148 @@
+Create.html <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create account</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header class="bg-primary p-2">
+        <nav>
+            <div class="container-fluid d-flex align-items-center justify-content-between">
+                <h2 class="text-light" style="text-shadow: 0px 0px 6px rgb(61, 61, 61);">Cash Deposit</h3>
+                <button class="btn bg-light text-primary fw-bold"><a href="./allAccounts.html" style="text-decoration: none;">Go To AllAccounts Page</a></button>
+
+            </div>
+        </nav>
+    </header>
+
+    <div class="container p-3 p-md-5">
+        <div class="row">
+            <div class="col-md-8 m-auto">
+                <div class="card p-3">
+                    <h1 class="fs-4">Create Bank Account</h1>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group mt-3">
+                                <label for="name" class="form-lable">Firstname</label>
+                                <input type="text" id="firstname" placeholder="enter firstname" class="form-control p-2">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group mt-3">
+                                <label for="name" class="form-lable">Lastname</label>
+                                <input type="text" id="lastname" placeholder="enter lastname" class="form-control p-2">
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="form-group mt-3">
+                                <label for="email" class="form-lable">Email address</label>
+                                <input type="email" id="email" placeholder="enter email" class="form-control p-2">
+                            </div>
+                        </div>
+
+                       
+
+                        <span  class="mt-3 fs-4">Old address</span>
+                        <div class="col-12">
+                            <input type="text" id="o_add1" placeholder="Street address" class="form-control p-2 mt-3">
+                        </div>
+                        <div class="col-12">
+                            <input type="text" id="o_add2" placeholder="Street address Line2" class="form-control p-2 mt-3">
+                        </div>
+
+                        <div class="col-md-6">
+                           <div class="form-group mt-3">
+                            <label for="city">City</label>
+                            <input type="text" id="o_city" placeholder="City" class="form-control p-2">
+                           </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group mt-3">
+                             <label for="city">Region</label>
+                             <input type="text" id="o_region" placeholder="your region" class="form-control p-2">
+                            </div>
+                         </div>
+
+                         <div class="col-md-6">
+                            <div class="form-group mt-3">
+                             <label for="city">Postal/Zip Code</label>
+                             <input type="text" id="o_pin" placeholder="Postal /Zip Code" class="form-control p-2">
+                            </div>
+                         </div>
+
+                         <div class="col-md-6">
+                            <div class="form-group mt-3">
+                             <label for="city">Country</label>
+                            <select name="country" id="o_country" class="form-select">
+                                <option value="india">India</option>
+                                <option value="usa">USA</option>
+                                <option value="Africa">Africa</option>
+                            </select>
+                            </div>
+                         </div>
+                         
+
+                         <span  class="fs-4 mt-3">New address</span>
+                         <div class="col-12">
+                             <input type="text" id="n_add1" placeholder="Street address" class="form-control p-2 mt-3">
+                         </div>
+                         <div class="col-12">
+                             <input type="text" id="n_add2" placeholder="Street address Line2" class="form-control p-2 mt-3">
+                         </div>
+ 
+                         <div class="col-md-6">
+                            <div class="form-group mt-3">
+                             <label for="city">City</label>
+                             <input type="text" id="n_city" placeholder="City" class="form-control p-2">
+                            </div>
+                         </div>
+ 
+                         <div class="col-md-6">
+                             <div class="form-group mt-3">
+                              <label for="city">Region</label>
+                              <input type="text" id="n_region" placeholder="your region" class="form-control p-2">
+                             </div>
+                          </div>
+ 
+                          <div class="col-md-6">
+                             <div class="form-group mt-3">
+                              <label for="city">Postal/Zip Code</label>
+                              <input type="text" id="n_pin" placeholder="Postal /Zip Code" class="form-control p-2">
+                             </div>
+                          </div>
+ 
+                          <div class="col-md-6">
+                             <div class="form-group mt-3">
+                              <label for="city">City</label>
+                             <select name="country" id="n_country" class="form-select">
+                                 <option value="india">India</option>
+                                 <option value="usa">USA</option>
+                                 <option value="Africa">Africa</option>
+                             </select>
+                             </div>
+                          </div>
+
+                          <div class="col-md-12">
+                            <div class="form-group mt-3">
+                             <label for="date">Date</label>
+                             <input type="date" id="date"  class="form-control p-2">
+                            </div>
+                         </div>
+                    </div>
+                    <button class="main-btn" onclick="createAccount()">Create Free Account</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script src="./script.js"></script>
+</body>
+</html>

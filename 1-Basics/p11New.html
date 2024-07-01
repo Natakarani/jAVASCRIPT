@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .container{
+            display: flex;
+            min-height: 100vh;
+            justify-content: center;
+            align-items: center; 
+        }
+        .card{
+            padding: 20px;
+            box-shadow: -5px -5px 30px red, 5px 5px 30px blue;
+            width: 500px;
+            min-height: 300px;
+            border-radius: 10px;
+        }
+        input{
+            width: 100%;
+            padding: 10px;
+            border: none;
+            outline: none;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+
+        }
+        button{
+            width: 100%;
+            border: none;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 10px;
+            background: linear-gradient(45deg,red,pink,red);
+            color: #fff;
+        }
+        .card img{
+            width: 100%;
+            border-radius: 20px;
+            margin-bottom: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <img src="" alt="" id="image">
+            <p id="day"></p>
+            <input type="date" id="date" name="date">
+            <button onclick="calucate()">Check day</button>
+        </div>
+    </div>
+
+    <script>
+        let image = document.getElementById('image')
+        let result=document.getElementById('day')
+        let date=document.getElementById('date')
+
+        function calucate(){
+            console.log(date.value);
+            switch (date.value) {
+                case '2024-04-09':
+                    result.innerHTML=`<h1>the selected date ${date.value} is a ugadi</h1>`
+                    image.src ='https://img.freepik.com/free-vector/realistic-ugadi-banner-with-fruits-offerings_23-2148453331.jpg?t=st=1712728870~exp=1712732470~hmac=f7e7c6bd3ef2e7c4ac606710492edb2467e664675b94a69bf1f376a6ab49a82b&w=1060'
+                    image.alt ='ugadi'
+                    
+                    break;
+            
+                default:
+                    result.innerHTML =`<h1>in selected date ${date.value} no special days available</h1>`
+                    image.src ='https://img.freepik.com/free-vector/flat-design-no-data-illustration_23-2150527142.jpg?t=st=1712728903~exp=1712732503~hmac=8ef7dfc9c169a6d4302e32a34c9b6669f654d884638116cd059a35d3a107c339&w=740'
+                    image.alt ='not found'
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>

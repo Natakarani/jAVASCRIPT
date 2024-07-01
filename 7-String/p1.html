@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>string</title>
+</head>
+<body>
+    <h1>string</h1>
+    <p>string is also collection of data</p>
+    <p>what are the methods available in array that all we can use in string also</p>
+    <hr>
+    <h3>string literal</h3>
+    <script>
+        let a='welcome to javascript.....!'
+        document.write(`${a}`+'<br>')
+        document.write(`length : ${a.length}`+'<br>')
+        document.write(`${typeof a}`+'<br>')
+        document.write(`${a[0]}`+'<br>')
+        document.write(`${a[1]}`+'<hr>')
+        for(let i=0;i<a.length;i++){
+            document.write(a[i]+'<br>')
+        }
+
+
+    </script>
+ <hr>
+    <center>
+        string using constrcutor
+    </center>
+    <hr>
+   
+    <script>
+        let b=new String()
+        b[0]='A';
+        b[1]='B';
+        b[2]='C'
+        console.log(b)
+        document.write(`${b}`)//we cant print the whole string in document.write instantly after inserting the value but we can print it character by character if we are creating the string by using the new keyword(by using constructor)
+       //again assigning the value to variable after by using new keyword 
+        b='this is string'
+        document.write(`${b}`+'<br>')
+        document.write(`length: ${b.length}`+'<br><hr>')
+
+    //  let k=   b.forEach((element)=>{
+    //         return element
+    //     })
+    //     document.write(k)
+
+    Array.from(b).forEach((Element)=>{
+        document.write('element',element)
+    })
+    </script>
+    <center>
+        <h1>string using const with parameter</h1>
+    </center>
+    <script>
+        let c=new String('hi, how are u')
+        document.write(`${c}`+'<br>')
+        document.write(`${c[0]}`)
+    </script>
+
+
+</body>
+</html>

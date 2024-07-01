@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card{
+            background: white;
+            padding: 10px;
+            width: 290px;
+            box-shadow: 0px 0px 5px;
+            border: 1px solid rgb(187, 184, 184);
+        }
+        #result{
+            display: flex;
+            gap:10px;
+            flex-wrap: wrap;
+            background: rgb(222, 135, 135);
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>looping statements</h1>
+
+    </center>
+    <hr>
+    <!-- for(ini,condi,inc/dec) 
+        while(con)
+        do while(con)
+        forEach()
+        for..in
+        for..of
+        for..await..of
+    -->
+    <button onclick="add()">create</button>
+    <button onclick="deleteIt()">deleted</button>
+    <div id="result"></div>
+    <script>
+        let a=10;
+        let result=document.getElementById('result');
+        for(let i=0;i<a;i++){
+            document.write(`<p>i= ${i}</p>`)
+        }
+        function add(){
+           for(let i=0;i<10;i++){
+                    result.innerHTML+=`
+                    <div class="card">
+                        <h1>card ${i+1}</h1>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti sed, at saepe nesciunt, corrupti ducimus suscipit atque, quasi rem accusantium aspernatur voluptatem sint tempore. Inventore, maxime debitis? Provident, ipsa assumenda?
+</p>
+                        </div>
+                    `
+           }
+        }
+        function deleteIt(){
+            result.innerHTML="";
+        }
+
+    </script>
+    
+</body>
+</html>

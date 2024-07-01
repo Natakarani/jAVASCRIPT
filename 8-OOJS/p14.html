@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Object.values()</h1>
+    <script>
+        let a={
+            name:'raj',
+            email:'raj@gmail.com',
+            age:23
+        }
+       let allValues= Object.values(a)
+       //i reads the index position for valuse arrayName[i]
+       for(let i in allValues){
+        document.write(`index = ${i}`+'<br>')
+        document.write(`values = ${allValues[i]}`+'<br>')
+
+       }
+       allValues.map((item,index)=>{
+        document.write(`<p style="color:red">${index} = ${item}</p>`)
+       })
+
+    </script>
+</body>
+</html>

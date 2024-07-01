@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <section class="section">
+         <h1>this os section</h1>
+    </section>
+    <div class="div">
+        <h1>this is div</h1>
+    </div> -->
+    <script>
+        // let section1=document.getElementsByClassName('section')
+   
+        let section1=document.createElement('section')
+        let btn=document.createElement('button')
+        section1.className+='container'
+        section1.innerHTML='this is section'
+        let div1=document.createElement('div')
+        div1.className+='read'
+        div1.innerHTML='this is div tag'
+        console.log(section1)
+        document.body.append(section1)
+        document.body.append(div1)
+        let check1=prompt("enter the valid data");
+    if(check1=='it'){
+       div1.classList.remove('read')
+       
+    }
+    else{
+        console.log(typeof check1)
+        console.log("wrong")
+    }
+console.log(section1)
+console.log(div1)
+    </script>
+</body>
+</html>

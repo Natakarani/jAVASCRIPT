@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="data">
+       Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic beatae fugiat ad quas repudiandae sit sequi tempora recusandae a sed.
+    </div>
+    <script>
+        let data=prompt("enter what u want");
+        if(data=='speak'){
+           if('speechSynthesis' in window){
+            let msg=new SpeechSynthesisUtterance();
+            var textToSpeech=document.getElementById('data').innerText;
+            msg.text=textToSpeech;
+            window.speechSynthesis.speak(msg);
+           }
+        }
+
+    </script>
+</body>
+</html>

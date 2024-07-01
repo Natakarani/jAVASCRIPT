@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .highlight {
+            color: black;
+            background-color: yellow;
+        }
+        .t {
+            margin-bottom: 10px;
+            color: white;
+            padding: 6px 10px;
+            max-width: fit-content;
+            background: linear-gradient(45deg, rgb(3, 113, 173), rgb(143, 221, 243));
+        }
+    </style>
+</head>
+<body>
+    <input type="text" placeholder="enter text" id="name">
+    <button onclick="clickIt()">Search text</button>
+
+    <ul>
+        <li class="t">this is text</li>
+        <li class="t">another piece of text</li>
+        <li class="t">this is Javascript</li>
+        <li class="t">JavaScript is a text-based programming language used both on the client-side and server-side that allows you to make web pages interactive. Where HTML and CSS are languages that give structure and style to web pages, JavaScript gives web pages interactive elements that engage a user.</li>
+        <li>Javascript </li>
+    </ul>
+
+
+    <script>
+        let listItems = document.querySelectorAll('.t');
+        let nameInput = document.getElementById('name');
+
+        function clickIt() {
+            let inputValue = nameInput.value.trim().toLowerCase();
+            listItems.forEach(listItem => {
+                // Reset the list item text to its original content
+                // listItem.innerHTML = listItem.textContent;
+
+                if (inputValue === '') {
+                    // console.log('Please enter some text');
+                } else {
+                    let itemText = listItem.textContent;
+                    let index = itemText.indexOf(inputValue);
+
+                   if (index !== -1) {
+                        
+                        let highlightedText = itemText.substring(0, index) +
+                                             '<span class="highlight">' + itemText.substring(index, index + inputValue.length) + '</span>' +
+                                             itemText.substring(index + inputValue.length);
+                        listItem.innerHTML = highlightedText;
+                        console.log(nameInput)
+                    }
+                     else {
+                        // console.log('Text not found');
+                    }
+                }
+                
+            });
+            
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    let a={
+        name:'raj',
+        email:'raj@gmail.com',
+        age:13
+    }
+   let allKeys= Object.keys(a)
+   document.write(allKeys+'<br>')
+   let result=allKeys.map((item,index)=>{
+    document.write(`<h1>${index} = ${item}</h1>`)
+    document.write(`<h1>${allKeys[index]}</h1>`)
+   })
+   </script>
+</body>
+</html>

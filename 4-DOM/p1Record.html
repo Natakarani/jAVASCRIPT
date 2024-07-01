@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+   <section>
+    <div class="box" id="1">
+        <input type="checkbox" name="box1" id="box1" value="box-1">
+     </div>
+     <div class="box" id="2">
+        <input type="checkbox" name="box2" id="box2" value="box-2">
+     </div>
+     <div class="box" id="1">
+        <input type="checkbox" name="box3" id="box3" value="box-3">
+     </div>
+   </section>
+
+
+   <script>
+    let sectionBox = document.querySelector('section');
+
+sectionBox.addEventListener('click', function(event) {
+      //   console.log("selected checkbox:", event.target);//event.target for selecting any attributeof present tag
+        // console.log(event.target.type)
+        //if checkbox is checked then will gets printed(checked the check box)
+        if(event.target.type==='checkbox'){
+         // console.log("checked the check box")
+        }
+        //will selectes all the checked ones so will get the id's of it
+       let checked= document.querySelectorAll('input[type="checkbox"]:checked')
+    console.log(checked)
+   //  console.log(typeof checked)
+    for(item in checked){//not selecting tag it selecting id so cant apply styles
+     // checked[item].style.background='red'
+    //  console.log(checked[item])
+    //  console.log(checked[item].type=='checked')
+    //converting obj to array
+   //   console.log(Array.from(checked))
+     Array.from(checked).map((item,index)=>{
+      //   console.log(item.type+" "+item.value)
+      })
+
+    }
+});
+ </script>
+
+</body>
+</html>

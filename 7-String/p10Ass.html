@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        box-sizing: border-box;
+        list-style-type: none;
+        cursor: pointer;
+    }
+    body{
+        margin:20px 70px;
+    }
+    input{
+        padding:8px;
+        padding-right: 40px;
+    }
+    button{
+        background-color: blue;
+        padding: 7px 30px;
+        border: none;
+        outline: none;
+        color: white;
+        letter-spacing: 1.2px;
+        font-weight: 500;
+        font-size: 17px;
+    }
+    #result{
+        margin-top: 30px;
+        line-height: 1.7;
+        letter-spacing: 0.7px;
+
+    }
+</style>
+<body>
+    <input type="text" placeholder="enter the data" id="name">
+    <button onclick="clickIt()">click
+    </button>
+    <ul id="result">
+    </ul>
+    <script>
+        result.innerHTML=`<div>
+            <li id="li">JavaScript is a scripting language used to develop web pages. Developed in Netscape, JS allows developers to create a dynamic and interactive web page to interact with visitors and execute complex actions. It also enables users to load content into a document without reloading the entire page.
+                JavaScript is already running in your browser on your computer, on your tablet, and on your smart-phone. JavaScript is free to use for everyone.
+            </li>
+        </div>`
+        
+    let liTag=document.getElementById('li')
+     console.log(liTag.innerText);
+   
+let name=document.getElementById('name')
+function clickIt(){
+if(((liTag.innerText).toLowerCase()).includes((name.value).toLowerCase())){
+   let t= (liTag.innerText).replaceAll((liTag.innerText),(name.value))
+   liTag.innerHTML=`${t}`;
+}
+else{
+    liTag.innerHTML='Data not found'
+}
+console.log((name.value),(liTag.innerHTML))
+}
+    </script>
+</body>
+</html>

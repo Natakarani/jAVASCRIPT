@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container>div{
+            border: 1px solid grey;
+            padding: 10px;
+            width: 300px;
+        }
+        .container img{
+            width: 100%;
+
+        }
+        button{
+            
+            display: flex;
+            justify-content: center;
+        }
+        .container button{
+            padding: 10px;
+            border:none;
+            background-color: red;
+            color: white;
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <button onclick="generateCard()">generate card</button>
+    <div id="result"></div>
+    <script>
+        let result=document.getElementById('result');
+        function generateCard(){
+        result.innerHTML=`
+        <div class="container">
+       <div>
+        <img src="https://img.freepik.com/free-photo/selective-focus-shot-blue-african-daisy-flower_181624-24402.jpg?t=st=1714415361~exp=1714418961~hmac=55f74b5eb046828290a39dff436ceba7c3cb6bdef5eace8998a56973c6ddf676&w=996" alt="">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste, dolorem possimus beatae nihil ipsa optio consequuntur cum? Beatae, iure asperiores?</p>
+        <button onclick="removeCard()">remove all</button>
+       </div>
+    </div>
+        `
+}
+        function removeCard(){
+            result.innerHTML=''
+
+        }
+    </script>
+</body>
+</html>

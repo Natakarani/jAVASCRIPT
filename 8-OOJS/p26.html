@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class User{
+            constructor(){
+            this.firstname='raj',
+            this.lastname='kumar',
+            this.fullname=function(){
+                return this.firstname+' '+this.lastname
+            }
+            
+            this.email='mohan@gmail.com'
+        }
+        displayAll(){
+            document.write(`<h1>firstname: ${this.firstname}</h1>`)
+            document.write(`<h1>lastname: ${this.lastname}</h1>`)
+            document.write(`<h1>fullname: ${this.fullname()}</h1>`)
+            document.write(`<h1>email: ${this.email}</h1>`)
+        }
+        getEmail(){
+            document.write(`<h2>${this.email}</h2>`)
+        }
+
+    }
+    let user1=new User();
+    console.log(user1);
+    user1.displayAll();
+    user1.getEmail()
+    
+
+
+    </script>
+</body>
+</html>

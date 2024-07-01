@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>converting the entries to array</h1>
+    <script>
+        let a=[
+            ['firstname','raj'],
+            ['lastname','kumar'],
+            ['age',32],
+
+        ]
+        let entriesToArray=Object.fromEntries(a)
+        document.write(entriesToArray.firstname +'<br>')
+        document.write(entriesToArray.lastname +'<br>')
+
+        for(let i=0;i<entriesToArray.length;i++){
+            document.write(i)
+        }
+    </script>
+</body>
+</html>

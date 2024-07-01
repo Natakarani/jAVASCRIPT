@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body{
+            padding: 30px;
+        }
+        #dates{
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 10px;
+            width:fit-content;
+            background-color: #bafed7;
+            padding: 30px;
+            margin: auto;
+            border-radius: 20px;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+        }
+        #dates .date{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(255, 255, 255);
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+            
+        }
+        .date:hover{
+            background-color: #2121215c !important;
+        }
+        .currentdate{
+          background: linear-gradient(45deg, #c1050b, #4b04a1);
+            color: #fff;
+        }
+        .currentdate:hover{
+           
+            color: transparent;
+            background-image: linear-gradient(45deg, #f17a7e, #4b04a1, yellow) !important;
+            -webkit-background-clip: text;
+        }
+    </style>
+</head>
+<body>
+    <div id="dates"></div>
+
+
+    <script>
+        let dates = document.getElementById('dates')
+        function getDates(){
+            const currentDate = new Date().getDate();
+            console.log(currentDate); //22
+            for(let i=1; i<=30; i++){
+              if(i==currentDate){
+                dates.innerHTML +=`<div class="date currentdate"><h1>${i}</h1></div>`
+              }else{
+                dates.innerHTML +=`<div class="date "><h1>${i}</h1></div>`
+              }
+            }
+        }
+        getDates()
+    </script>
+</body>
+</html>

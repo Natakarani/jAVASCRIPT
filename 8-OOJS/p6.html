@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>methods for objects</title>
+</head>
+<body>
+    <center>
+        <h1>object methods</h1>
+    </center>
+    <hr>
+
+    <script>
+        //Object constructer
+        //object.creste-> copy or clone one object to another obhject 
+
+        const user1={
+            name:'mahi',
+            email:'mahi@gmail.com',
+            mobileno:'+91467547687',
+            age:25
+        }
+
+        console.log(user1);
+        document.write(<h1>user1 name: ${user1.name}</h1>)
+
+        document.write(<h1>user1 email: ${user1.email}</h1>)
+
+        document.write(<h1>user1 mobileno: ${user1.mobileno}</h1>)
+
+        document.write(<h1>user1 age: ${user1.age}</h1>)
+
+        //cloning user1 object to user2 variable
+        let user2=Object.create(user1)
+
+        console.log(user2);
+
+        document.write(<h1>user2 name: ${user2.name}</h1>)
+
+        document.write(<h1>user2 email: ${user2.email}</h1>)
+
+        document.write(<h1>user2 mobileno: ${user2.mobileno}</h1>)
+
+        document.write(<h1>user2 age: ${user2.age}</h1>)
+
+
+
+
+       
+        
+    </script>
+
+    
+</body>
+</html>

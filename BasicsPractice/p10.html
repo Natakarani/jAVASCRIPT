@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="url" id="imageInput">
+    <button onclick="generator()">generate image</button>
+    <div id="result"></div>
+   <script>
+    let result=document.getElementById('result')
+    let imageInput=document.getElementById('imageInput')
+    function generator(){
+        if(imageInput.value==""){
+            imageInput.style.border='1px solid red'
+        }
+        else{
+          let image=  document.createElement('img')
+            image.src='https://img.freepik.com/free-psd/begonia-flower-isolated-transparent-background_191095-29482.jpg?t=st=1714491381~exp=1714494981~hmac=81f332600f1f74e68dc3ab0b32914b8a5f647081eedd1d99d59a0a82699b96bb&w=740'
+            result.append(image)
+            console.log(result)
+        }
+
+    }
+
+   </script> 
+</body>
+</html>

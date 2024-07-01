@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>home</li>
+        <li class="liTag">contacts</li>
+        <li>about</li>
+    </ul>
+    <ul>
+        <li class="liTag">read</li>
+        <li id="liTag">details</li>
+        <li>more</li>
+    </ul>
+<p>-------------------</p>
+
+
+    <div>
+        <p class="para">text in first div</p>
+        <p>text2 in first div</p>
+        <p>text3 in first div</p>
+    </div>
+    <div>
+        <p class="para">text in second div</p>
+        <p>text2 in second div</p>
+        <p>text3 in second div</p>
+    </div>
+    <script>
+        // which one having first that have high priority
+        // example many li tags are there if we are appling same styles to all that will apply to last one only
+        let liTag=document.querySelector('li.liTag')
+        let liTag1=document.querySelector('li#liTag')
+        let ulTag=document.querySelector('ul li')
+        document.write("priting the text : "+`<h1>${ulTag.innerText}</h1>`)
+        ulTag.style.background='red'
+        ulTag.style.padding='20px'
+        liTag1.style.background='green'
+        liTag1.style.padding='20px'
+        liTag.style.boxShadow='4px 4px 10px green'
+
+        document.write(`<p>${ulTag.length}</p>`)//becaues tag has no length here ulTag means we are selecting the tag 
+        document.write(`<p>${ulTag.innerHTML.length}</p><hr>`)
+document.write(`<hr>`)        
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>var (global variable) = we can access the value from outside to inside but not  inside to outside</h1>
+    <script>
+        var a=10;
+        // function whoIsThsis(){
+        //     var a=67;
+        //     document.write('whoisthis method ',`${a}`+'<br>')
+        // }
+        // whoIsThsis()
+
+document.write('==============='+'<br>')
+      
+        function whoIsThsis(){
+            var a=67;
+            document.write(' a value',`${a}`+'<br>')
+        }
+        document.write(`${a}`+'<br>')//having error
+        whoIsThsis()
+document.write('==========='+'<br>')
+
+        function whoIsThsis(){
+            var a=67;
+            document.write(`${a}`+'<br>')
+        }
+        try{
+            document.write(`${a}`+'<br>')
+        }
+        catch(error){
+            document.write(`${error}`+'<br>')
+        }
+        whoIsThsis()
+        document.write("======"+'<br>')
+var a=100;
+var b=607;
+        function whoIam(){
+            var b=980;
+            document.write(`${a}`+'<br>');
+            document.write(`${b}`+'<br>')
+
+        }
+        whoIam()
+
+
+    </script>
+</body>
+</html>

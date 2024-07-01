@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Object.entries()</h1>
+    <h1>object to array conversion by using entries method</h1>
+    <p>after converting the obj into array we can apply any method which we can apply for thearray</p>
+    <p>in for loop for to print the key and value have to pass the two parameters one for key and another for value</p>
+    <script>
+        let user={
+            name:'raj',
+            email:'raj@gmail.com',
+            age:24
+        }
+       let objToArray= Object.entries(user)
+       console.log(objToArray);
+    
+    //    for(let key of objToArray){
+     
+    //     document.write(`<p>key = ${key}</p>`)
+    //    }
+
+       for(let key of objToArray){
+     
+     document.write(`<h1>key = ${key}</h1>`)
+    //  document.write(`<h1>value = ${value}</h1>`)
+    }
+    document.write('=============')
+    for(let [key,index] of Object.entries(user)){
+     
+     document.write(`<h1>key = ${key}</h1>`)
+     document.write(`<h1>value = ${index}</h1>`)
+    }
+    document.write('=========')
+
+    </script>
+
+
+<script>
+   let a={
+    name:'jkj',
+    age:54
+   }
+  let d=Object.keys(a)
+for(let key in d){
+  if(key=='age'){
+    console.log('pree');
+  }
+}
+
+ 
+</script>
+</body>
+</html>

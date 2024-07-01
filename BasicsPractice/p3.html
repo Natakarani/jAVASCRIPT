@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="result"></div>
+    <script>
+        let result=document.getElementById('result');
+        let bool=true;
+        bool=String(bool)
+        result.innerHTML+=`<p>${typeof(bool)}</p>`
+        let a=89.9
+        a=String(a)
+        result.innerHTML+=`<p>${typeof(a)}</p>`
+        result.innerHTML+=`<p><span style="color:orange">${typeof(1223)} value after ${typeof(String(123))} ${String(123)}</span></p>`
+        result.innerHTML+=`<p><span style="color:orange">${typeof(10+68)} value after ${typeof(String(10+56))} ${String(10+7)}</span></p>`
+        //first do the calculation and then it will converts to string
+        //data type of null=obj
+        //data typr of undefined=undefined
+
+        result.innerHTML+=`<p><span style="color:orange">${typeof(123e-1)} value after ${typeof(String(123e-1))} ${String(123e-1)}</span></p>`
+        result.innerHTML+=`<p><span style="color:orange">${typeof(undefined)} value after ${typeof(String(undefined))} ${String(undefined)}</span></p>`
+
+        result.innerHTML+=`<p><span style="color:orange">${typeof(null)} value after ${typeof(String(null))} ${String(null)}</span></p>`
+
+
+    </script>
+</body>
+</html>

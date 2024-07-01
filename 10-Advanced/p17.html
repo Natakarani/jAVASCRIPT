@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Strict Mode</title>
+</head>
+<body>
+    <h1>JavaScript Strict Mode</h1>
+    <p>Sometimes, JavaScript won't show errors for certain mistakes. By using strict mode, we can make the code more strict, forcing it to show errors if there are any issues.</p>
+    <p>For example, a variable that is not declared but assigned a value gets treated as a global variable without showing any error. Strict mode helps catch such errors.</p>
+    <hr>
+    <script>
+        // Example 0: Without strict mode
+        function noStrictMode() {
+            x = 100; // This will not throw an error in non-strict mode(asidental global variable)
+            document.write('Without strict mode: ' + x + '<hr>');
+        }
+        noStrictMode();
+
+        // Example 1: Without strict mode at global level
+        a = 10; // This will not throw an error in non-strict mode
+        document.write('Without strict mode at global level: ' + a + '<hr>');
+
+        // Example 2: With strict mode
+        function withStrictMode() {
+            "use strict";
+          
+                y = 100; // This will throw an error in strict mode
+                document.write('With strict mode: ' + y);//shows error
+            
+                document.write('Error in strict mode: ' + e.message + '<hr>');//shows error
+        }
+        withStrictMode();
+    </script>
+</body>
+</html>

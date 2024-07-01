@@ -1,0 +1,77 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 20%;
+        }
+        /* .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 100vh;
+            border: 2px solid red;
+        }
+        .container div{
+            width: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        } */
+    </style>
+</head>
+<body>
+    <div class="container">
+       <div>
+        <img src="https://img.freepik.com/free-vector/green-snake-cartoon-character-isolated-white-background_1308-64260.jpg?t=st=1714623422~exp=1714627022~hmac=6edbe683d2e14dd2c2980381b1aeb3cfafa7ab27c9f8fdbfe742b081320f1748&w=1380" alt="" id="image">
+        
+       </div>
+    </div>
+    <button onclick="moveIt()">move</button>
+    <br>
+    
+    <script>
+       let image= document.getElementById('image')
+        let i=0;
+        let i1=150,i2=150;
+        function moveIt(){
+            i=i+10;
+            if(i>150
+            && i<=300){
+                image.style.transform=`translateX(150px) translateY(${i}px)
+                `
+            
+            }
+            
+          else if(i>300 && i<=450){
+           i1-=10;
+                image.style.transform=`translateY(300px) translateX(${i1}px)`
+                // console.log(i)
+            }
+
+            else if(i>450 && i<=600){
+
+           i2-=10;
+           console.log(i2)
+                image.style.transform=`translateY(${i2}px) translateX(0px)`
+            }
+            else{
+                image.style.transform=`translateX(${i}px)`
+                // if(i==40){
+                //     alert("over")
+                //     image.style.transform=`translateX(0)`
+                // }
+            }
+       image.style.transition='1s'
+        }
+
+    </script>
+</body>
+</html>
+
+--->
+
+

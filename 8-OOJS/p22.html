@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //craeting function const
+        function Student(){
+              this.firstname='john';
+              this.lastname='doe';
+              this.age=6;
+              this.status='good';
+              this.isOnline='false'
+        }
+        let student1=new Student();
+        Student.prototype.marks={
+            kannada:26,
+            english:78,
+            hindi:60
+        }
+        Student.prototype.phoneNumber='890-7887'
+        console.log(student1)//not gets added bcz after creating the obj we are adding the properties need to add before creting the obj so than only that values gets stored in obj
+        let student2=new Student();
+        console.log(student2)
+        console.log(`${student2.marks.kannada}`)
+    </script>
+</body>
+</html>

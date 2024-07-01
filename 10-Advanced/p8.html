@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ananomous function (immediate execution funtion)
+        <p>no needto call again</p>
+    <script>
+       let result= (function(a,b){
+            return `${a+b}`
+        })(2,3)
+       
+        document.write(`${result}`)
+    </script>
+
+    <script>
+        ((a,b)=>{
+            document.write(`<p>the value of a ${a}</p>`)
+            document.write(`<p>the value of b ${b}</p>`)
+        })(2,4)
+    </script>
+</body>
+</html>

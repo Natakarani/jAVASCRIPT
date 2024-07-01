@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <p>alert</p>
+        <p>confirm</p>
+        <p>prompt</p>
+    </center>
+    <button onclick="alertDialog()">alertBox</button>
+    <button onclick="confirmDialog()">confirmBox</button>
+    <button onclick="promptDialog()">PromptBOx</button>
+    <div id="result"></div>
+    <script>
+        let result=document.getElementById('result')
+        function alertDialog(){
+          var message='this is dialog box'
+          alert(message)
+        }
+        function confirmDialog(){
+            var confirmBox=confirm('are u sure u want to deleet this message')
+            if(confirmBox==true){
+                result.innerHTML=`user clicked the ok butotn`
+            }
+            else{
+                result.innerHTML='user clicked the cancel button'
+            }
+
+        }
+        function promptDialog(){
+          let firstNumber=Number(prompt("enter the first num"))
+          if(firstNumber==0){
+            result.innerHTML='u entered a empty value'
+            firstNumber=Number(prompt('enter the value'))
+          }
+          let secondNumber=Number(prompt("enter the second num"))
+
+let total=firstNumber+secondNumber;
+result.innerHTML=`<h1>the total: ${total}</h1>`
+
+        }
+
+    </script>
+</body>
+</html>

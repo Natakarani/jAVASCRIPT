@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table{
+        
+        text-align: center;
+    }
+    img{
+        width: 100px;
+        border-radius: 10px;
+    }
+</style>
+<body>
+    <table align="center" class="container" id="container" border="1" cellpadding="15" cellspacing="0">
+        <tr>
+            <th>SI.NO</th>
+            <th>profile</th>
+            <th>username</th>
+            <th>email</th>
+            <th>address</th>
+            
+            <th>phone number</th>
+            <th>company</th>
+            <th>website</th>
+        </tr>
+    </table>
+    <script>
+        var container=document.getElementById('container')
+        var alluser=[]
+        fetch('https://panorbit.in/api/users.json')
+        .then(function(pending){
+          return pending.json()
+        })
+        .then(function(response){
+            console.log(response)
+            alluser=response.users;
+            alluser.map((item,index)=>{
+                container.innerHTML+=`<tr>
+                    <td>${index+1}</td>
+                    <td><img src="${item.profilepicture}"></td>
+                    <td>${item.username}</td>
+                    <td>${item.email}</td>
+                    <td>${item.address.street}<br>${item.address.city}
+                        <br>${item.address.zipcode}</td>
+                    <td>${item.phone}</td>
+                     <td>${item.company.name}<br>${item.company.catchPhrase}</td>
+                      <td><a href="${item.website}"">${item.website}</td>
+                    </tr>`
+
+            })
+        })
+        .catch(function(error){
+            //returns error when data getting time or convertion json to obj or array
+            console.log(error)
+        })
+    </script>
+</body>
+</html>

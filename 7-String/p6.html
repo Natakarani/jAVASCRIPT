@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #output li{
+            padding: 10px;
+            font-size: 1.2rem;
+            background-color: red;
+            list-style-type: none;
+            width: fit-content;
+            border-radius: 0px 10px 10px 5px;
+            margin-bottom: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <center>
+       <h1>string method.........</h1> 
+    </center>
+    <hr>
+    <input type="text" placeholder="enter the data" id="name">
+    <ul id="output"></ul>
+    <button onclick="uppercase()">convert to uppercase</button>
+    <button onclick="lowercase()">convert to lowercase</button>
+
+    <script>
+        let name=document.getElementById('name')
+        let output=document.getElementById('output')
+        function uppercase(){
+            output.innerHTML+=`<li>${(name.value).toUpperCase()}</li>`
+        }
+        function lowercase(){
+            output.innerHTML+=`<li>${(name.value).toLowerCase()}</li>`
+            
+
+        }
+
+        
+
+        
+
+    </script>
+</body>
+</html>

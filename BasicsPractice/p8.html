@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--assignment: take the input tag if enter 1 have to give the background color to only first card based on number have to give background color to particukar card -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>this is paragraph 1</p>
+    <p class="test">this is paragraph</p>
+    <h1 class="test">this is h1</h1>
+    <h2 class="test">this is h2</h2>
+    
+   <img src="" alt="" class="test">
+    <script>
+        let test=document.getElementsByClassName('test');
+      //  document.write(test[0].innerText)
+        document.write(test[0].innerText)
+test[2].style="background-color:red";
+test[1].style.backgroundColor="green"
+// for(let i=0;i<test.length;i++){
+//     test[i].style.color="blue"
+//     test[i].style.padding="20px"
+    
+// }
+for(key in test){
+    test[key].style.backgroundColor="orange";
+    test[key].style.color="#fff"
+    test[key].style.padding="10px";
+    if(key==3){
+    test[3].setAttribute('src','https://img.freepik.com/free-photo/selective-focus-shot-blue-african-daisy-flower_181624-24402.jpg?t=st=1714415361~exp=1714418961~hmac=55f74b5eb046828290a39dff436ceba7c3cb6bdef5eace8998a56973c6ddf676&w=996')
+    }
+}
+
+    </script>
+</body>
+</html>

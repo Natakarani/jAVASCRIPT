@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let allUsers=[
+            {
+                username:'raj',
+                email:'raj@gmail.com',
+                age:20
+            },
+            {
+                username:'john',
+                email:'john@gmail.com',
+                age:30
+            },
+            {
+                username:'doe',
+                email:'doe@gmail.com',
+                age:10
+            },
+        ]
+        console.log(allUsers)
+        let newUser1={
+            username:'jack',
+            email:'jack@gmail.com',
+            age:24
+        }
+
+        allUsers=[...allUsers,newUser1]
+        console.log(allUsers)
+       
+        let newUser2={
+            username:'raju',
+            email:'raju@gmail.com',
+            age:28
+        }
+        allUsers=[...allUsers,newUser2]
+        console.log(allUsers)
+    </script>
+</body>
+</html>

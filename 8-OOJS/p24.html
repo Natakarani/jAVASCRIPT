@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>__proto__:objectName</h1>
+    <p>linking the obj one into another with short code </p>
+    <script>
+        let user1={
+            name:'raj',
+            age:17
+        }
+        let user2={
+            email:'raj@gmail.com',
+            phNo:'+56788900',
+            __proto__:user1,
+        }
+        let user3={
+            course:'java full stack',
+            duration:'6months',
+            __proto__:user2,
+        }
+        document.write('user3===========')
+        document.write(`${user3.name}`+'<br>')
+        document.write(`${user3.email}`+'<br>')
+        document.write(`${user3.course}`+'<br>')
+        document.write(`${user3.duration}`+'<br>')
+        document.write(`${user3.age}`+'<br>')
+        document.write(`${user3.phNo}`+'<br>')
+        document.write('user2==========='+'<br>')
+        document.write(`${user2.name}`+'<br>')
+        document.write(`${user2.email}`+'<br>')
+        document.write(`${user2.course}`+'<br>')
+        document.write(`${user2.duration}`+'<br>')
+        document.write(`${user2.age}`+'<br>')
+        document.write(`${user2.phNo}`+'<br>')
+        document.write('user1==========='+'<br>')
+        document.write(`${user1.name}`+'<br>')
+        document.write(`${user1.email}`+'<br>')
+        document.write(`${user1.course}`+'<br>')
+        document.write(`${user1.duration}`+'<br>')
+        document.write(`${user1.age}`+'<br>')
+        document.write(`${user1.phNo}`)
+    </script>
+</body>
+</html>

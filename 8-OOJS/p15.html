@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let user={
+            name:'raj',
+            email:'raj@gmail.com',
+
+            age:22
+        }
+        console.log(user)
+        document.write(user.name+'<br>')//we can print the values line this 
+        document.write(user['name']+'<br>')//and also like this
+        for(let i in user){
+            document.write(`index = ${i}`+'<br>')
+            document.write(`value = ${user[i]}`+'<br>')
+        }
+    </script>
+</body>
+</html>

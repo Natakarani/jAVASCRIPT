@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="result">
+
+    </div>
+    <script>
+        let result =document.getElementById('result');
+        result.innerHTML+=`<h1>is equals to </h1>`
+        if(100=='100'){
+            result.innerHTML+=`<h1>numbers are equal</h1>`
+        }
+        else{
+            result.innerHTML+=`<h1>numbers are not equal</h1>`
+        }
+
+        if(100==='100'){
+            result.innerHTML+=`<h1>numbers are equal</h1>`
+        }
+        else{
+            result.innerHTML+=`<h1>numbers are not equal </h1>`
+        }
+    </script>
+</body>
+</html>

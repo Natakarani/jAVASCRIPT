@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: black;
+            color: rgb(161, 255, 47);
+            line-height: 2.4;
+        }
+    </style>
+</head>
+
+<h1>window.reload()</h1>
+<p>for to reload the page</p>
+<h1>window.assign()</h1>
+<p>for to add the website</p>
+<h1>OR</h1>
+<h1>window.location.hef='addressofurl"
+</h1>
+<p>for to add the website</p>
+   <h1>window.location.refresh()</h1>
+    <h2>refreshes the browser </h2>
+   
+    <h1>location</h1>
+    <button onclick="addWebsite()">add website</button>
+    <button onclick="getIt()">github</button>
+    <button onclick="reloadBtn()">refresh the page</button>
+    <br>
+    <script>
+        console.log(location)
+        document.write("protocol: "+location.protocol+'<br>')
+        document.write("href: "+location.href+'<br>')
+        document.write("pathname: "+location.pathname+'<br>')
+        //port number with server location=port
+//local server address and also port number=host
+//local server address=hostname
+        document.write("hostname: "+location.hostname+'<br>')
+        document.write("host: "+location.host+'<br>')
+
+        document.write("origin: "+location.origin+'<br>')
+        document.write("port: "+location.port+'<br>')
+
+
+function getIt(){
+    location.href='https://github.com'
+}
+function reloadBtn(){
+    location.reload()
+}
+function addWebsite(){
+    location.assign('https://github.com')
+}
+
+
+
+    </script>
+</body>
+</html>

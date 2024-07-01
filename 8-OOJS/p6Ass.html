@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    header img{
+        border-radius: 100px;
+        width: 50px;
+        height: 50px;
+    }
+    header>div{
+        font-weight: 550;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    header>div>div{
+        font-size: 23px;
+        display: flex;
+        gap:80px;
+    }
+    header>div>div>p:hover{
+        color: rgb(255, 136, 0);
+    }
+    header{
+        padding: 15px 0;
+        box-shadow: 0px 0px 10px rgb(183, 179, 179);
+    }
+    .menu h2{
+       margin-left: 80px;
+       margin-top: 20px;
+    }
+    .menu>div{
+        display: flex;
+        padding: 40px;
+        justify-content: space-around;
+    }
+    .menu>div>div{
+        display: flex;
+        align-items: center;
+
+    }
+    .menu img{
+        width: 150px;
+        height: 150px;
+        border-radius: 100px;
+    }
+    .menu>div>div{
+        display: flex;
+        flex-direction: column;
+        gap:14px;
+        margin-top: 20px;
+        font-size: 21px;
+        
+    }
+    #foods{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly; 
+        margin: 0 70px;
+        gap:10px;
+    }
+    
+    #foods img{
+        border-radius: 20px;
+        width: 100%;
+    }
+    .card{
+        margin-top: 40px;
+        border-radius: 20px;
+        width: 350px;
+        padding: 10px;
+        padding-bottom: 30px;
+        border: 1px solid rgb(216, 216, 216);
+    }
+</style>
+<body>
+    <header>
+        <div>
+           <img src="https://img.freepik.com/free-vector/letter-s-brand-logo-concept-golden-style_1017-23640.jpg?t=st=1715840678~exp=1715844278~hmac=e6b6890da9b618438b90782f309d90d46fe0cbf76791ad44bfaff32895b2e8c9&w=740" alt="">
+           <div>
+            <p>swiggy corporate</p>
+            <p>search</p>
+            <p>offers</p>
+            <p>help</p>
+            <p>sign in</p>
+            <p>cart</p>
+           </div>
+
+        </div>
+    </header>
+    <h1 style="text-shadow: 2px 2px 2px rgb(24, 24, 24);color:red">create object()(cloning the obj)</h1>
+
+    <section class="menu">
+        <h2 style="font-size: 29px;">What's on your mind?</h2>
+        <div>
+            <div>
+                <img src="https://img.freepik.com/free-photo/delicious-chicken-table_144627-8758.jpg?t=st=1715840914~exp=1715844514~hmac=f4108bb44e77c0f30b983cdf038d65f78034bb7199924537410fae1b5301fce5&w=900" alt="">
+                <p>Chicken</p>
+            </div>
+            <div>
+                <img src="https://img.freepik.com/free-photo/photorealistic-lohri-festival-celebration-with-traditional-food_23-2151098302.jpg?t=st=1715840972~exp=1715844572~hmac=e126ad185df765f6e31fa00004c44e332c6a59ae1de1c039888c5633a52e6173&w=900" alt="">
+                <p>North India</p>
+            </div>
+            <div>
+                <img src="https://img.freepik.com/free-photo/view-indian-spices-arrangement_23-2148747645.jpg?t=st=1715841006~exp=1715844606~hmac=0d4b5b2177177304ea6ae6caa841ac851ae777384191d9fa27410546c448ab57&w=900" alt="">
+                <p>South India</p>
+            </div>
+            <div>
+                <img src="https://img.freepik.com/free-photo/freshly-italian-pizza-with-mozzarella-cheese-slice-generative-ai_188544-12347.jpg?t=st=1715841055~exp=1715844655~hmac=c6c6c19ea50bb55c16249fb16c20193200948b6bb6a6424ea8f69ca80c504b92&w=900" alt="">
+                <p>Pizza</p>
+            </div>
+            <div>
+                <img src="https://img.freepik.com/free-photo/grilled-cheeseburger-with-tomato-sesame-bun-generative-ai_188544-12302.jpg?t=st=1715841648~exp=1715845248~hmac=3a0937d54de0ec86fcd592ee85d76a1357c4b99fc859d96edbf964b1b5bac49c&w=900" alt="">
+                <p>Burger</p>
+            </div>
+        </div>
+    </section>
+    <h2 style="margin-left: 80px;margin-top: 100px;margin-bottom: 20px;font-size:29px">To Restaurant chains in Bangalore</h2>
+    
+    <div id="foods"></div>
+    <script>
+        let foods=document.getElementById('foods')
+        let swiggy={
+            image:[
+            {
+                id:'chicken',
+                img:'https://img.freepik.com/free-photo/crispy-fried-chicken-wooden-cutting-board_1150-20220.jpg?t=st=1715844134~exp=1715847734~hmac=b9f8d495f90966a7bcb94862463998c43f0fdf0b220efb359123bd158571ab1d&w=996',
+                name:'Chinese Wok',
+                desc:'Chinese , Asian, Dessets , Shanti Nagar',
+            },
+            {
+                id:'chicken',
+                img:'https://img.freepik.com/free-photo/curry-with-chicken-onions-indian-food-asian-cuisine_2829-4415.jpg?t=st=1715841989~exp=1715845589~hmac=95c1b57f1d736c7e5120abfdcd48d52c3d3e3ddb12de67fb7e5f4f8b2b831cf7&w=900',
+                name:'Chinese Wok',
+                desc:'Chinese , Asian, Dessets , Shanti Nagar',
+            },
+            {
+                id:'north',
+                img:'https://img.freepik.com/free-photo/indian-tasty-roti-composition_23-2149073358.jpg?t=st=1715842036~exp=1715845636~hmac=78ea099513ffc98486e98e2f249b379c012d2e19efb49dd64bd0d3bd33ce1338&w=900',
+                name:'chapathi',
+                 desc:'4 Classic Non-Veg Wraps at 380',
+            },
+             {
+                id:'north',
+                img:'https://img.freepik.com/free-photo/close-up-appetizing-ramadan-meal_23-2151182465.jpg?t=st=1715842201~exp=1715845801~hmac=4b25b40684f155c5eab506c45dc528ed67c0ada34311d44a1979a1d0682d4f2d&w=900',
+                name:'chapathi',
+                 desc:'4 Classic Non-Veg Wraps at 380',
+             },
+             {
+                 id:'north',
+                 img:'https://img.freepik.com/free-photo/side-lamb-ragout-with-fried-onion-carrot-tomato-sauce-greens-vegetable-salad-table_141793-4744.jpg?t=st=1715844211~exp=1715847811~hmac=3cf6c4c298e72a2f7556ed6da5656cec87079bdf1418450138539fb94c6eac55&w=996',
+                name:'chapathi',
+                desc:'4 Classic Non-Veg Wraps at 380',
+            },
+            {
+                id:'south',
+                img:'https://img.freepik.com/premium-photo/idly-idli-south-indian-main-breakfast-item-which-is-beautifully-arranged-aqua-color-plates_527904-2878.jpg?w=900',
+                name:'rice',
+                desc:'Idly sambar breakfast',
+            },
+            {
+                id:'south',
+                img:'https://img.freepik.com/free-photo/delicious-indian-food-tray_23-2148723505.jpg?t=st=1715842340~exp=1715845940~hmac=afc2e0c55f115fc0373da02f6b9f09f44850d66659452393d0f579775fe5882c&w=900',
+                name:'rice',
+                desc:'food With meals 65 Combo',
+            },
+            {
+                id:'south',
+                img:'https://img.freepik.com/free-photo/delicious-indian-dosa-composition_23-2149086046.jpg?t=st=1715842404~exp=1715846004~hmac=9ebf219cbff1a76a3016d8eedee054e0b107cbdee5937edeaaee39476cf83ec8&w=900',
+                name:'dosa',
+                desc:'specialMasala dosa ',
+            },
+            {
+                id:'pizza',
+                img:'https://img.freepik.com/premium-psd/pizza_999179-6.jpg?w=826',
+                name:'pizza',
+                desc:'Creamy Cheese & Chopped Spinach Pasta ',
+            },
+            {
+                id:'pizza',
+                img:'https://img.freepik.com/free-photo/top-view-seafood-pizza-with-shrimp-mussel-calamari-squid-cheese_141793-2452.jpg?t=st=1715842498~exp=1715846098~hmac=d39ebc55268316b0d87cd37b7b59c3602b6c44354a16e2bc13ada179f3e7e4e5&w=900',
+                name:'pizza',
+                desc:'Creamy Cheese & Chopped Spinach Pasta ',
+            },
+            {
+                id:'pizza',
+                img:'https://img.freepik.com/premium-photo/indian-style-italian-dish-paneer-pizza-topped-with-cottage-cheese_55610-3555.jpg?w=900',
+                name:'pizza',
+                desc:'Creamy Cheese & Chopped Spinach Pasta ',
+            },
+            {
+                id:'pizza',
+                img:'https://img.freepik.com/free-photo/view-ready-eat-delicious-meal-go_23-2151431778.jpg?t=st=1715842588~exp=1715846188~hmac=4ce84d7fa175748d40dc16b330263f685956a2ed25ce57b662b8c07979304402&w=900',
+                name:'pizza',
+                desc:'Creamy Cheese & Chopped Spinach Pasta ',
+            },
+            {
+                id:'burger',
+                img:'https://img.freepik.com/free-photo/high-angle-hamburger-ingredients_23-2148575454.jpg?t=st=1715842610~exp=1715846210~hmac=e23f31441ff10ccb7b42745bf324c6107636273d026bd1cc9a68d69b37ab2f98&w=900',
+                name:'burger',
+                desc:'Popcorn Chicken Rice Bowl ',
+            },
+            {
+                id:'burger',
+                img:'https://img.freepik.com/premium-photo/close-up-delicious-burger-with-sesame-delicious-homemade-burger-wooden-table-free-space-text_87555-2725.jpg?w=900',
+                name:'burger',
+                desc:'Popcorn Chicken Rice Bowl ',
+            },
+            {
+                id:'burger',
+                img:'https://img.freepik.com/free-photo/yummy-cheeseburger-with-french-fries_23-2148374855.jpg?t=st=1715842676~exp=1715846276~hmac=eb63e25a7e19391ff7d3c4f243dc3c7d760604fd0a6cc420ef7f7df3eb35a0f8&w=900',
+                name:'burger',
+                desc:'Popcorn Chicken Rice Bowl ',
+            }, 
+            ]
+           
+          
+        }
+        let result=Object.create(swiggy)
+           
+        console.log(result.image[0].name)
+        for(let i=0;i<result.image.length;i++){
+            foods.innerHTML+=`<div class="card">
+                <img src="${result.image[i].img}">
+                <p style="font-size:20px">${result.image[i].name}</p>          
+            </div>`
+        }
+
+        
+    </script>
+</body>
+</html>

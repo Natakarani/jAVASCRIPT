@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>set constructor with nno parametsers</h1>
+    <p>set wont allowduplicates if duplicates are there it will print only once removes extra one</p>
+    <p>size= for to know the length</p>
+    <p>has = for to know element present or not</p>
+    <p>if present gives true else false</p>
+    <p>delete for to delete </p>
+    <p>if present deleted not present not gets deleted bcz noth9ng is there to delete</p>
+    <script>
+        let emp=new Set();
+        emp.add('ramesh');
+        emp.add('suresh');
+        emp.add('john');
+        console.log(emp)
+
+        console.log(emp.has('ramesh'))
+        console.log(emp.has('doe'))
+        console.log(emp.delete('ramesh'))
+        console.log(emp.delete('doe'))
+        if(emp.has('ramesh')){
+            document.write(`<h1>presemt</h1> `+'<hr>')
+        }
+        else{
+            document.write(`<h1>absent</h1>`+'<hr>')
+        }
+
+        if(emp.has('suresh')){
+            document.write(`<h1>presemt</h1> `+'<hr>')
+        }
+        else{
+            document.write(`<h1>absent</h1>`)
+        }
+
+    </script>
+</body>
+</html>

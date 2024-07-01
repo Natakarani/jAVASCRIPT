@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>for to delete the obj we can use delete and also for set we can use the delete</p>
+    <p>array we use remove</p>
+    <script>
+        let car=new Object();
+        car.name='motor';
+        car.color='red';
+        car.model='2029'
+        delete car.name
+        
+        console.log(car)
+console.log(Array.isArray(car))
+        for(let i in car){
+            delete car[i]
+            console.log(car)
+        }
+
+document.write("==========="+'<hr>')
+        let car1=Object.assign({num:465,height:'400cm'},car)
+        for(let j in car1){
+            document.write(`${j}`)
+            document.write(`${car1[j]}`+'<br>')
+        }
+    </script>
+</body>
+</html>

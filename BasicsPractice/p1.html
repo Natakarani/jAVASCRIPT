@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="result"></div>
+    <script>
+        //converting string to num by using NUmber constructor and parseInt
+        let result=document.getElementById('result');
+        result.innerHTML+=`this is result`;
+        result.innerHTML+=`<h1>this is result in h1 tag</h1>`
+        let a="10.9999"
+        a=Number(a);
+        result.innerHTML+=`<h1>the type of ${a} if <span style="color:green">${typeof(a)}</span></h1>`
+        let a1="190.889"
+        a1=parseInt(a1);
+        result.innerHTML+=`the type of a1 ${a1} is <span style="color:red">${typeof(a1)}</span>`
+        let a2="maneesha"
+        a2=Number(a2)
+        result.innerHTML+=`<h2 style="color:blue">changing str to num ${a2}</h2>`
+        let a4=188900.5909
+        result.innerHTML+=`<h4>the type of a4 is ${typeof(a4)}</h4>`
+        a4=parseFloat(a4)
+        result.innerHTML+=`<h4>the type of a4 is <span style="color:orange">${typeof(a4)}</span></h4>`
+        result.innerHTML+=`<h4>the type of a4 is <span style="color:orange">${typeof(a4)}</span></h4>`
+        result.innerHTML+=`<h4>the type of a4 is <span style="color:orange">${a4}</span></h4>`
+
+        result.innerHTML+=`<h4>the type of a4 is <span style="color:orange">${a4.toFixed()}</span></h4>`
+        result.innerHTML+=`<h4>the type of a4 is <span style="color:orange">${a4.toFixed(2)}</span></h4>`
+        result.innerHTML+=`<h4>the type of a4 is <span style="color:orange">${a4.toFixed(16)}</span></h4>`
+    </script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body{
+        margin: 20px;
+        margin-left: 40px;
+    }
+    .adder{
+        border-radius: 10px;
+        border: 2px solid green;
+        background-color: rgba(109, 217, 109, 0.656);
+
+       min-width: 100%;
+        padding: 7px 5px;
+        padding-right: 100px;
+    }
+    .remover{
+        border-radius: 10px;
+        border: 2px solid red;
+        background-color: rgba(255, 0, 0, 0.503);
+
+       min-width: 100%;
+        padding: 7px 5px;
+        padding-right: 100px;
+    }
+    input{
+        margin-top: 25px;
+    }
+ 
+</style>
+<body>
+    <div id="question"></div>
+
+   <div id="answer"></div>
+    <!-- <h1>What is your name?</h1> -->
+   
+    <script>
+        let question=document.getElementById('question')
+        let answer=document.getElementById('answer')
+        let quiz=[
+       
+                options={
+                    que:'what is your name',
+                    option:['harika','varsha','rani'],
+
+                    ans:'harika'
+                },
+     
+                options={
+                    que:'what is your age',
+                    option:[67,32,78],
+
+                    ans:32,
+                },
+            
+          
+        ]
+       let index=0;
+      let container= document.createElement('div')
+      let para=document.createElement('p')
+
+    //   console.log(quiz[index].option[index]);
+    for(let i=0;i<quiz[index].option.length;i++){
+        let heading=document.createElement('h1')
+
+        heading.innerHTML+=`<h1>${quiz[index].que}</h1>`
+        
+        
+        para.innerHTML+=`<p onclick=func(${i})>${quiz[index].option[i]}</p>`
+        container.appendChild(para)
+         document.body.appendChild(container)
+    }
+    
+
+    function func(i,para){
+        // console.log(para);
+        if(quiz[index].option[i]==quiz[index].ans){
+            console.log(para);
+            
+        }
+    }
+    </script>
+</body>
+</html>

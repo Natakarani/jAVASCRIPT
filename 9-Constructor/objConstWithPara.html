@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    #result{
+        background-color: red;
+        color: white;
+        border: 2px solid grey;
+        font-size: 20px;
+        letter-spacing: 1.5px;
+    }
+</style>
+<body>
+    <h1>object constructor with parameter</h1>
+    <div id="result"></div>
+    <script>
+        let obj=new Object({
+            firstname:'raj',
+            lastname:'kumar',
+            age:23,
+        });
+        
+       let obj1= Object.entries(obj)
+       obj1=Object.values(obj)
+       console.log(obj1)
+
+        for(let i=0;i<obj1.length;i++){
+            result.innerHTML+=`<div>
+                <p>${obj1[i]}</p>
+                </div>`
+
+        }
+    </script>
+</body>
+</html>

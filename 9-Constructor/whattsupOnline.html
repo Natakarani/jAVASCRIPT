@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"   />
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<style>
+    *{
+        /* background-color: azure; */
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .container{
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+    }
+    .container1{
+        border: 13px solid rgb(65, 64, 64);
+        border-radius: 20px;
+        background-color: black;
+        min-height: 80vh;
+        min-width: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-width: 450px;
+        position: relative ;
+        
+    }
+    .searchBox{
+
+        position: absolute;
+        bottom: 0px;
+        left:0;
+        display: flex;
+        align-items: center;
+        gap:30px;
+        box-shadow: 0px 0px 10px gray;
+        font-size: 20px;
+        background-color: white;
+        max-width: fit-content;
+        padding:10px 20px;
+    }
+    .searchBox input{
+        border-radius: 20px;
+        border: none;
+        padding: 10px;
+        padding-right: 80px;
+    }
+    .searchBox input::placeholder{
+        font-size: 18px;
+    }
+    .searchBox i{
+        color:grey;
+    }
+    .profile{
+        position: absolute;
+        top: 0;
+        min-width: fit-content;
+        box-shadow: 0px 0px 10px gray;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        gap:60px;
+        padding: 10px 20px;
+        color:grey
+    }
+    
+    .profile p{
+        color: black;
+        font-weight: 550;
+    }
+    .fa-user{
+        background-color: rgb(210, 206, 206);
+        color: grey;
+        padding: 10px 15px;
+        border-radius: 100px;
+    }
+    #send{
+        display: none;
+    }
+
+    #mes{
+        display: flex;
+        gap:20px;
+        flex-direction: column;
+        margin-top:90px;
+        /* background: linear-gradient(45deg,purple,rgb(235, 113, 226)); */
+        color: white;
+        padding: 10px;
+        border-radius: 10px 10px 10px 10px;
+    }
+   
+    .searchBox input:hover {
+        border: none; /* Ensure border is removed on hover */
+    }
+</style>
+<div class="container">
+    <div class="container1">
+        <div class="profile">
+            <div style="display: flex;gap:14px">
+                <i class="fa-solid fa-user"></i>
+                <div style="min-width:166px;">
+                    <h3 style="color:black">profile</h3>
+                    <small id="online" style="color:grey">online</small>
+                </div>
+            </div>
+            <div style="display: flex;gap:24px">
+             <i class="fa-solid fa-video"></i>
+             <i class="fa-solid fa-phone"></i>
+             <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+         </div>
+         <div id="mes">
+
+         </div>
+        <div class="searchBox">
+          <i class="fa-regular fa-face-smile"></i>
+         <i class="fa-regular fa-file"></i>
+        <input type="text" placeholder="Type a Message" oninput="changeStatus()" id="message">
+        <i class="fa-solid fa-microphone" id="audio"></i>
+        <i class="fa-solid fa-paper-plane" id="send" onclick="sendMes()"></i>
+      </div>
+    </div>
+</div>
+
+
+<body>
+   <script>
+    let audio=document.getElementById('audio')
+    let send=document.getElementById('send')
+    let mes=document.getElementById('mes')
+    let message=document.getElementById('message')
+    let online=document.getElementById('online')
+    function sendMes(){
+        var a=130;
+        if(message.value==''){
+            console.log('enter')
+        }
+        else{
+            // a=a+70;
+            // console.log(a)
+           mes.innerHTML+=`<div>
+            <p>${message.value}</p>
+            </div>
+            
+            `
+            // console.log(func())
+            changeStatus()
+        message.value=''
+        online.innerHTML='online'
+        setTimeout(func,1000)
+        }
+    }
+    function changeStatus(){
+        message.value==''?audio.style.display='block':audio.style.display='none';
+      message.value==''?send.style.display='none':send.style.display='block';
+      message.value==''?online.innerHTML='online':online.innerHTML='Typing...';
+    //   message.value=''
+     
+
+    }
+    function func(){
+        let date=new Date();
+      let time=date.getTime();
+      console.log(date.getHours())
+  
+    let meridian=date.getHours()>12?'PM':'AM'
+   let getHr= date.getHours()<10?`0 ${date.getHours()}`:`${date.getHours()}`
+   let getMin= date.getMinutes()<10?`0 ${date.getMinutes()}`:`${date.getMinutes()}`
+      online.innerHTML=`<p>Last seen: ${getHr}  : ${getMin} ${meridian}</p>`
+    }
+
+
+   </script> 
+</body>
+</html>

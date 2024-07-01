@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Map constructor</h1>
+    <h2>need key and value pair</h2>
+    <p>set()= for to add valueks</p>
+    <p>get()= for to get the values(using the key name)</p>
+    <p>has()=  for to know particulay key present or not </p>
+    <p>if present gives true or else false</p>
+    <p>delete()= for to delete</p>
+    <p>size()= for to check the length</p>
+    <p>clear()= for to clear all entries(it makes empty) </p>
+    <p>if there gets deleted and return true else gives false (that means not there so how can we delete that)</p>
+    <script>
+        let map=new Map();
+        console.log(map)
+        map.set('name','john')
+        map.set('email','john@gmail.co,')
+        map.set('marks',89)
+        map.set('online',false)
+        console.log(map)
+        console.log(map.get('name'))
+        console.log(map.get('email'))
+        console.log(map.get('marks'))
+        console.log("=====")
+        console.log(map.has('name'))
+
+        console.log(map.has('age'))
+        console.log(map.delete('name'))
+        console.log(map.delete('age'))
+        if(map.get('online')){
+            document.write('in online')
+        }
+        else{
+            document.write('in offline')
+        }
+
+
+    </script>
+</body>
+</html>

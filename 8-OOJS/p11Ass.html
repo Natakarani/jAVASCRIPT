@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+   <style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    button{
+        cursor: pointer;
+        background-color: green;
+        color: white;
+        outline: none;
+        border: none;
+        padding: 5px 30px;
+        font-size: 18px;
+        margin: 10px;
+
+    }
+    .card{
+        margin-left: 20px;
+        max-width: 300px;
+        padding: 10px;
+        background: rgba(168, 217, 168, 0.262);
+        box-shadow: 0px 0px 10px green;
+    }
+
+   </style>
+<body>
+    <h1>assign method()</h1>
+    <button onclick="clickIt()">click</button>
+    <div id="result"></div>
+    <script>
+        let result=document.getElementById('result')
+        var a={
+            name:'raj',
+            age:90,
+            email:'raj@gmail.com',
+        }
+        result.innerHTML+=`<div class="card">
+        <p>${a.name}</p>
+        <p>${a.email}</p>
+    </div>`
+        var b={
+            name:'rani',
+            email:'rani@gmail.com'
+        }
+       console.log(a)
+       console.log(b)
+       var c=Object.assign(a,b)
+      
+
+
+    function clickIt(){
+        result.innerHTML=''
+        result.innerHTML+=`<div class="card">
+        <p>${c.name}</p>
+        <p>${c.email}</p>
+    </div>`
+    }
+    </script>
+</body>
+</html>

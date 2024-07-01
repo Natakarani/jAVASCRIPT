@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        when by usind setPrototypeOf() it will removes the existing data and overwrites with new data 
+        so for that we can use the defineProperty to add new property without removing the old property
+        <h1>defineProperty(objName,key,{value:anyvalue})</h1>
+        //when present present we are setting property again it will over writes the values
+    </center>
+    <script>
+        let user={
+            name:'raj',
+            email:'raj@gmail.com'
+        }
+        console.log('before inserting the firstname')
+        console.log(user)
+        Object.defineProperty(user,'firstname',{value:'kumar'})
+        console.log(user.name)
+        console.log(user.lastname)
+        console.log('afetr inserting the firstname')
+
+        console.log(user)
+
+        Object.defineProperty(user,'fullname',{value:function(){
+            return this.name+' '+this.email;
+        }}) 
+        Object.defineProperty(user,'name',{value:'kumar'})
+        console.log('before inserting the firstname and fullname function')
+
+        console.log(user)
+
+        console.log(user.fullname())
+
+    </script>
+</body>
+</html>

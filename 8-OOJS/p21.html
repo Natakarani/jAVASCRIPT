@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>PROTOTYPE</h1>
+    <P>prototype keyword is used to create a property in const</P>
+
+    <script>
+        function User(){
+            this.firstname='raj',
+            this.lastname='kumar',
+            this.age=24,
+            this.address={
+                state:'bangalore',
+                pincode:768,
+            }
+            this.fullname=function(){
+                return this.firstname+' '+this.lastname
+            }
+        }
+
+        let user1=new User();
+        console.log(`${user1.address.state}`)
+        console.log('before adding the property')
+        console.log(user1)
+        //property gets added to user1 only
+        user1.rollno=67 //email just added to the user1 only not to the const so in that case need to add that property every time for every obj creation for for that we can use the prototyype so we can add the property directly to constructor
+        console.log('after adding the property')
+
+        console.log(user1)
+
+        let user2=new User();//email not added to the User const 
+        console.log(user2)
+//property gets added directly to const
+        User.prototype.course='btech'
+        let user3=new User();
+        user3.marks=89
+        console.log(user3)
+
+
+    </script>
+</body>
+</html>

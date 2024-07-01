@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p class="para">text in first div</p>
+        <p>text2 in first div</p>
+        <p>text3 in first div</p>
+    </div>
+    <div>
+        <p class="para">text in second div</p>
+        <p>text2 in second div</p>
+        <p>text3 in second div</p>
+    </div>
+    <script>
+        document.write("<hr>")
+    let para=document.querySelectorAll('.para')
+  para[0].style.background='blue'
+//   para.style.background='yellow'// cant apply  stylings to whole array at a time
+
+document.write("content : "+para[0].innerText+'<br>')
+para[0].style.color='red'
+document.write("color of text: "+`<h1>${para[0].style.color}</h1>`+"<hr>")
+for(let i=0;i<para.length;i++){
+    document.write(para[i].innerText+"<br>")
+}
+
+</script>
+</body>
+</html>

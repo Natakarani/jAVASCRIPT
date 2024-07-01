@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .element{
+            background-color: red;
+        }
+        .disabled{
+            color: white;
+            background-color: green;
+        }
+        .none{
+            color:pink;
+            background-color: grey;
+        }
+    </style>
+</head>
+<body>
+    <div class="element" style="color:blue">this is element</div>
+    <script>
+        let element=document.querySelector('.element')
+        element.classList.add('disabled')
+        element.classList.add('none')
+        let none=document.querySelector('.none')
+console.log(none)
+// if write like this means have hign priority than internal bcz it is also like inline only
+none.style.color='yellow'
+
+// if inline means it have first priority
+        //which is last have high priority
+        console.log(element)
+       
+    </script>
+</body>
+</html>

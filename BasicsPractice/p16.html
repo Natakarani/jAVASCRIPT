@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="move" style="color:red;">move it</h1>
+    <button onclick="Slide()">move</button>
+<br>
+    <script>
+        let move=document.getElementById('move')
+        document.write(move.style.color,`<br>`)
+        document.write(move.style.transform,`<br>`)
+        let i=0;
+        function Slide(){
+          i+=10;
+          console.log(i)
+          if(i>150){
+            move.style.transform=`translateX(150px) translateY(${i}px)`
+          }
+          else{
+            move.style.transform=`translateX(${i}px)`
+
+            if(i==40){
+              alert('game over')
+              move.style.transform=`translateX(0px)`
+            }
+          }
+         
+        move.style.transition='1s'
+        }
+           let alStyles=getComputedStyle(move)
+           alStyle.getPropertyValue('color')
+        
+        
+
+    </script>
+</body>
+</html>

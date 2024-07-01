@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>rest operator</h1>
+    <p>when we are passing the multiple values it will converts into an array</p>
+    <p>in function when we are giving the only one parameter but passing the multiple values it will take only first one at that time we can use the rest opertaor</p>
+    <script>
+        function user1(sum){
+           console.log(sum)
+        }
+        user1(1,2,3,4,6)
+
+
+        function user(...sum){
+            let result=0;
+           console.log(sum)
+           sum.map((item,index)=>{
+            result=result+item;
+           })
+           console.log(result)
+        }
+        user(1,2,3,4,6)
+    </script>
+</body>
+</html>

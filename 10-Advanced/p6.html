@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>closure function</h1>
+    <p>writing the one func into another func the innerfunc can able the get theproperties of outer function also</p>
+    <script>
+
+        function fun1(){
+            let a=10;
+            function fun2(){
+                document.write(`<h1>${a}</h1>`)
+
+            }
+            fun2()
+        }
+        fun1()
+        function counter1(){
+            let count=0;
+            function incCount(){
+                return count+=1;
+            }
+            return incCount();
+
+        }
+        document.write(`count ${counter1()}`)
+    </script>
+
+    <script>
+        function createMsg(senderName){
+            return function(mes){
+                document.write(`<p>${senderName}  says ${mes}</p>`+'<br>')
+
+            }
+        }
+        let friend=createMsg('raj');
+        friend(`<p>hi</p>`);
+        let me=createMsg('iam')
+        me(`<p>iam sending hi</p>`)
+    </script>
+</body>
+</html>

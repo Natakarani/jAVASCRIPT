@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM Simulator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            overflow-y: hidden;
+            background-color: blue;
+        }
+        button {
+            cursor: pointer;
+        }
+       
+        .selectLan {
+            font-size: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            position: absolute;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            gap: 20px;
+        }
+        .selectLan h2 {
+            color: white;
+        }
+        .selectLan div {
+            background-color: rgb(237, 237, 84);
+            color: blue;
+            padding: 5px 40px;
+            border: 1px solid black;
+            border-radius: 100px;
+            
+            outline-offset: 2px;
+        }
+        #lanNext {
+            position: absolute;
+            bottom: 4%;
+            right: 2%;
+            padding: 6px 48px;
+            border: none;
+            outline: none;
+            font-size: 26px;
+            font-weight: 550;
+        }
+        #pinNo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-items: center;
+            margin-top: 200px;
+            gap: 20px;
+        }
+        #pinNo h1 {
+            color: white;
+        }
+        #pinNo button {
+            background: yellow;
+            color: blue;
+            font-size: 30px;
+            padding: 6px 40px;
+        }
+        #pinNo input {
+            outline: none;
+            border: none;
+            background-color: transparent;
+            border: 1px solid white;
+            padding: 10px 80px;
+            color: white;
+            font-size: 28px;
+            text-align: center;
+        }
+        .selectTransaction {
+            font-size: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transform: translateY(100px);
+            gap: 20px;
+        }
+        .selectTransaction h1 {
+            color: white;
+        }
+        .selectTransaction div {
+            background-color: rgb(237, 237, 84);
+            color: blue;
+            padding: 5px 40px;
+            border-radius: 100px;
+           
+            outline-offset: 2px;
+        }
+        #bankType {
+            margin-top: 200px;
+            display: flex;
+            gap: 40px;
+            border-radius: 100px;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        #bankType button {
+            background-color: yellow;
+            padding: 6px 40px;
+            color: blue;
+            font-size: 30px;
+        }
+        .withdraw {
+            margin-top: -200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+        .withdraw h1 {
+            color: white;
+        }
+        .withdraw div {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .withdraw input {
+            text-align: center;
+            border: 1px solid white;
+            outline: none;
+            background: transparent;
+            color: white;
+            font-size: 30px;
+            font-weight: 480;
+        }
+        .withdraw button {
+            background-color: yellow;
+            padding: 6px 40px;
+            font-size: 30px;
+            color: blue;
+        }
+        .balanceBtns>div{
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            
+            gap:20px;
+            max-width: fit-content;
+            margin-top:10%;
+            margin-left: 90%;
+        }
+        .balanceBtn>div{
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            
+            gap:20px;
+            max-width: fit-content;
+            margin-top:10%;
+            margin-left: 90%;
+        }
+        .balanceBtn>div{
+           
+            margin-top:20%;
+            margin-left: 90%;
+        }
+        .balanceBtns button{
+            background: yellow;
+            color: blue;
+            font-size: 30px;
+            padding: 6px 40px;
+            
+        }
+        .balanceBtn button{
+            background: yellow;
+            color: blue;
+            font-size: 30px;
+            padding: 6px 40px;
+            
+        }
+        .balanceBtns .lightBtn ,.balanceBtn .lightBtn{
+           background-color: white;
+           padding: 6px 53px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="welcome"></div>
+    <div id="cardInsert"></div>
+    <div id="language"></div>
+    <div id="pinNo"></div>
+    <div id="transaction"></div>
+    <div id="bankType"></div>
+    <div id="withdrawAmount"></div>
+    <div id="depositAmount"></div>
+    <div id="thankyou"></div>
+    <script>
+        let welcome=document.getElementById('welcome')
+        let thankyou=document.getElementById('thankyou')
+        let atmPin = 1010;
+        let totalDeposit=0;
+        let totalWithdraw=0;
+        let balance = 10000; // Initial balance
+         function Welcome(){
+            welcome.innerHTML+=`<div>
+                <h1 style="text-shadow:1px 1px 3px black;color:white;font-weight:bold;font-size:50px;text-align:center;margin-top:300px">Welcome to <br>ATM</h1>
+                </div>`
+            setTimeout(()=>selectLanguage(),2000)
+         }
+         Welcome()
+        function selectLanguage() {
+            welcome.innerHTML=``
+            document.getElementById('language').innerHTML = `
+                <section class="selectLan">
+                    <h2>Select Language</h2>
+                    <div>
+                        <input type="checkbox" id="english">
+                        <label>English</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="telugu">
+                        <label>Telugu</label>
+                    </div>
+                </section>
+            `;
+            document.querySelector('.selectLan').addEventListener('change', function() {
+                let selectedLanguage = document.querySelector('input[type="checkbox"]:checked');
+                if (selectedLanguage) {
+                    enterPin();
+                }
+            });
+        }
+        // selectLanguage();
+        function enterPin() {
+            document.getElementById('language').innerHTML = '';
+            document.getElementById('pinNo').innerHTML = `
+                <h1>Please Enter Your Pin</h1>
+                <input type="password" id="pin"/>
+                <button onclick="pinValidate()">Press if Yes</button>
+                <button>Press if No</button>
+            `;
+        }
+
+        function pinValidate() {
+            let pinInput = document.getElementById('pin').value;
+            if (pinInput != atmPin) {
+                document.getElementById('pinNo').innerHTML += `<h2 style"color:white">Enter the correct pin number</h2>`;
+            } else {
+                transactionDetails();
+            }
+        }
+
+        function transactionDetails() {
+            document.getElementById('depositAmount').innerHTML=``
+            document.getElementById('withdrawAmount').innerHTML=``
+            document.getElementById('pinNo').innerHTML = '';
+            document.getElementById('transaction').innerHTML = `
+                <section class="selectTransaction">
+                    <h1>Select Transaction Method</h1>
+                    <div>
+                        <input type="checkbox" id="withdraw" value="with">
+                        <label>Withdraw</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="balance" value="bal">
+                        <label>Balance Enquiry</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="deposit" value="dep">
+                        <label>Deposit</label>
+                    </div>
+                </section>
+            `;
+            document.querySelector('.selectTransaction').addEventListener('click', function() {
+                let selectedTransaction = document.querySelector('input[type="checkbox"]:checked');
+                if (selectedTransaction) {
+                    if (selectedTransaction.value === 'with') {
+                        enterAmount();
+                    } else if (selectedTransaction.value === 'dep') {
+                        enterDepAmount();
+                    } else if (selectedTransaction.value === 'bal') {
+                        balanceEnquiry();
+                    }
+                }
+            });
+        }
+
+        function enterAmount() {
+            document.getElementById('transaction').innerHTML = '';
+            document.getElementById('bankType').innerHTML = `
+                <button onclick="enterWithdrawAmount()">From Current</button>
+                <button onclick="enterWithdrawAmount()">From Savings</button>
+            `;
+        }
+
+        function enterWithdrawAmount() {
+            document.getElementById('bankType').innerHTML = '';
+            document.getElementById('withdrawAmount').innerHTML = `
+                <div class="withdraw">
+                    <h1>Please Enter Amount</h1>
+                    <input type="text" id="withdrawInput">
+                    <div>
+                        <button onclick="collectCash()">Press if Yes</button>
+                        <button onclick="enterAmount()">Press if No</button>
+                    </div>
+                </div>
+            `;
+        }
+
+        function collectCash() {
+            let withdrawAmountValue = document.getElementById('withdrawInput').value;
+            let withdrawObj = {
+                withdrawAmount: parseFloat(withdrawAmountValue)
+            };
+            if (withdrawObj.withdrawAmount < 500) {
+                document.getElementById('withdrawAmount').innerHTML += `<h3 style="text-align:center;color:white">Withdraw amount should not be less than 500</h3>`;
+            } else if (withdrawObj.withdrawAmount > balance) {
+                document.getElementById('withdrawAmount').innerHTML += `<h3 style="text-align:center;color:white">Insufficient balance</h3>`;
+            } else {
+                totalWithdraw=balance-withdrawObj.withdrawAmount;
+                balance -= withdrawObj.withdrawAmount;
+                document.getElementById('withdrawAmount').innerHTML = `<h1 style="text-align:center;color:white;font-size:40px">Wait until Processing...</h1>`;
+                setTimeout(() => endWithdraw(withdrawObj), 5000);
+               
+            }
+            
+        }
+
+        function endWithdraw(withdrawObj) {
+            document.getElementById('withdrawAmount').innerHTML = `<div class="balanceBtns">
+                <p style="text-align:center;color:yellow;font-size:30px">
+                    Withdrawn amount: <span style="color:white;font-weight:bold">${withdrawObj.withdrawAmount}</span>
+                </p>
+                
+                <p style="text-align:center;color:yellow;font-size:30px">Current balance:<span style="color:white;font-weight:bold;font-size:30px;"> ${balance}</span></p>
+                <div>          
+                <button onclick="transactionDetails()">continue</button>
+                <button onclick="thankYou()" class="lightBtn">cancel</button>
+                </div>
+                </button>
+            `;
+        }
+
+        function enterDepAmount() {
+            document.getElementById('transaction').innerHTML = '';
+            document.getElementById('depositAmount').innerHTML = `
+                <div class="withdraw">
+                    <h1>Please Enter Amount</h1>
+                    <input type="text" id="depositInput">
+                    <div>
+                        <button onclick="depositCash()">Press if Yes</button>
+                        <button onclick="enterDepAmount()">Press if No</button>
+                    </div>
+                </div>
+            `;
+        }
+
+        function depositCash() {
+            let depositAmountValue = document.getElementById('depositInput').value;
+            let depositObj = {
+                depositAmount: parseFloat(depositAmountValue)
+            };
+            if (depositObj.depositAmount < 500) {
+                document.getElementById('depositAmount').innerHTML += `<h3 style="text-align:center;color:white">Deposit amount should not be less than 500</h3>`;
+            } else {
+                balance += depositObj.depositAmount;
+                document.getElementById('depositAmount').innerHTML = `<h1 style="text-align:center;color:white;font-size:40px">Wait until Processing...</h1>`;
+                setTimeout(() => endDeposit(depositObj), 5000);
+               
+            }
+        }
+
+        function endDeposit(depositObj) {
+            document.getElementById('depositAmount').innerHTML = `<div class="balanceBtns">
+                <p style="text-align:center;color:yellow;font-size:30px">
+                    Deposited amount: <span style="color:white;font-weight:bold">${depositObj.depositAmount}</span>
+                </p>
+              
+                <p style="color:yellow;font-size:30px;text-align:center;">Current balance: <span  style="color:white;font-weight:bold;">${balance}</span></p>
+                <div>
+                <button onclick="transactionDetails()">continue</button>
+                <button onclick="thankYou()" class="lightBtn">cancel</button>
+                </div>
+                </div>
+            `;
+        }
+        function thankYou(){
+            document.getElementById('depositAmount').innerHTML = ``
+            document.getElementById('withdrawAmount').innerHTML = ``
+            document.getElementById('transaction').innerHTML = ``
+
+            thankyou.innerHTML=`<h1 style="color:white;font-size:60px;text-align:center">THANK YOU</h1>`
+
+
+        }
+        // <h1 style="font-size:60px;color:white;text-align:center">Thank You for using our ATM</h1>
+        // <h1 style="font-size:60px;color:white;text-align:center">Thank You for using our ATM</h1>
+        function balanceEnquiry() {
+            document.getElementById('transaction').innerHTML = `<div class="balanceBtn">
+                <p style="text-align:center;color:yellow;font-size:30px">
+                    Your current balance is: <span style="color:white;font-weight:bold;">${balance}</span>
+                </p>
+              <div>
+                <button onclick="transactionDetails()">continue</button>
+                <button onclick="thankYou()" class="lightBtn">cancel</button>
+                </div>
+                </div>
+
+            `;
+        }
+    </script>
+</body>
+</html>

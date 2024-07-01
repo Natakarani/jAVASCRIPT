@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="result"></div>
+    <script>
+    let firstnumber = prompt("enter the firstnumber")
+    let secondnumber = prompt("enter the secondnumber")
+    let result = document.getElementById('result')
+    console.log(typeof Number(firstnumber))
+    console.log(Number(firstnumber)+Number(secondnumber))
+    if(Number(firstnumber)==Number(secondnumber)){
+        result.innerHTML+=`<h2>firstnumber ${firstnumber} is euals to second number</h2>`;
+        
+    }
+    else if (Number(firstnumber) >Number(secondnumber)) {
+            result.innerHTML += `<h2>firstnumber ${firstnumber} is greater than  to second number</h2>`;
+
+        }
+      else if (Number(firstnumber) <Number(secondnumber)) {
+        result.innerHTML += `<h2>firstnumber ${firstnumber} is lesser than  to second number</h2>`;
+        }
+      else{
+        result.innerHTML += `<h2>firstnumber ${firstnumber} is not euals to second number</h2>`;
+
+       }
+    </script>
+   
+</body>
+</html>

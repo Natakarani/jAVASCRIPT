@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+           <ul>
+        <li>local function=function A(){}</li>
+        <li>Expression Function= let A=function(){}</li>
+        <li>arrow function=let A=()=>{}</li>
+        <li>callback function=forEach(function(item){})</li>//we can send the one function as parameter to another function
+        <li>closer function= function A(){fucntion B(){} B();}</li>
+        <li>anonymous function or immediate execution function=()();</li>
+        <li>lamda function=A=(x)=>100+x;</li>
+        <li>geneartor function=function* A(){yield "A"; yield "B"}</li>
+       </ul>
+    </center>
+    <div id="res"></div>
+    <script>
+        //local function
+        function localFunc(){
+            document.write(`<h1>this is the local function</h1>`)
+        }
+        localFunc()
+    </script>
+
+</script>
+</body>
+</html>

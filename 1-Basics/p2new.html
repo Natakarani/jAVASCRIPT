@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        datatype
+        1)primitive
+        2)non primitive
+        <h3>primitive data type</h3>
+          -int(integer)= it accept only round numbers example = 0-9
+          -float= it accepts decimal value line 10.6
+          -boolean = either true or false
+          -char = it accepts single char like A
+          -void = returns null value
+
+         2)non primitive /derived data types
+          -array
+          -structure
+          -union
+          -enum
+          -pointer
+          -function
+    </pre>
+    <hr>
+    <script>
+        let firstNumber;
+        document.write(`<p>the first number value ${firstNumber}</p>`);
+        firstNumber=8;
+        document.write('<h1>the first number value'+` ${firstNumber}`+'</h1>');
+        document.write(`<h1>the data type of firstnumber variable : ${typeof(firstNumber)}</h1>`);
+
+        let secondNumber="hello";
+        document.write(`<p>the value of secondNumber variable: ${secondNumber}</p>`);
+        document.write(`<p>the data type of secondNumber is : <span style="color:red">${typeof (secondNumber)}</span></p>`)
+
+         secondNumber = 99;
+            document.write(`<p>the value of secondNumber variable: ${secondNumber}</p>`);
+            document.write(`<p>the data type of secondNumber is : <span style="color:red">${typeof (secondNumber)}</span></p>`);
+        var thirdNumber = false;
+            document.write(`<p>the value of thirdNumber variable: ${thirdNumber}</p>`);
+            document.write(`<h1>the data type of thirdNumber is : <span style="color:green">${typeof thirdNumber}</span></h1>`)
+        thirdNumber = true;//boolean
+        document.write(`<p>the value of thirdNumber variable: ${thirdNumber}</p>`);
+                document.write(`<h1>the data type of thirdNumber is : <span style="color:green">${typeof thirdNumber}</span></h1>`)
+         let name = 'j';//boolean
+            document.write(`<p>the value of name variable: ${name}</p>`);
+            document.write(`<h1>the data type of name is : <span style="color:orange">${typeof name}</span></h1>`)
+        
+        let number=80.980;
+         document.write(`<p>the value of name variable: ${number}</p>`);
+            document.write(`<h1>the data type of name is : <span style="color:orange">${typeof number}</span></h1>`)
+        
+    </script>
+</body>
+</html>

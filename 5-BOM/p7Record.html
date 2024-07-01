@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #message{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            width: 300px;
+            padding: 10px;
+            background-color: green;
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            /* display: none; */
+            color: white;
+            
+        }
+        .hide{
+            /* display: none; */
+        }
+        /* .show
+        {
+            display: block;
+        } */
+        #rr{
+            background-color: green;
+            color: white;
+            padding: 20px;
+            position:fixed;
+            bottom: 0;
+            right: 0;
+        }
+        .hide{
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- <div id="message" class="show">
+        <p  style="font-size: 2rem;">&times</p>
+        <p>you are in online</p>
+    </div> -->
+    <!-- <script>
+        let message=document.getElementById('message')
+        function onlineChecker(){
+            message.classList.add('')
+
+        }
+    </script> -->
+
+
+
+    <div id="message" class="hide">
+        <p style="font-size: 2rem;" onclick="check()">&times;</p>
+        <p >u r in online</p>
+
+    </div>
+    <button onclick="check()">check Online</button>
+    <script>
+        let message=document.getElementById('message')
+        let hide=document.getElementsByClassName('hide')
+        //using navigator details writing code to know user is online or not if in online have give one popup message or else no message have to give
+        function check(){
+            if(navigator.onLine==true){
+                message.style.background='green'
+        message.classList.toggle('hide')
+            }
+            else{
+                message.style.background='red'
+            }
+        }
+    </script>
+    
+</body>
+</html>

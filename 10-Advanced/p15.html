@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="card">
+        <input type="text" name="" id="name" placeholder="search emp" onkeyup="checkEmployee()">
+        <div id="result"></div>
+        <button type="button" id="btn" onclick="checkEmployee()">search</button>
+    </div>
+    <table border="1" cellpadding="10" cellspacing="0" align="center" id="table">
+        <tr>
+            <th>si no</th>
+            <th>emp name</th>
+            <th>action</th>
+        </tr>
+    </table>
+    <script>
+        let result = document.getElementById('result');
+        let btn = document.getElementById('btn');
+        let table = document.getElementById('table');
+        let nameInput = document.getElementById('name');
+        let emp = new Set(['ramesh', 'suresh', 'naresh']);
+
+        function checkEmployee() {
+            let name = nameInput.value.trim();
+            if (name === '') {
+                result.innerHTML = 'Please enter emp name';
+            } else {
+                if (emp.has(name)) {
+                    result.innerHTML = `${name} is present`;
+                } else {
+                    result.innerHTML = `${name} is absent`;
+                }
+            }
+        }
+
+        function printEmployee() {
+            let i = 0;
+            table.innerHTML = `
+                <tr>
+                    <th>si no</th>
+                    <th>emp name</th>
+                    <th>action</th>
+                </tr>`;
+            emp.forEach((item) => {
+                i++;
+                table.innerHTML += `<tr>
+                    <td>${i}</td>
+                    <td>${item}</td>
+                    <td><button onclick="deleteEmployee('${item}')">delete</button></td>
+                </tr>`;
+            });
+        }
+
+        function deleteEmployee(name) {
+            if (confirm(`Are you sure you want to delete ${name}?`)) {
+                emp.delete(name);
+                printEmployee();
+            }
+        }
+
+        printEmployee();
+    </script>
+</body>
+</html>

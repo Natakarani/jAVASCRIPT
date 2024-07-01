@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>call back fucntion</h1>
+    <p>passing the funcion as parametr to another funciton</p>
+    <p>example map is aone function in that we are passing the expression function or arrow func as parameter</p>
+    <script>
+        let a=[2,3,1,2,5]
+        //map is a fucntiom
+        a.map((item,index)=>{
+            console.log(item)
+        })
+        console.log("================")
+        a.map(function(item){
+            console.log(item)
+        })
+        console.log("=============")
+        a.map(function func(item){
+            console.log(item)
+        })
+        function printHello(){
+            document.write(`<p>hwllo</p>`)
+        }
+        setInterval(printHello,1000)
+
+        function printHello1(){
+            document.write(`<p style="color:red">hai</p>`)
+        }
+        setInterval("printHello1()",1000)
+
+        function printHello2(){
+            document.write(`<p style="color:green">how are u</p>`)
+        }
+        // setInterval("printHello2",1000)//cant call like this 
+    </script>
+</body>
+</html>

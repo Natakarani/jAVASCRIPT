@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Strict Mode Errors</title>
+</head>
+<body>
+    <h1>JavaScript Strict Mode Errors</h1>
+    <h2>Duplicate Parameter Error</h2>
+    <h2>Variable Not Declare d Error</h2>
+    <h2>Read-Only Property Error</h2>
+    <p>Strict mode can be applied within a function or globally to catch errors that would otherwise be ignored.</p>
+    <hr>
+    <script>
+        // Duplicate parameter example without strict mode
+        function duplicateParameters(a, a, b) {
+            document.write('Without strict mode: ' + (a + a + b) + '<br>');
+        }
+        duplicateParameters(1, 2, 3);
+
+        // Duplicate parameter example with strict mode
+        // function duplicateParametersStrict(a, a, b) {
+        //     'use strict';
+        //     try {
+        //         document.write('With strict mode: ' + (a + a + b) + '<br>');
+        //     } catch (e) {
+        //         document.write('Error in strict mode (duplicate parameters): ' + e.message + '<br>');
+        //     }
+        // }
+        // Uncommenting the following line will throw an error due to duplicate parameters
+        // duplicateParametersStrict(1, 2, 3);
+
+        // Variable not declared example without strict mode
+        function variableNotDeclared() {
+            x = 10; // This will not throw an error in non-strict mode
+            document.write('Without strict mode (undeclared variable): ' + x + '<br>');
+        }
+        variableNotDeclared();
+
+        // Variable not declared example with strict mode
+        // function variableNotDeclaredStrict() {
+        //     'use strict';
+        //     try {
+        //         y = 20; // This will throw an error in strict mode
+        //         document.write('With strict mode (undeclared variable): ' + y + '<br>');
+        //     } catch (e) {
+        //         document.write('Error in strict mode (undeclared variable): ' + e.message + '<br>');
+        //     }
+        // }
+        // variableNotDeclaredStrict();
+
+        // Read-only property example without strict mode
+        var obj = {};
+        Object.defineProperty(obj, 'password', {
+            value: 'test@56',
+            writable: false
+        });
+        document.write('Without strict mode (before change): ' + obj.password + '<br>');
+        obj.password = 'testchange'; // This will not throw an error in non-strict mode
+        document.write('Without strict mode (after change): ' + obj.password + '<br>');
+
+        // Read-only property example with strict mode
+        var objStrict = {};
+        Object.defineProperty(objStrict, 'password', {
+            value: 'test@56',
+            writable: false
+        });
+        'use strict';
+        document.write('With strict mode (before change): ' + objStrict.password + '<br>');
+        try {
+            objStrict.password = 'testchange'; // This will throw an error in strict mode
+        } catch (e) {
+            document.write('Error in strict mode (read-only property): ' + e.message + '<br>');
+        }
+        document.write('With strict mode (after attempted change): ' + objStrict.password + '<br>');
+    </script>
+</body>
+</html>

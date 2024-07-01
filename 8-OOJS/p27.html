@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #hobbies{
+            padding: 30px;
+            margin: 30px;
+            background-color: rgba(173, 216, 230, 0.247);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-wrap: wrap;
+            gap:30px;
+            justify-content: center;
+        }
+        #hobbies div{
+            padding: 20px;
+            background-color: #fff;
+            min-width: 200px;
+            border-radius: 10px;
+            border-left: 3px solid #e56409;
+        }
+        #data{
+            margin: 30px;
+        }
+        .bank{
+            background-color: rgba(90, 60, 0, 0.485);
+            padding: 30px;
+            border: 1px solid rgb(96, 50, 0);
+            color: rgb(96, 50, 0);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>CLASS ES-6</h1>
+    </center>
+    <hr>
+    <h1>User Details</h1>
+    <div id="data">
+
+    </div>
+
+
+    <h1>Hobbies</h1>
+    <div id="hobbies">
+
+    </div>
+
+  
+    <script>
+
+        let hobbiesContainer = document.getElementById('hobbies');
+        let userContainer = document.getElementById('data');
+        class User{
+            constructor(){
+                this.username = 'Rahul',
+                this.email="rahul@gamil.com";
+                this.age = 45;
+                this.rollNo = 'ROLL09732876',
+                this.isAdmin = true;
+                this.hobbies = ['Coding', 'Cycling', 'Racing', 'Reading', 'Exploring'];
+                this.BankDetails = {
+                    accountNumber:'AC878262522',
+                    Bankbalance:130000,
+                    Branch:'Bangalore'
+                }
+            }
+        }
+
+        let user1 = new User();
+        console.log(user1);
+        user1.hobbies.map((item, index)=>{
+            hobbiesContainer.innerHTML += `
+            <div>
+                <p>${index})</p>
+                <h1>${item}</h1>
+            </div>
+            `
+        })
+
+        userContainer.innerHTML +=`
+        <h1>Name: ${user1.username}</h1>
+        <h4>Name: ${user1.email}</h4>
+        <h4>Name: ${user1.age}</h4>
+        <h5>Name: ${user1.rollNo}</h5>
+
+        <div class="bank">
+            <h1>Name: ${user1.BankDetails.accountNumber}</h1> 
+            <h4>Name: ${user1.BankDetails.Branch}</h4> 
+            <h1>Available Balance = ${user1.BankDetails.Bankbalance}</h1>
+        </div>
+
+        `
+    </script>
+</body>
+</html>

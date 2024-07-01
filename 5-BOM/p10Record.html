@@ -1,0 +1,143 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="sec">00</div>
+    <div id="mil">00
+
+    </div>
+    <button onclick="startTime()">start</button>
+    <button onclick="stopTime()">stop</button>
+    <div id="pop"></div>
+    <script>
+        let sec=document.getElementById('sec')
+        let mil=document.getElementById('mil')
+        let pop=document.getElementById('pop')
+        let secIntervalId;
+        let milIntervalId;
+        let second=0;
+        let milliSecond=0;
+        function setSecondsTimer(){
+            second++;
+            if(second<10){
+                sec.innerHTML='0'+second
+            }
+            else if(second>=60){
+                second=0
+            }
+            else{
+                sec.innerHTML=second
+            }
+        }
+        function setMilliSecondsTimer(){
+            milliSecond++;
+            if(milliSecond<10){
+                mil.innerHTML='0'+milliSecond
+            }
+            else if(milliSecond>=60){
+                milliSecond=0
+            }
+            else{
+                mil.innerHTML=milliSecond
+            }
+        }
+
+        secIntervalId=setInterval(setSecondsTimer,1000)
+        milIntervalId=setInterval(setMilliSecondsTimer,1)
+       function stopTime(){
+        clearInterval(secIntervalId)
+        clearInterval(milIntervalId)
+        if(second<10){
+            pop.innerHTML+='0'+second+" : "+milliSecond+"<br>";
+        }
+        else if(milliSecond<10){
+            pop.innerHTML+=second+" : "+'0'+milliSecond+"<br>";
+        }
+        else if(milliSecond<10 && second<10){
+            pop.innerHTML+='0'+second+" : "+'0'+milliSecond+"<br>";
+        }
+        else{
+            pop.innerHTML+=second+" : "+milliSecond+"<br>";
+
+        }
+       }
+       function startTime(){
+        secIntervalId=setInterval(setSecondsTimer,1000)
+        milIntervalId=setInterval(setMilliSecondsTimer,1)
+       }
+    </script>
+</body>
+</html> 
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="sec">00</div>
+    <div id="mil">00</div>
+    <button onclick="startTimer()">start</button>
+    <button onclick="stopTimer()">stop</button>
+    <div id="pop"></div>
+    <script>
+        let sec=document.getElementById('sec')
+        let mil=document.getElementById('mil')
+        let pop=document.getElementById('pop')
+        let second=0;
+        let milliSecond=0;
+        let secIntervalId;
+        let milIntervalId;
+         function secTimer(){
+            if(second<60){
+                second++;
+                sec.innerHTML=second
+            }
+            else{
+                second=0
+                second.innerHTML=second;
+            }
+            if(second<10){
+                sec.innerHTML='0'+second
+            }
+         }
+
+         function milliTimer(){
+            if(milliSecond<60){
+                milliSecond++;
+                mil.innerHTML=milliSecond
+            }
+            else{
+                milliSecond=0
+                milliSecond.innerHTML=milliSecond;
+            }
+            if(milliSecond<10){
+                milliSecond.innerHTML='0'+milliSecond
+            }
+         }
+         secIntervalId=setInterval(secTimer,1000)
+         milIntervalId= setInterval(milliTimer,1)
+        function stopTimer(){
+            clearInterval(milIntervalId)
+            clearInterval(secIntervalId)
+            pop.innerHTML+=second+" : "+milliSecond+'<br>'
+
+        }
+        function startTimer(){
+            secIntervalId=setInterval(secTimer,1000)
+         milIntervalId= setInterval(milliTimer,1)
+        }
+
+    </script>
+</body>
+</html> -->

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="openWindow()">open window</button>
+    <button onclick="closeWindow()">close window</button>
+    <script>
+        function openWindow(){
+            let windowProps='width=400, height=400, top=10, left=10, toolbar=yes, scrollable=yes, resizable=yes'
+           myWidow= window.open('./p1Record.html',' ',windowProps)
+        }
+        function closeWindow(){
+           myWidow.close()
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        list-style-type: none;
+    }
+    body{
+        background: rgb(240, 240, 240);
+        margin: 20px 20px;
+    }
+    input{
+        /* border: none; */
+        /* outline: none; */
+        margin-bottom: 30px;
+        padding: 10px;
+        padding-right: 90px;
+    }
+    button{
+        margin-left: 30px;
+        background-color: green;
+        color: white;
+        padding: 13px 40px;
+        border: none;
+        outline: none;
+        border-radius: 30px;
+    }
+    ul li{
+        margin-bottom: 10px;
+    }
+    .tag:nth-child(odd){
+        border-radius: 0px 20px 20px 20px;
+
+        background-color: rgb(174, 233, 174);
+        padding: 10px;
+        width: fit-content;
+        max-width: 300px;
+    }
+    .tag:nth-child(even){
+
+        border-radius: 20px 0px 20px 20px;
+        width: fit-content;
+        margin-left: 1080px;
+        padding: 10px;
+        /* min-width: 300px; */
+        box-shadow: 0px 0px 5px rgb(207, 200, 200);
+    }
+</style>
+<body>
+    <input type="text" placeholder="enter" id="name">
+    <button onclick="searchBtn()">Search</button>
+    <ul>
+        <li class="tag">Hi</li>
+            <li class="tag">HI, how are you</li>
+        <li class="tag">Iam fine ,what about you</li>
+        <li class="tag">Yeah  fine, may I know what is your status at present I mean studying or something else</li>
+        <li class="tag">Yeah ,Iam doing java full stack course course in be practical tech solutions</li>
+        <li class="tag">That's nice </li>
+        <li class="tag">thankyou , what's your current status</li>
+        <li class="tag">iam also planning for to take course </li>
+        
+        <li class="tag">That's Great , Then when u are going to join</li>
+        <li class="tag">First I have to search a best one</li>
+    </ul>
+    <script>
+        let result=document.getElementById('result')
+        let nameInput = document.getElementById('name');
+        let tags = document.querySelectorAll('.tag');
+
+        function searchBtn(){
+            tags.forEach((tag) => {
+                if((tag.textContent.toLowerCase()).includes((nameInput.value).toLowerCase())) {
+                   tag.style.background='yellow'
+                    
+                }
+            })
+    }
+    </script>
+</body>
+</html>

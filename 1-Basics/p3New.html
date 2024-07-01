@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>there are 3 types of array...</h2>
+    <ol>
+        <li>literal array =single
+            <ol>
+                <li>literal</li>
+                <li>array using const</li>
+                <li>array using const parameter</li>
+            </ol>
+        </li>
+        <li>array object</li>
+        <li>array json</li>
+    </ol>
+    <hr>
+    <h1>Literal array</h1>
+    <script>
+        //array using literal 
+        let userDetails=["yes",100,false,'three']
+        document.write(`<p>the values of array : ${userDetails}</p>`);
+        document.write(`<p>the values of array : ${typeof userDetails}</p>`)
+        document.write(`<p>the values of array : ${userDetails[0]}</p>`)
+        document.write(`<p>the values of array : <span style="color:red">${userDetails[5]}</span></p>`)
+      //array using const
+      let employee=new Array();
+            document.write(`<h1>len of employee  is:${employee.length}</h1>`);
+
+      employee[0]="raju";
+      employee[1]="john";
+      employee[2]="mary";
+      employee[3]="Arun";
+      document.write(`<h1>len of employee  is:${employee.length}</h1>`);
+            document.write(`<h1>len of employee  is:${employee}</h1>`);
+        document.write(`<h1>len of employee  is:<span style="color:green">${employee[0]}</span></h1>`);
+        document.write(`<h1>len of employee  is:<span style="color:green">${employee[1]}</span></h1>`);
+//constructor using parameters
+     let colors=new Array('red','orange','green','white',100);
+     document.write(`<h1>the length of array : ${colors.length}</h1>`)
+     document.write(`<h1>the values of array: ${colors}</h1>`)
+    document.write(`<h1>the values of array: <span style="color:red">${colors[0]}</span></h1>`)
+    document.write(`<h1>the values of array: <span style="color:red">${colors[4]}</span></h1>`)
+    document.write(`<h1>the values of array: <span style="color:red">${colors[5]}</span></h1>`)
+    </script>
+</body>
+</html>p

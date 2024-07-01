@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>assign() same like concat in object we use assign to add the obj</h1>
+   <p>when same properties present in the both obj it will over writes the first and takes the second obj value</p>
+    </center>
+    <script>
+        var a={
+            name:'raj',
+            age:90,
+            email:'raj@gmail.com',
+        }
+        var b={
+            name:'rani',
+            id:2,
+            lastname:'vashanthi',
+        }
+       console.log(a)
+       console.log(b)
+       var c=Object.assign(a,b)
+       console.log(c)
+    </script>
+</body>
+</html>

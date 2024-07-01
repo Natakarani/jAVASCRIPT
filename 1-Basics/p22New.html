@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function factory(cocoPowder,sugar,milk,water,butter){
+            let chocolate;
+            chocolate=cocoPowder+" "+sugar+" "+milk+" "+water+" "+butter;
+            document.write(`<h1>chocolate ${chocolate}</h1>`)
+
+        }
+        factory('2kg','1kg','500g','1L','1L');
+
+        function name(firstName,lastName){
+            let fullName;
+            fullName=firstName+" "+lastName;
+            document.write(`<h1>fullname: ${fullName}</h1>`)
+        }
+        name();
+        function user(name,age,gender,isOnline){
+            var userName=name;
+            var userAge=age;
+            var userGender=gender;
+            var userOnline=isOnline;
+            document.write(`<h1>name: ${userName}</h1>`)
+            document.write(`<h1>age: ${userAge}</h1>`)
+
+            document.write(`<h1>userGender: ${userGender}</h1>`)
+            document.write(`<h1>userOnline: ${userOnline}</h1>`)
+            if(userOnline==true){
+                document.write(`<h3 style="color:red">user in online</h3>`)
+            }
+            else{
+                document.write(`<h3 style="color:green">user in offline</h3>`)
+            }
+
+
+        }
+        user('john',35,'doe')
+    </script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body{
+            margin:20px;
+            
+        }
+        #next {
+            display: none;
+        }
+        .option {
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        .selected {
+            padding: 10px;
+            padding-right: 290px;
+            margin-bottom: 10px;
+            border: 2px solid green;
+            width: fit-content;
+            background-color: rgba(6, 142, 6, 0.518);
+        }
+        button{
+            margin-top: 20px;
+            border: none;
+            outline: none;
+            padding:10px 20px;
+            background-color: blueviolet;
+            color: white;
+            font-size: 18px;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1 id="score">Score: 0</h1>
+    <button onclick="startFunc()" id="startBtn">Start</button>
+    <div id="questions"></div>
+    <button id="next" onclick="nextBtnFunc()">Next</button>
+    <script>
+        let startBtn = document.getElementById('startBtn');
+        let next = document.getElementById('next');
+        let questions = document.getElementById('questions');
+        let scoreDisplay = document.getElementById('score');
+
+        class Quiz {
+            constructor() {
+                this.ques = [
+                    {
+                        que: 'What\'s your name?',
+                        option: ['Harika', 'Rani', 'Maneesha'],
+                        ans: 'Maneesha'
+                    },
+                    {
+                        que: 'What\'s your age?',
+                        option: [34, 23, 54],
+                        ans: 23
+                    },
+                    {
+                        que: 'What\'s your qualification?',
+                        option: ['B.Tech', 'M.Tech', 'BCA'],
+                        ans: 'B.Tech'
+                    },
+                ];
+            }
+        }
+
+        let quiz = new Quiz();
+        let index = 0;
+        let score = 0;
+        
+
+        function startFunc() {
+            if (index < quiz.ques.length) {
+                questions.innerHTML = `
+                    <h4 style="margin-top:20px">${quiz.ques[index].que}</h4>
+                `;
+                quiz.ques[index].option.forEach((item, i) => {
+                    questions.innerHTML += `
+                        <div class="option" onclick="selectOption(${i})" id="option-${i}">
+                            <input type="radio" name="radio1">${item}</input>
+                        </div>
+                    `;
+                });
+                next.style.display = 'none';
+                startBtn.style.display = 'none';
+            } else {
+                questions.innerHTML = `<h1 style="margin-top:20px">Quiz Over! Your final score is: ${score}</h1>`;
+                next.style.display = 'none';
+                scoreDisplay.style.display='none'
+            }
+        }
+    
+        function selectOption(i) {
+            let previousOption = document.querySelector('.option.selected');
+            if (previousOption) {
+                
+                previousOption.classList.add('selected');
+            }
+            
+           
+            // let currentOption = document.getElementById(`option-${i}`);
+            // if (currentOption) {
+            //     currentOption.classList.add('selected');
+            // }
+           
+            next.style.display = 'block';
+        }
+
+        function nextBtnFunc() {
+            index++;
+            
+            startFunc();
+        }
+    </script>
+</body>
+</html>

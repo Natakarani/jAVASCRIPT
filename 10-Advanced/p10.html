@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Generator Function = function* A(){ yield "A"; yield "B"}</h1>
+    </center>
+
+    <script>
+
+        //by using generater function exporting multiple values from function to outside of teh function that returned values wwill stores in function like array
+        function* users(){
+
+            //yield keyword is kind of return keyword 
+            
+            yield 'raju';
+            yield "mahesh";
+            yield 'Ranjith';
+            yield 'venkatesh';
+            yield 'Anvar',
+            yield 'Sumukh'
+        }
+        console.log(users());// ['raju','mahesh', 'Ranjith', 'venkatesh', 'Anvar', 'Sumukh' ]
+        console.log(typeof users()); //object
+        for(let item of users()){
+            console.log(item)
+            document.write(<h1>${item}</h1>)
+        }
+
+
+
+        //in normal function if we use return at any line it will stops there only it wont execute the next line
+        function A(){
+            let a = 10, b=20, sum;
+            sum = a+b;
+            return sum;//30
+            return a; //10
+            console.log(sum);
+
+        }
+        document.write(`<h1>${A()}</h1>`)
+
+
+       
+    </script>
+</body>
+</html>

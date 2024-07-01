@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>spread opertaor</h1>
+    <p>will spread the array into individual values</p>
+
+    <script>
+        let num=[1,24,4]
+        function user(...sum){
+            console.log(sum)
+
+        }
+        user([1,2,3])
+
+
+        
+        document.write(`<p>${"min value: "+Math.min(89,6,0)}</p>`)
+        document.write(`<p>${"min value: "+Math.min(89,6,0)}</p>`)
+
+        document.write(`<p>${"min value: "+Math.min(...num)}</p>`)
+        document.write(`<p>${"max value: "+Math.max(...num)}</p>`)
+
+    </script>
+</body>
+</html>

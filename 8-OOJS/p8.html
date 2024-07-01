@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #result{
+        border: 1px solid green;
+        background-color: rgb(170, 224, 170);
+        padding: 10px;
+        max-width: 350px;
+        text-align: center;
+    }
+</style>
+<body>
+    <div id="result"></div>
+    <script>
+        let result=document.getElementById('result')
+        let user={
+            name:'raj',
+            email:'raj@gmail.com',
+            phone:'67890-',
+            age:56
+        }
+     let user1=Object.create(user);
+     console.log(user1)
+     let employee={
+        empName:'rani',
+        empSalary:6789,
+        empEmail:'rani@gmail.com'
+     }
+   let user2=  Object.setPrototypeOf(user1,employee)
+   console.log(`${user2.name}`)//we cant print this bcz what the obj setted will over writes the existing obj so what are properties in the new obj only present in the new obj old objproperties gets removed
+   result.innerHTML=`<div>
+    <h2>${user2.empName}</h2>
+    <p>${user2.empSalary}</p>
+    <p>${user2.empEmail}</p>
+    </div>`
+    </script>
+</body>
+</html>

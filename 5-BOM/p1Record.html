@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM</title>
+</head>
+
+<body onresize="getWidth()">
+    <h1>screen</h1>
+    <script>
+        console.log(screen)
+                document.write(screen.availTop+"<br>")
+
+                document.write(screen.availLeft+"<br>")
+
+        document.write(screen.availHeight+"<br>")
+        document.write(screen.availWidth+"<br>")
+        document.write(screen.height+"<br>")
+        document.write(screen.width+"<br>")
+        document.write(screen.pixelDepth+"<br>")
+        document.write(screen.availHeight+"<br>")
+        document.write(screen.colorDepth+"<br>")
+        document.write(screen.Category+"<br>")
+        document.write(screen.onChange+"<br>")
+        function getWidth() {
+            var screenWidth = screen.availWidth;
+            switch (window.availWidth) {
+                case 400:
+                    document.body.style.background = 'red';
+                    break;
+                case 200:
+                    document.body.style.color = 'orange';
+                    break;
+                default:
+                    document.body.style.background = 'green';
+                    document.body.style.color = 'pink';
+                    break;
+            }
+        }
+        // getWidth(); // Call the function to set initial styles
+
+        window.onresize = getWidth; // Call getWidth function when window is resized
+    </script>
+</body>
+</html>

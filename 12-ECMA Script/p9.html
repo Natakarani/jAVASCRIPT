@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<center>
+    <h1>ECMA script-6 class</h1>
+</center>
+<body>
+    <h1>class constructor</h1>
+    <p>within the class need to use the this keyword for to access the properties</p>
+    <p>outside of class no need to use this keyword</p>
+    <script>
+        //ecma script 6 class -> group of objects (state [variable] & behaviours [methods/functions])
+        class Student{
+            constructor(){
+                this.name='john';
+                this.age='21';
+                this.email='john@gmail.com'
+                this.marks={
+                    kannada:34,
+                    telugu:24
+                }
+            }
+            userTotalMaraks(){
+                return this.marks.kannada+this.marks.telugu
+            }
+            userEmail=function(){
+                return this.email;
+            }
+        }
+        let s=new Student();
+        console.log(s.userTotalMaraks())
+        console.log(s.userEmail())
+
+    </script>
+</body>
+</html>

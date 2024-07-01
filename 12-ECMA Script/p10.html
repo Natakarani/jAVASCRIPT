@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Student(){
+            this.name='jack';
+            this.email='john@gmail.com';
+            this.marks={
+                kannada:90,
+                telugu:87,
+            }
+            this.totalMarks=function(){
+                document.write(`${this.marks.kannada+this.marks.telugu}`)
+            }
+           
+
+        }
+        let s=new Student();
+        s.totalMarks()
+    </script>
+</body>
+</html>

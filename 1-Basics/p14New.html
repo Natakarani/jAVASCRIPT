@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .highLight{
+        box-shadow: 0px 0px 10px #ccc;height: 100px;
+        width: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .box{
+        box-shadow: 0px 0px 10px green;
+        padding: 10px 20px;
+        width: fit-content;
+    }
+</style>
+<body>
+    <script>
+       let num= Number(prompt("enter the number"))
+        let a=10;
+        for(let i=0;i<10;i++){
+            if(i==num){
+                document.write(`<h1 style="color:red" class="box">${i}</h1>`)
+            }
+            else{
+                document.write(`<h3 style="color:green">${i}</h3>`)
+            }
+        }
+    </script>
+</body>
+</html>

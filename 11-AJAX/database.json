@@ -1,0 +1,45 @@
+{
+    "users":[
+      {
+
+        "username":"arun",
+        "age":34,
+        "email":"arun@gmail.com",
+        "gender":"male",
+        "address":{
+            "city":"nellore",
+            "zipcode":34900,
+            "state":"Andhra pradesh"
+
+        }
+
+      },
+      {
+
+        "username":"raj",
+        "age":14,
+        "email":"raj@gmail.com",
+        "gender":"male",
+        "address":{
+            "city":"karimnagar",
+            "zipcode":34900,
+            "state":"Andhra pradesh"
+        }
+
+      }
+    ],
+    "comments":[
+        {
+            "message":"hi",
+            "time":"22:09pm"
+        }
+    ],
+    "likes":[
+        {
+            "likes":"200"
+
+        }
+    ]
+
+
+}

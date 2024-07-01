@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM</title>
+</head>
+<body>
+    <h1>WINDOW>HISTORY</h1>
+    <!-- <button onclick="goForward()">go forward</button> -->
+    <!-- <button onclick="goBackward()">go back</button> -->
+    <img src="https://img.freepik.com/free-photo/top-view-arrow-different-size_23-2148488403.jpg?t=st=1714851942~exp=1714855542~hmac=4c9faf46000d398bfd92474d735d2128b7861529f7a4c0feedb42849daee013c&w=740" alt="" onclick="goForward()" width="50" height="50">
+<script>
+    document.write("how many webpages u have opened is "+`<h1>${history.length}</h1>`)
+    function goForward(){
+        window.history.forward()
+    }
+    // function goBackward(){
+    //     window.history.back()
+    // }
+</script>
+    
+</body>
+</html>

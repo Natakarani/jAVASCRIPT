@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>class Es-6</h1>
+    <p>parameterized class const</p>
+    <hr>
+    <p>in javascript, classes are used to create objects, Aclass is blue print for creating objects with similar properties and methods but diffrenet values, Classes help to organize your code and make it more reusable</p>
+    <hr>
+    <div id="result"></div>
+    <script>
+let result=document.getElementById('result')
+        class Student{
+            constructor(firstname,lastname,age,marks,course,email){
+                this.userFirstname=firstname;
+                this.userlastname=lastname;
+                this.userAge=age;
+                this.userMarks=marks;
+                this.usercourse=course;
+                this.userEmail=email;
+
+            }
+            fullname(){
+                return this.userFirstname+' '+this.userlastname;
+            }
+        }
+        let student=new Student('john','doe',23,{kannada:39,telugu:87,english:99});
+       
+        console.log(student);
+          result.innerHTML+=`<p>${student.userMarks.english}</p>
+          <p>${student.userMarks.kannada}</p>
+          <p>${student.userMarks.english}</p>
+          <p>${student.fullname()}</p>
+        <p>=====================</p>
+          `
+          let student1=new Student('raj','kumar',23,{kannada:99,telugu:47,english:100});
+          console.log(student1);
+          result.innerHTML+=`<p>${student1.userMarks.english}</p>
+          <p>${student1.userMarks.kannada}</p>
+          <p>${student1.userMarks.english}</p>
+          <p>${student1.fullname()}</p>
+        <p>=====================</p>
+          `
+    </script>
+</body>
+</html>

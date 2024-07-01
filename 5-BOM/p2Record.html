@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM</title>
+    
+</head>
+<body onresize="getWidth()">
+    <h1>screen</h1>
+    <div id="container">
+        <p >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo itaque est nesciunt atque saepe cupiditate inventore ab asperiores laboriosam esse?</p>
+    </div>
+    <script>
+        let container=document.getElementById('container')
+        console.log(container)
+        function getWidth(){
+        if(screen.orientation.type=='landscape-primary'){
+            alert('dont open this website in landscape')
+        }
+     if(screen.availWidth<768){
+        container.style.display='none'
+            document.body.innerHTML=`<h1>please dont open in landscape</h1>`
+            document.body.style.backgroundColor='red'
+            document.body.classList.add('error')
+            document.body.classList.remove('success')
+
+        }
+       else{
+        container.style.display='block'
+            // document.body.innerHTML=`<h1>no error is there u can open it</h1>`
+            document.body.style.background='green'
+            document.body.classList.remove('error')
+
+            document.body.classList.add('success')
+
+        }
+    }
+    getWidth();
+    </script>
+</body>
+</html> 
+
+
+

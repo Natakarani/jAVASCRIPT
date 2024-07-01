@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>obj using the constructor method</h1>
+    </center>
+    <hr>
+    <script>
+        let user=new Object();
+        user.firstName='arun';
+        user.lastName='kumar';
+        user.fullName=function(){
+           return this.firstName+' '+this.lastName
+        }
+        user.hobbies=['cycling','racing','singing'];
+        user.address={
+            city:'bangalore',
+            pincode:6789,
+        };
+        user.isOnline=false;
+
+
+        document.write(`<p>${user.firstName}</p>`)
+        document.write(`<p>${user.lastName}</p>`)
+        document.write(`<p>${user.fullName()}</p>`)
+        document.write(`<p>${user.address.city}</p>`)
+        document.write(`<p>${user.isOnline}</p>`)
+for(let i=0;i<user.hobbies.length;i++){
+    document.write(user.hobbies[i]+' <br>')
+}
+
+    </script>
+</body>
+</html>

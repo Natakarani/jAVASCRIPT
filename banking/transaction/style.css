@@ -1,0 +1,39 @@
+.main-btn{
+    border: none;
+    margin-top: 20px;
+    width: fit-content;
+    padding: 10px 20px;
+    background-color: rgb(241, 63, 14);
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.2rem;
+    box-shadow: 0px 4px 7px rgba(241, 63, 14, 0.323);
+    border-radius: 10px;
+    text-decoration: none;
+
+}
+.main-btn:hover{
+    opacity: 0.8;
+}
+
+
+/* allaccounts.html */
+.allusers-tables{
+    width: 100%;
+    border-collapse: collapse;
+
+}
+.allusers-tables tr th{
+    background-color: rgb(241, 63, 14);
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 700;
+    border: 1px solid #fff;
+    padding: 15px;
+}
+.allusers-tables tr td{
+    border: 1px solid #5d5c5c;
+    padding: 15px;
+    font-size: 1.2rem;
+    color: #201f1f;
+}

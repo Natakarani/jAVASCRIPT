@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    input{
+        background-color: white;
+        padding: 10px;
+        border: 1px solid grey;
+    }
+    table tr{
+        border: 2px solid red !important;
+    }
+    #btn{
+        background-color: rgb(27, 2, 116);
+        padding: 8px 20px;
+        color:white;
+        font-size: 16px;
+        border: none;
+        border-radius: 20px;
+
+    }
+
+    #edit, #delete{
+        background-color: green;
+        padding:6px 20px;
+        color: white;
+        font-size: 16px;
+        border: none;
+        border-radius: 20px;
+
+    }
+    #delete{
+        margin-left: 10px;
+        background: rgb(251, 5, 5);
+    }
+    table{
+        border: 7px solid red;
+    }
+</style>
+<body style="text-align: center;">
+    <input type="text" onkeyup="SearchData()" placeholder="enter text" id="input">
+    <button id="btn">search</button><br><br>
+    <div id="editBox"></div>
+    <div id="res"></div>
+    <table cellpadding="20" align="center" border="10">
+        <tr>
+            <th>si no</th>
+            <th>emp name</th>
+            <th>action</th>
+        </tr>
+    </table>
+  
+    <script>
+        let editBox = document.getElementById('editBox');
+        let table = document.querySelector('table');
+        let res = document.getElementById('res');
+        let set=new Set(['dairy milk','five star','chocobar','cadbary','almond chocolate','mango chocolate','chocolate ice cream','dark chocolate'])
+        function print() {
+            let i = 0;
+            table.innerHTML = `
+                <tr>
+                    <th>si no</th>
+                    <th>emp name</th>
+                    <th>action</th>
+                </tr>`;
+            set.forEach((item) => {
+                i++;
+                table.innerHTML += `<tr>
+                    <td>${i}</td>
+                    <td>${item}</td>
+                    <td><button onclick="deleteBtn('${item}')" id="delete">delete</button>
+                        <button onclick="editData('${item}')" id="edit">edit</button></td>
+                </tr>`;
+            });
+        }
+        print();
+
+        function editData(item) {
+            editBox.innerHTML = `<input type="text" value="${item}" placeholder="edit data" onkeyup="func(event, '${item}')">`;
+        }
+
+        function func(inputText, item) {
+            if (inputText.key === 'Enter') {
+               const newValue= inputText.target.value.trim()
+                
+                    set.delete(item);
+                    set.add(newValue);
+                    print(); 
+                    editBox.innerHTML = ''; 
+            }
+        }
+
+        function SearchData() {
+            if (set.has(input.value)) {
+                res.innerHTML = `Employee found`;
+            } else {
+                res.innerHTML = 'Employee absent';
+            }
+        }
+
+        function deleteBtn(name) {
+            if (confirm(`Are you sure you want to delete ${name}?`)) {
+                set.delete(name);
+                print(); // Reprint the table after deletion
+            }
+        }
+    </script>
+</body>
+</html>

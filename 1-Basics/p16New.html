@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        video{
+            width: 200px;
+            height: 200px;
+            border-radius: 100px;
+            margin: auto;
+            overflow: hidden;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Nested conditions</h1>
+    </center>
+    <hr>
+    <video id="video" autoplay></video>
+
+    <script>
+       
+
+        var camera = document.getElementById('video');
+        let action = prompt('enter what u need ');
+
+        if(action == 'camera'){
+            if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia){
+                navigator.mediaDevices.getUserMedia({video:true})
+                .then(function(stream){
+                    camera.srcObject = stream
+                }
+                )
+                .catch(function(error){
+                    alert("we cannot on camera")
+                })
+            }
+            else{
+                alert('camera is not available on this device')
+            }
+        }
+        else(
+            document.write('you entered unavailable action')
+        )
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #result{
+        padding: 20px;
+        background-color: green;
+        border: 2px solid grey;
+        color:white;
+        font-size: 20px;
+        letter-spacing: 1.5px;
+    }
+</style>
+<body>
+    <h1>array constructor with parameter</h1>
+    <div id="result"></div>
+    <script>
+        let result=document.getElementById('result')
+        let array1=new Array('coding','racing','eating');
+      
+        for(let i=0;i<array1.length;i++){
+        result.innerHTML+=`<div style="">
+            <p>${array1[i]}</p>
+            </div>`
+        }
+    </script>
+</body>
+</html>

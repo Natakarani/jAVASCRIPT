@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+     input{
+        background-color: white;
+        padding: 10px 40px;
+        padding-left: 10px;
+        border: 1px solid rgba(128, 128, 128, 0.525);
+        outline: none;
+    }
+    button{
+        background-color: blue;
+        border: none;
+        outline: none;
+        padding: 10px 16px;color: white;
+        font-weight: 500;
+        letter-spacing: 1.4px;
+
+    }
+</style>
+</head>
+<body>
+    <h1>program to display the particular element index position</h1>
+    <button onclick="findLastIndex('g')">find LastIndex`</button>
+    <div id="result"></div>
+<script>
+     let result=document.getElementById('result')
+        let a='cosmetics'
+        var indexPosition;
+       let findLastIndex=(element)=>{
+        for(let i=a.length;i>=0;i--){
+            console.log(a[i],element)
+            if(element==a[i]){
+                indexPosition=i;
+                result.innerHTML=`<div>The index position of ${element}:  <span style="font-weight:500;font-size:22px">${indexPosition}</span></div>` 
+                break;
+            }
+            else{
+                result.innerHTML=`<h1>Give The valid data present in an string</h1>` 
+            }
+        }
+    }
+</script>
+</body>
+</html>

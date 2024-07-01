@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        window.open()and
+        window.close()
+    </center>
+    <button onclick="openHandler()">open</button>
+    <button onclick="closeHandler()">close</button>
+    <script>
+        var webStates;
+        function openHandler(){
+           webStates=window.open('https://github.com')
+           console.log(webStates)
+        }
+        function closeHandler(){
+            webStates.close('')
+            console.log(webStates)
+        }
+
+    </script>
+</body>
+</html>

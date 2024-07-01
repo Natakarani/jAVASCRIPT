@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p id="time"></p>
+
+    </div>
+    <h1 id="clock"></h1>
+    <script>
+        let time=document.getElementById('time')
+        let a=1;
+        function Seconds(){
+            time.innerText=a++;
+            if(time.innerHTML>=60){
+                a=1;
+              
+            }
+        }
+        setInterval(Seconds,100)
+    </script>
+
+    <script>
+        function Timer(){
+            var clock=document.getElementById('clock')
+
+        let timer=new Date();
+  clock.innerHTML=timer.toLocaleTimeString()
+
+        }
+    setInterval(Timer,1000)
+        </script>
+
+
+
+
+</body>
+</html>

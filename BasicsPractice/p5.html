@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <img src="https://img.freepik.com/free-vector/realistic-light-bulb-isolated_1284-41741.jpg?t=st=1714409673~exp=1714413273~hmac=7e5424b5221c25855d2f7e156cc8b8883b3b45f1be7b666a12e0aee083ad86f2&w=740" alt="" width="80px" class="lightBulb">
+    <img src="" alt="" class="glowBulb" width="80px">
+    
+    <button onclick="off()" class="lightBulb">off</button>
+    <button onclick="on()" class="lightBulb">on</button>
+
+    <script>
+        let bulb=document.querySelector('.lightBulb')
+        function off(){
+            bulb.setAttribute("src","https://img.freepik.com/free-vector/realistic-light-bulb-isolated_1284-41741.jpg?t=st=1714409673~exp=1714413273~hmac=7e5424b5221c25855d2f7e156cc8b8883b3b45f1be7b666a12e0aee083ad86f2&w=740");
+            bulb.src="https://img.freepik.com/free-vector/realistic-light-bulb-isolated_1284-41741.jpg?t=st=1714409673~exp=1714413273~hmac=7e5424b5221c25855d2f7e156cc8b8883b3b45f1be7b666a12e0aee083ad86f2&w=740";
+        }
+        function on(){
+            bulb.setAttribute('src','https://img.freepik.com/free-vector/realistic-lit-light-bulb-isolated_1284-41774.jpg?t=st=1714409706~exp=1714413306~hmac=cba62ef20ca05fa4f2b994d7f34024e32a6f52bd5ff785d226f31fd35e93e60b&w=740');
+
+            bulb.src='https://img.freepik.com/free-vector/realistic-lit-light-bulb-isolated_1284-41774.jpg?t=st=1714409706~exp=1714413306~hmac=cba62ef20ca05fa4f2b994d7f34024e32a6f52bd5ff785d226f31fd35e93e60b&w=740';
+        }  
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+<!----
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <img src="https://img.freepik.com/free-vector/realistic-light-bulb-isolated_1284-41741.jpg?t=st=1714409673~exp=1714413273~hmac=7e5424b5221c25855d2f7e156cc8b8883b3b45f1be7b666a12e0aee083ad86f2&w=740" alt="" width="80px" class="lightBulb">
+    <img src="" alt="" class="glowBulb" width="80px">
+    
+    <button onclick="g()">ON</button>
+    <button onclick="off()">OFF</button/>
+    <script>
+        let bulb=document.querySelector('.lightBulb')
+        function off(){
+            bulb.setAttribute("src","https://img.freepik.com/free-vector/realistic-light-bulb-isolated_1284-41741.jpg?t=st=1714409673~exp=1714413273~hmac=7e5424b5221c25855d2f7e156cc8b8883b3b45f1be7b666a12e0aee083ad86f2&w=740");
+            // bulb.src="https://img.freepik.com/free-vector/realistic-light-bulb-isolated_1284-41741.jpg?t=st=1714409673~exp=1714413273~hmac=7e5424b5221c25855d2f7e156cc8b8883b3b45f1be7b666a12e0aee083ad86f2&w=740";
+        }
+        function on(){
+            bulb.setAttribute('src','https://img.freepik.com/free-vector/realistic-lit-light-bulb-isolated_1284-41774.jpg?t=st=1714409706~exp=1714413306~hmac=cba62ef20ca05fa4f2b994d7f34024e32a6f52bd5ff785d226f31fd35e93e60b&w=740');
+
+            // bulb.src='https://img.freepik.com/free-vector/realistic-lit-light-bulb-isolated_1284-41774.jpg?t=st=1714409706~exp=1714413306~hmac=cba62ef20ca05fa4f2b994d7f34024e32a6f52bd5ff785d226f31fd35e93e60b&w=740';
+        }
+
+      let onBulb=false;
+      function g(){
+      if(onBulb==true){
+        bulb.src="https://img.freepik.com/free-vector/realistic-light-bulb-isolated_1284-41741.jpg?t=st=1714409673~exp=1714413273~hmac=7e5424b5221c25855d2f7e156cc8b8883b3b45f1be7b666a12e0aee083ad86f2&w=740"
+        document.querySelector('button').innerHTML=`on`
+        onBulb=false;
+      }
+      else{
+        bulb.src='https://img.freepik.com/free-vector/realistic-lit-light-bulb-isolated_1284-41774.jpg?t=st=1714409706~exp=1714413306~hmac=cba62ef20ca05fa4f2b994d7f34024e32a6f52bd5ff785d226f31fd35e93e60b&w=740';
+        document.querySelector('button').innerHTML=`off`
+        onBulb=true;
+        console.log(onBulb)
+
+      }
+    }
+        
+    </script>
+</body>
+</html>
+-->
+
+
+
+
+
+
+<!-----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <img src="https://img.freepik.com/free-vector/realistic-light-bulb-isolated_1284-41741.jpg?t=st=1714409673~exp=1714413273~hmac=7e5424b5221c25855d2f7e156cc8b8883b3b45f1be7b666a12e0aee083ad86f2&w=740" alt="" width="80px" class="lightBulb">
+    <img src="" alt="" class="glowBulb" width="80px">
+    
+    <button onclick="g()">ON</button>
+    <script>
+        let bulb=document.querySelector('.lightBulb')
+        function off(){
+             bulb.setAttribute("src","https://img.freepik.com/free-vector/realistic-light-bulb-isolated_1284-41741.jpg?t=st=1714409673~exp=1714413273~hmac=7e5424b5221c25855d2f7e156cc8b8883b3b45f1be7b666a12e0aee083ad86f2&w=740");
+           
+        }
+        function on(){
+             bulb.setAttribute('src','https://img.freepik.com/free-vector/realistic-lit-light-bulb-isolated_1284-41774.jpg?t=st=1714409706~exp=1714413306~hmac=cba62ef20ca05fa4f2b994d7f34024e32a6f52bd5ff785d226f31fd35e93e60b&w=740');
+
+        }
+        
+    </script>
+</body>
+</html>
+
+------->

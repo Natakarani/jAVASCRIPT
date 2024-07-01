@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .container{
+            min-height: 100vh;
+            display: flex;
+            gap:10px;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 50px;
+        }
+        .hero{
+            outline: 10px solid white;
+            outline-offset: 16px;
+            border: 2px solid white;
+            width: 300px;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        .time{
+            
+            border: 20px solid rgb(172, 7, 7);
+        }
+        button{
+            width: 70px;
+            height: 70px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <div id="time">00:00</div>
+        </div>
+        <div style="margin-top: 20px;">
+            <button onclick="startTime()">start</button>
+    <button onclick="stopTime()">stop</button>
+        </div>
+    </div>
+
+    <script>
+        
+        let time=document.getElementById('time')
+        var intervalId;
+        
+        function showTime(){
+            var date=new Date();
+           time.innerHTML=date.toLocaleTimeString()
+        }
+     intervalId= setInterval(showTime,1000)
+       
+        function stopTime(){
+            clearInterval(intervalId)
+        }
+        function startTime(){
+            intervalId= setInterval(showTime,1000)
+        }
+    </script>
+</body>
+</html>

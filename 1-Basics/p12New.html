@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .text{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .text div{
+            flex: 1;
+        }
+        .text div input,  .text div select{
+            width: 100%;
+            padding: 10px;
+            border: none;
+            outline: none;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            margin-top: 5px;
+        }
+        .text div input:hover,  .text div select:hover{
+            border: 1px solid #de3c06;
+            background-color: #de3c0628;
+        }
+        button{
+            width: 100%;
+            margin-top: 20px;
+            background-color: #fa5018;
+            border: none;
+            padding: 10px;
+            color: #fff;
+            font-size: 1.1rem;
+            font-weight: 700;
+            box-shadow: 0px 3px 5px #fa501850;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.8s;
+        }
+        button:hover{
+            opacity: 0.5;
+        }
+        .card{
+            width: 500px;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 10px;
+        }
+        label{
+            font-size: 0.9rem;
+        }
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #de3c06;
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h2>Calucations</h2>
+            <br>
+            <hr>
+            <br>
+           <div class="text">
+            <div>
+                <label for="">First Number</label> <br>
+                <input type="Number" placeholder="enter a number" id="firstnumber">
+            </div>
+            <div>
+                <label for="">Second Number</label><br>
+                <input type="number" placeholder="enter a number" id="secondnumber">
+            </div>
+          <div>
+            <label for="">Select any operator</label> <br>
+            <select name="operator" id="operator">
+                <option value="add">Addition</option>
+                <option value="sub">Subtraction</option>
+                <option value="mul">Multiplication</option>
+                <option value="div">Division</option>
+                <option value="mod">Modulo</option>
+            </select>
+          </div>
+           </div>
+           <button onclick="calucate()">Calucate</button>
+           <p id="result"></p>
+        </div>
+    </div>
+
+
+
+    <script>
+        let number1 = document.getElementById('firstnumber');
+        let number2 = document.getElementById('secondnumber');
+        let result = document.getElementById('result');
+        let operator = document.getElementById('operator');
+        function calucate(){
+            console.log(operator.value);
+            switch (operator.value) {
+                case 'add':
+                    // alert(Number(number1.value) + Number(number2.value))
+                    result.innerText = `the result is ${Number(number1.value) + Number(number2.value)} `
+                    break;
+            
+                case 'sub':
+                    // alert(Number(number1.value) + Number(number2.value))
+                    result.innerText = `the result is ${Number(number1.value) - Number(number2.value)} `
+                    break;
+            
+                    
+                case 'mul':
+                    // alert(Number(number1.value) + Number(number2.value))
+                    result.innerText = `the result is ${Number(number1.value) * Number(number2.value)} `
+                    break;
+                          
+                case 'div':
+                    // alert(Number(number1.value) + Number(number2.value))
+                    result.innerText = `the result is ${Number(number1.value) / Number(number2.value)} `
+                    break;
+            
+                case 'mod':
+                    // alert(Number(number1.value) + Number(number2.value))
+                    result.innerText = `the result is ${Number(number1.value) % Number(number2.value)} `
+                    break;
+            
+                default:
+                result.innerText = `please select valid operator `
+                    break;
+            }
+        }
+
+
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+//  70-100(a) 50-70(b) 35-50(c) <35(fail) <0>100 give invalid

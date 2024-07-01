@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Object.freeze()</h1>
+    <p>for to make the propertie values of objects as const we can use freeze method</p>
+    <script>
+        "use strict"
+        const user={
+            name:'raj'
+        }
+        console.log(user)
+        //cant get updated
+        Object.freeze(user)
+        try{
+        user.name='john'
+        }
+        catch(error){
+            console.log(error)
+        }
+        
+        console.log(user)
+        console.log("after error")
+    </script>
+</body>
+</html>

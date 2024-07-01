@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let test='hello'
+        document.write(test)
+
+        let student={
+            studentName:'john',
+            studentAge:14,
+            studentRollNo:'RG6890',
+            studentMarks:{
+                kannada:20,
+                english:78,
+                telugu:67,
+            }
+
+        }
+        document.write(`${student.studentName}`+'<br>')
+        document.write(`${student.studentAge}`+'<br>')
+
+        document.write(`${student.studentRollNo}`+'<br>')
+        console.log(`${student.studentMarks}`+'<br>')
+        document.write(`${student.studentMarks.kannada}`+'<br>')
+        document.write(`${student.studentMarks.telugu}`+'<br>')
+
+        document.write(`${student.studentMarks.english}`+'<br>')
+//method 2
+
+document.write(`${student['studentName']}`+'<br>')
+
+document.write(`${student['studentMarks']['kannada']}`)
+
+    </script>
+</body>
+</html>

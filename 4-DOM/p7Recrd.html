@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section class="section">
+       box1 <input type="checkbox" value="box1">
+        box2<input type="checkbox" value="box2">
+        box3<input type="checkbox" value="box3">
+    </section>
+    
+    <script>
+        let selectedData=[]
+        let section=document.querySelector('.section')
+        
+    section.addEventListener('click',function(event){
+       if(event.target.type==='checkbox'){
+       console.log(event.target)
+        let checked=document.querySelectorAll('input[type="checkbox"]:checked')
+        console.log('selected item'+`${event.target}`);
+selectedData=Array.from(checked).map((item,index)=>{
+    console.log(item)
+})
+
+       }
+       else{
+        console.log('no')
+       }
+    })
+ 
+    </script>
+</body>
+</html>

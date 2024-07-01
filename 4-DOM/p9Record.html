@@ -1,0 +1,91 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button ondblclick="applyStyles()">apply styles</button>
+    <section>
+    <div class="box1">box </div>
+    <div class="box1">box </div>
+    <div class="box1">box </div>
+    <div class="box1">box </div>
+    <div class="box1">box </div>
+</section>
+    <script>
+        
+
+        function applyStyles(){
+            let box1=document.querySelectorAll('.box1')
+            console.log(box1);
+            box1[0].style.color='red'
+let section=document.querySelector('section')
+console.log(section);
+        for(let i=0;i<box1.length;i++){
+            box1[i].classList.add('card')
+            box1[0].style.background='red'
+            box1[1].style.background='green'
+            box1[2].style.background='blue'
+            box1[3].style.background='grey'
+            box1[4].style.background='brown'
+            if(i==4){
+                box1[i].style.background='orange'
+            }
+        }
+    }
+
+    </script>
+</body>
+</html> 
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>what is your name</h1>
+        <section>
+            hanifa<input type="checkbox" class="radio1" value="wrong"><br>
+            maneesha<input type="checkbox" class="radio1" value="correct"><br>
+           raksha <input type="checkbox" class="radio1" value="wrong">
+
+        </section>
+   <script>
+      let section=document.querySelector('section')
+      section.addEventListener('click',function(event){
+        // console.log(event.target.value);
+        if(event.target.value=='correct'){
+            alert('correct')
+            event.target.style.color='red'
+            event.target.parentElement.style.color='red'
+      }
+      if(section.value=='correct'){
+        console.log('got')
+      }
+      })
+      
+
+
+   </script> 
+</body>
+</html>
+
+ -->
+

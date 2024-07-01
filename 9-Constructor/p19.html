@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function factorial(n){
+            if(n==1){
+                return 1;
+            }
+            return n*factorial(n-1)
+        }
+        document.write(factorial(5))
+    </script>
+
+    <script>
+        function user1(...x){
+            console.log(x)
+
+        }
+        user1(1,2,4,7,6);
+    </script>
+    <script>
+        let a=[1,9,8]
+        let b=[4,68,8]
+        let c=[a,b]
+        let c1=[...a,...b]
+        
+       console.log(c)
+       console.log(c1)
+    </script>
+
+    <script>
+        let a1=[1,2,3,4,5]
+        console.log("before    ",a1)
+        const reverse=([h,...t])=>t.length?[...reverse(t),h]:[h]
+        console.log("before    ",reverse(a1))
+    </script>
+
+    <script>
+        let a2=[1,2,4,8]
+        console.log(a2.slice(1))
+        function reverse1(a2){
+            if(a2.length==0){
+                return a2;
+            }
+            return reverse(a2.slice(1)).concat(a2[0])
+        }
+        console.log(reverse(a2))
+        console.log('=======')
+    </script>
+
+    <script>
+    const removeVowels2=function(str){
+        let vowels=["a","e","i","o","u"];
+        let words =[];
+        for(let i=0; i<str.length; i++){
+            if(!vowels.includes(str[i])){
+                words.push(str[i]);
+            }
+        }
+       return words.join("");
+    }
+    console.log("resullt = ",removeVowels2("maneesha"));
+    
+</script>
+
+
+
+
+    <script>
+        function VowelsPick(name){
+            let vowels=['a','e','i','o','u']
+            return [...name].filter((c)=>!vowels.includes(c)).join("")
+
+        }
+        console.log(VowelsPick('maneesha'))
+        </script>
+</body>
+</html>

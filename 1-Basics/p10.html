@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>else if statements</h1>
+    </center>
+    <hr>
+    <ol>
+        <li>simple if</li>
+        <li>if else</li>
+
+        <li>if else ladder</li>
+        <li>switch case</li>
+
+    </ol>
+    <script>
+        
+        let a=prompt("enter the first value");
+       let b= prompt("enter second value");
+        let z=a+b;
+        document.write(`${typeof(z)} <br>`,a);
+
+        let z1=Number(a)+Number(b);
+        alert(z1);
+        document.write(`var a ${z1}<br>`);
+        document.write(`${typeof(z1)} <br>`,a);
+if(Number(a)>Number(b)){
+document.write(`<p>a value id big</p>`)
+}
+else if(Number(a)<Number(b)){
+document.write(`<p>b value small</p>`)
+}
+else if(Number(a)!==Number(b)){
+document.write(`<p>nums not equal</p>`);
+}
+
+else if(Number(a)===Number(b)){
+    document.write(`<p>nums  equal</p>`);
+
+}
+else{
+    document.write(`<p>invalid data</p>`);
+
+}
+document.write(`<p>equal</p>`)
+
+
+    </script>
+</body>
+</html>

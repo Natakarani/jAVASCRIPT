@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="Result"></div>
+    <script>
+        let result=document.getElementById('Result')
+        function Howareu(question,yes,no){
+          if(confirm(question)){
+            yes()
+          }
+          else{
+            no()
+          }
+        }
+        Howareu('how are you',function(){
+            result.innerHTML+=`this is second parameter value , good`
+
+        },
+    function(){
+        result.innerHTML+=`this is second parameter value , bad`
+
+    })
+    </script>
+</body>
+</html>

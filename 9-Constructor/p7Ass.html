@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        font-family:Arial, Helvetica, sans-serif
+    }
+    body{
+        background: url('https://img.freepik.com/premium-photo/birds_559599-241.jpg?w=740') ;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+    }
+    .container{
+background:rgba(255, 0, 0, 0.39);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .cal{
+        background-color: rgba(255, 255, 255, 0.9);
+        box-shadow: 0px 0px 6px grey;
+        padding: 20px;
+        min-width:fit-content;
+        align-items: center;
+        justify-content: center;
+    }
+    .cal h1{
+        font-size: 50px;
+        text-shadow: 0px 0px 10px grey;
+    }
+    h2{
+        text-shadow: 0px 0px 10px rgba(12, 231, 255, 0.226);
+        font-size: 30px;
+    }
+    .image{
+
+        background: url('https://img.freepik.com/premium-photo/birds_559599-241.jpg?w=740') ;
+        background-repeat: no-repeat;
+        background-position: center;
+        padding: 20px;
+        color:white;
+        text-shadow: 2px 2px 10px grey;
+        background-size: cover;
+        width: 500px;
+        height:280px;
+    }
+    #dates{
+        display: grid;
+        column-gap:10px;
+        row-gap: 20px;
+        margin: auto;
+        text-align: center;
+        grid-template-columns: repeat(7,1fr);
+       
+    }
+    .calDays{
+        
+        margin-top:10px;
+        margin-bottom: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        /* position: relative; */
+    }
+    .curDate{
+        color:white;
+        padding: 3px;
+        max-width: 30px;
+        /* position: absolute; */
+        /* left:140px; */
+        margin-left: 20px;
+        border-radius: 50px;
+        background-color: rgb(3, 115, 80);
+    }
+    .sun{
+        color: red;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="cal">
+           <div class="image">
+            <div id="day">
+
+            </div>
+            <div id="month"></div>
+           </div>
+           <div class="calDays">
+            <h2>S</h2>
+            <h2>M</h2>
+            <h2>T</h2>
+            <h2>W</h2>
+            <h2>T</h2>
+            <h2>F</h2>
+            <h2 style="color:red">S</h2>
+           </div>
+            <div id="dates"></div>
+        </div>
+    </div>
+    <script>
+        let day=document.getElementById('day')
+        let dates=document.getElementById('dates')
+        let month=document.getElementById('month')
+        let date=new Date('2019 August 1');
+        let mon=['Jan','Feb','Mar','Apr','may','June','July','Aug','Sep','Oct','Nov','Dec']
+        let days=['Sun','Mon','Tue','Wed','Thu','Fri','Sat']
+         day.innerHTML=`<h1>${date.getDate()} , ${days[date.getDay()]}</h1>`
+         month.innerHTML=`<h2>${mon[date.getMonth()]}</h2>`
+         console.log(days[date.getDate()])
+         for(let i=1;i<=31;i++){
+          if(i%7==0){
+                dates.innerHTML+=`<h3 class="sun date">${i}</h3>`
+            }
+           else if(i==date.getDate()){
+                dates.innerHTML+=`<h3 class="curDate date">${i}</h3>`
+             }
+              else{
+                dates.innerHTML+=`<h3 class="date">${i}</h3>`
+              }
+        }
+         
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .blackTheme{
+        background-color: black;
+    }
+</style>
+<body>
+    <div id="result"></div>
+    <!-- <button onclick="AddClass()">addClass</button> -->
+    <!-- <button onclick="RemoveClass()">removeClass</button> -->
+    //OR
+    <button onclick="ToggleBtn()">toogleBtn</button>
+    //OR
+    <!-- <button onclick="darkBtn('black')">dark</button> -->
+    <!-- <button onclick="lightBtn('white')">light</button> -->
+  
+    <script>
+        // function darkBtn(color){
+        //     document.body.style.background=color
+
+        // }
+        // function lightBtn(color){
+        //     document.body.style.background=color
+
+        // }
+        //OR
+        function ToggleBtn(){
+            document.body.classList.toggle('blackTheme')
+        }
+        //OR
+        // function AddClass(){
+        //     document.body.classList.add('blackTheme')
+
+        // }
+        // function RemoveClass(){
+        //     document.body.classList.remove('blackTheme')
+        // }
+
+    </script>
+</body>
+</html>

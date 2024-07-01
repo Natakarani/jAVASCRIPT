@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #hero{
+        background-color: red;
+    }
+</style>
+<body>
+    <div id="hero">
+        <div id="container"></div>
+        <div id="likes"></div>
+
+    </div>
+    <script>
+          let likes=document.getElementById('likes')
+
+         let container=document.getElementById('container')
+        let allusers=[]
+        let allusersLikes=[]
+      fetch('./database.json')
+      .then((res)=>res.json())
+      .then((response)=>{
+        allusers=response.users
+        allusersLikes=response.comments
+        allusers.map((item,index)=>{
+           container.innerHTML+=`<div>
+            <h3>${item.username}</h3>
+            <p>${item.email}</p>
+            <p>${item.age}</p>
+            <p>${item.gender}</p>
+            </div>`
+        })
+      })
+      .catch((err)=>{
+        console.log(err)
+      })
+
+    </script>
+</body>
+</html>

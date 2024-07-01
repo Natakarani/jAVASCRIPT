@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>hasfocus() will give true  if user present else gives false</p>
+    <div id="result"></div>
+    <script>
+        let result=document.getElementById('result')
+        var date=new Date();
+        function checkUserStatus(){
+            var date=new Date();
+            console.log(typeof date.getHours());
+            var hours=String(date.getHours())
+            var min=String(date.getMinutes())
+            var sec=String(date.getSeconds())
+
+            var currentTime=`${hours}: ${min} : ${sec}`
+            if(document.hasFocus()){
+                result.innerHTML+=`<p style="color:green">user is present</p>`
+            }
+            else{
+                result.innerHTML+=`<p style="color:red">user is absent - ${currentTime}</p>`
+
+            }
+        }
+        setInterval(checkUserStatus,1000)
+    </script>
+</body>
+</html>

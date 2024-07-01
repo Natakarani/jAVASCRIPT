@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function getWhatsStatusTime(mesTime){
+            let curTime=new Date();
+            let diffTime=curTime-mesTime
+            let seconds=Math.floor(diffTime/1000)
+            console.log(seconds)
+            let minutes=Math.floor(seconds/60)
+            console.log(seconds)
+            let hours=Math.floor(minutes/60)
+            console.log(hours)
+            let day=Math.floor(hours/24)
+            console.log(day)
+
+            if(day>0){
+                return `${day} days age`
+            }
+            else if(hours>0){
+                return `${hours} hours age`
+            } 
+            else if(minutes>0){
+                return `${minutes} minutes age`
+            }
+            else{
+                return 'just now'
+            }
+
+
+        }
+        let mesTime=new Date('2024-05-22T19:30:00')
+        console.log(getWhatsStatusTime(mesTime))
+    </script>
+</body>
+</html> 
+
+
+
+
+
+

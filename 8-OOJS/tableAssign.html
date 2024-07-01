@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    button{
+        outline: none;
+        border: none;
+    }
+    .container{
+        margin: 20px;
+       max-width: 400px;
+       padding: 20px;
+
+        border: 2px solid rgb(64, 0, 255);
+    }
+    input,button{
+        margin-top: 20px;
+        padding: 10px;
+        width: 100%;
+    }
+    table{
+        margin: 20px;
+        background-color: rgba(183, 241, 247, 0.196);
+        border-collapse: collapse;
+    }
+    th,td{
+        border: 2px solid blue;
+        padding: 19px;
+        border-collapse: collapse;
+        min-width: 200px;
+        padding: 10px;
+    }
+    button{
+        background-color: blue;
+        color: white;
+        border-radius: 20px;
+        font-size: 18px;
+        letter-spacing: 0.6px;
+        font-weight: 500;
+    }
+   
+
+</style>
+<body>
+    <div class="container">
+        <input type="text" placeholder="enter name" id="name"><br>
+    <input type="text" placeholder="enter email" id="email1"><br>
+    <input type="password" placeholder="enter Password" id="password"><br>
+    <input type="password" placeholder="enter confirm password" id="confirmPassword"><br>
+    <button onclick="click1()">ADDROWS</button>
+    </div>
+    
+        <table border="1" id="result">
+           <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>ConfirmPassword</th>
+           </tr>
+        </table>
+
+
+    <script>
+        
+        let result=document.getElementById('result')
+        let name=document.getElementById('name')
+        let email1=document.getElementById('email1')
+        let password1=document.getElementById('password')
+        let confirmPassword1=document.getElementById('confirmPassword')
+        var a={}
+        function click1(){
+        
+        let a={
+            name:name.value,
+            email1:email1.value,
+            password1:password1.value,
+            confirmPassword:confirmPassword1.value,
+
+        };
+        if(name.value=='' || email1.value=='' || password1.value=='' || confirmPassword1.value==''){
+            alert('please fill the details')
+        }
+        else{
+            result.innerHTML+=`<table>
+        <tr>
+            <td>${a.name}</td>
+            <td>${a.email1}</td>
+            <td>${a.password1}</td>
+            <td>${a.confirmPassword}</td>
+        </tr>
+        
+        </table>`
+    }
+        a.name=''
+        a.email1='' 
+    }
+       
+
+    </script>
+</body>
+</html>

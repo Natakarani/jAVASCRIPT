@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    #result{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        
+
+    }
+    .container{
+        /* border: 2px solid red; */
+        
+        min-width: 800px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap:20px;
+        min-height: fit-content;
+    }
+    .inputs,.inputs1{
+        display: flex;
+        gap:80px;
+        /* justify-content: space-between; */
+   }
+   .inputs1{
+    gap:330px;
+   }
+   
+    .inputs input,.inputs1 input{
+        
+        border:2px solid  rgb(177, 180, 183) ;
+        border-radius: 10px;
+        padding: 10px;
+        padding-right: 180px;
+        letter-spacing: 0.8px;
+    }
+    .container p{
+        font-size: 20px;
+        font-weight: 500;
+        letter-spacing: 0.6px;
+        background-color: rgba(0, 221, 255, 0.416);
+        width: 100%;
+        padding: 5px;
+        color:rgb(52, 50, 50);
+        text-align: center;
+
+    }
+    img{
+        width: 40px;
+        height: 40px;
+    }
+    .underline{
+        text-decoration:underline;
+        text-underline-offset: 12px;
+    }
+</style>
+<body>
+    <div id="result"></div>
+    <script>
+        let result=document.getElementById('result')
+        class Bank{
+            constructor(){
+                this.account='Interest Account';
+                this.currency='Rupees';
+                this.firstName="Maneesha";
+                this.lastName="Natakarani";
+                this.phNo="+76890678";
+                this.email='natakaranimaneesha@gmail.com';
+                this.dob='22-04-2002';
+                this.citizen=['EU citizen','US citizen','Others'];
+                this.address={
+                    city:'nellore',
+                    state:'Andhra Pradesh',
+                    pinCode:'524004',
+
+                };
+                this.occupation='Btech';
+                this.employeeName='Maneesha Natakarani';
+                this.jointAccount='yes';
+
+
+
+            }
+            
+        }
+        let bank=new Bank();
+        result.innerHTML+=`<div class="container">
+            <div style="text-align:center;background:rgb(6,103, 163);width:100%;color:white;padding:40px 40px;display:flex;align-items:center;justify-content:center;gap:40px">
+                <img src="data:image/png;base64,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">
+                <h1>Bank Account Registration Form</h1>
+            </div>
+            <p>Account Information</p>
+            <div class="inputs">
+                <div>
+                    Account Type <br><br>
+                   <input type="text" value="${bank.account}">
+                </div>
+                <div>
+                    Currency Type <br><br>
+                   <input type="text" value="${bank.currency}">
+                </div>
+            </div>
+            <p>Personal Information</p>
+
+            <div class="inputs">
+                <div>
+                    First Name <br><br>
+                   <input type="text" value="${bank.firstName}">
+                </div>
+                <div>
+                    Last Name <br><br>
+                   <input type="text" value="${bank.lastName}">
+                </div>
+            </div> 
+            
+            
+            <div class="inputs">
+                <div>
+                    Phone Number <br><br>
+                   <input type="text" value="${bank.phNo}">
+                </div>
+                <div>
+                    Email <br><br>
+                   <input type="text" value="${bank.email}">
+                </div>
+            </div>
+
+            <div class="inputs1">
+                <div>
+                    Date of Birth <br><br>
+                   <input type="text" value="${bank.dob}">
+                </div>
+                <div>
+                    CitizenShip <br><br>
+                 <input type="radio" name="radio1" value="${bank.citizen[0]}">${bank.citizen[0]}<br>
+                   <input type="radio" name="radio1" value="${bank.citizen[1]}">${bank.citizen[1]}<br>
+
+                   <input type="radio" name="radio1" value="${bank.citizen[2]}">${bank.citizen[1]}
+
+                </div>
+            </div>
+            <div class="inputs">
+                <div>
+                    State <br><br>
+                   <input type="text" value="${bank.address.state}">
+                </div>
+                <div>
+                    City <br><br>
+                   <input type="text" value="${bank.address.city}">
+                </div>
+            </div>
+            </div>
+             <br>
+
+            <div class="inputs">
+                <div>
+                    Occupation <br><br>
+                   <input type="text" value="${bank.occupation}">
+                </div>
+                <div>
+                    Employer Name <br><br>
+                   <input type="text" value="${bank.employeeName}">
+                </div>
+            </div>
+            </div>
+            <br>
+
+            <div>
+                <div style="display:flex;gap:320px"> 
+                    <p>Do you want add joint owner to the bank Account Name</p>
+                    <p>Date</p>
+                </div>
+                    <br>
+                  <div style="display:flex;gap:120px">
+                    <div style="display:flex;gap:10px;align-items:center">
+                        <input type="radio" name="radio2" ">
+                    <p>Yes</p>
+                    </div>
+
+                    <div style="display:flex;gap:10px;align-items:center">
+                        <input type="radio" name="radio2" ">
+                    <p>No</p>
+                    </div>
+                    <div style="margin-left:300px">
+                        <p class="underline">Your Signature</p>
+                        <p style="margin-top:14px">Your Name</p>
+                    </div>
+                </div>
+            </div>
+
+
+                </div>
+            `
+
+    </script>
+    
+</body>
+</html>

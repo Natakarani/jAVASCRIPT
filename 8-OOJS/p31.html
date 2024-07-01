@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>we can write more than one static methods also and when having same classname last   one will print</h1>
+    <script>
+        class Student{
+            static display(){
+                return 'display method called'
+            }
+            constructor(){
+                return `<h1>${Student.display()}</h1>`
+            }
+            static print(){
+                alert(`${Student.display()}`)
+            }
+        }
+        //const called
+        let s=new Student();
+        //
+        document.write(Student.display())
+
+        
+
+    </script>
+</body>
+</html>

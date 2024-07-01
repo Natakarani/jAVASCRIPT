@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>inheritance</h1>
+    <p>can able to access the properties of one obj into another obj( by cloning the one obj into another obj)</p>
+    <p>if not present that property gives the undefied</p>
+
+    <script>
+        let user1={
+            name:'hari',
+            phNo:'+7689089'
+        }
+        let user2=Object.create(user1,{
+            course:{
+                value:'java fulla tsack',
+                
+            },
+            duration:{
+                value:'6months'
+
+            }
+        })
+        let user3=Object.create(user2,{
+            email:{
+                value:'hari@gmail.com',
+            },
+            age:{
+                value:33
+            }
+        })
+        document.write(`<p>${user3.age}</p>`)
+        document.write(`<p>${user3.email}</p>`)
+
+        document.write(`<p>${user3.course}</p>`)
+        document.write(`<p>${user3.duration}</p>`)
+        document.write(`<p>${user3.name}</p>`)
+        document.write(`<p>${user3.phNo}</p>`)
+        document.write('user2================')
+        document.write(`<p>${user2.name}</p>`)
+        document.write(`<p>${user2.course}</p>`)
+        document.write(`<p>${user2.phNo}</p>`)
+        document.write(`<p>${user2.duration}</p>`)
+document.write('user1===============================')
+document.write(`<p>${user1.name}</p>`)
+document.write(`<p>${user2.phNo}</p>`)
+
+
+    </script>
+</body>
+</html>

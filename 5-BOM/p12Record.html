@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        settimeout= is used to run the code after sometime
+        setintervale=used to run the code every time
+    </center>
+    <button onclick="delayedTime()">clickit</button>
+    
+    <center>
+        <h1>to run any code every time</h1>
+    </center>
+    <script>
+        function showAlert(){
+            alert('hi how r u')
+        }
+        showAlert()
+       let timer= setInterval('showAlert()',5000)
+       
+        function simpleAlert(){
+            alert('this is late message')
+        }
+        function delayedTime(){
+            setTimeout(simpleAlert,2000)
+        }
+    </script>
+</body>
+</html>

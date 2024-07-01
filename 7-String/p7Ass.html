@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body{
+    }
+    #users{
+        margin-top: 40px;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        gap:80px;
+
+    }
+   
+    p{
+        border-radius: 200px;
+       text-align: center;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       
+        color: white;
+        width: 240px;
+        height: 240px;
+        font-size: 60px;
+    }
+    input{
+        
+        padding: 9px;
+        padding-right: 40px;
+    }
+    button{
+        color: white;
+        font-size: 14px;
+        letter-spacing: 1.2px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        background: rgb(243, 221, 181);
+        padding: 10px 30px;
+        background-color: rgb(140, 5, 93);
+    }
+    .teams{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+</style>
+<body>
+    <input type="text" placeholder="enter students names" id="name">
+    <button onclick="addStudents()">ADD Students</button>
+    <ul id="users"></ul>
+    <script>
+        var textColor=['rgb(248, 181, 181)','rgb(147, 147, 242);','rgb(181, 248, 181)','rgb(241, 175, 175)','rgb(218, 215, 215)','rgb(167, 230, 230)','rgb(236, 159, 189)','rgb(235, 203, 239)','rgb(243, 221, 181)','rgb(228, 228, 157)']
+        var colors=['red','blue','green','brown','grey','rgb(4, 117, 117)','rgb(213, 9, 87)','rgb(124, 6, 175)','orange','yellow']
+
+        let users=document.getElementById('users')
+        let name=document.getElementById('name')
+        function addStudents(){
+            //for font color
+            let random1=Math.random(textColor.length)*10;
+
+            random1=parseInt(random1);
+            console.log(random1)
+            let color1=textColor[random1];
+            //for background color
+             //getting the index value of text color to background color also
+            console.log(random1)
+            let color2=colors[random1];
+            if(name.value==''){
+                name.style.border='1px solid red';
+            }
+            else{
+            users.innerHTML+=`<div class="teams">
+               
+                <p style="background:${color1};color:${color2}">${(name.value[0]).toUpperCase()}</p>
+                <h5>${name.value}</h5>
+               
+            </div>`
+        }
+
+        }
+    </script>
+</body>
+</html>

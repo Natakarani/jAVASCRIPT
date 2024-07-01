@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section class="allusers" id="allusers"></section>
+    <script>
+        let container=document.getElementById('allusers')
+        var allGithubUsers=[]
+        fetch('https://jsonplaceholder.typicode.com/todos')
+        .then((res)=>res.json())
+        .then(function(response){
+            allGithubUsers=response
+            allGithubUsers.map((item,index)=>{
+                container.innerHTML+=`<div class="card">
+                    <img src=${item.userId}></img>
+                    <h4>${item.login}</h4>
+                    <p>visit github <a href=${item.html_url}>${item.html_url}</a></b></p>
+                </div>`
+            })
+
+        })
+        .catch(function(error){
+            console.log('error')
+        })
+        
+    </script>
+</body>
+</html>

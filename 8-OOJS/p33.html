@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Static Method with paramaters</h1>
+    </center>
+    <hr>
+
+
+    <script>
+        class Employee{
+            constructor(fisrtname, lastname, email, age){
+                this.fname = fisrtname;
+                this.lname = lastname;
+                this.userEmail = email;
+                this.userAge = age;
+            }
+            static emplyeename(fisrtname, lastname){
+                document.write(`<h1>Employee firstname is ${fisrtname}</h1> <hr>`)
+                document.write(`<h1>Employee lastname is ${lastname}</h1> <hr>`)
+                document.write(`<h1>Employee fullanme is ${fisrtname} ${lastname}</h1><hr>`)
+            }
+
+            fullname(){
+
+                return this.fname + " " + this.lname;
+            }
+        }
+
+        Employee.emplyeename('Arun', 'Kumar'); //calling static methos using the class name
+        Employee.emplyeename('Raj', 'Kumar'); //calling static methos using the class name
+
+        //creating instance for the class name
+        let employee1 = new Employee('Mohan', 'Reddy', 'Mohan@gmail.com', 43);
+        console.log(employee1);
+        console.log(employee1.fname);
+        console.log(employee1.lname);
+        console.log(employee1.userEmail);
+        console.log(employee1.userAge);
+        console.log(employee1.fullname()); //we need to call the properties using instance of class (here instance is employee1 variable)
+    </script>
+</body>
+</html>
